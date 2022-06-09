@@ -26,6 +26,7 @@ $plugin_path = plugin_dir_path( __FILE__ );
 
 require_once( $plugin_path . 'includes/post-types/post-type-publikation-table.php' );
 require_once( $plugin_path . 'includes/post-types/post-type-vortrag-table.php' );
+require_once( $plugin_path . 'includes/post-types/post-type-vortrag.php' );
 require_once( $plugin_path . 'includes/api/publikation.php' );
 require_once( $plugin_path . 'includes/acf.php' );
 require_once( $plugin_path . 'includes/block-editor.php' );

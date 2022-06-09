@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom post type for managing lectures.
+ * Table related functions for the custom post type to manage lectures.
  *
  * @author  Marco Di Bella <mdb@marcodibella.de>
  * @package mdb-theme-core
