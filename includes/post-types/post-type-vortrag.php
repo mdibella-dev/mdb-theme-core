@@ -4,7 +4,6 @@
  *
  * @author  Marco Di Bella <mdb@marcodibella.de>
  * @package mdb-theme-core
- * @uses    ACF
  */
 
 
@@ -13,14 +12,13 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Register the custom post type
+ * Register the custom post type.
  *
  * @since  1.0.0
  */
 
 function mdb_tc__vortrag__register()
 {
-
     $labels = [
         'name'                  => __( 'Vorträge', 'mdb_tc' ),
         'singular_name'         => __( 'Vortrag', 'mdb_tc' ),
