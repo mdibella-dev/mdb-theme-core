@@ -17,9 +17,12 @@ defined( 'ABSPATH' ) or exit;
 
 
 
-/** Variables **/
+/** Variables and definitions **/
 
 $plugin_path = plugin_dir_path( __FILE__ );
+
+define( 'MDB_BUILD_STRING', 1 );
+define( 'MDB_BUILD_ARRAY', 2 );
 
 
 /** Include function library */
