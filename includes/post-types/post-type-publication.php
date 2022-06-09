@@ -62,7 +62,7 @@ function mdb_tc__publikation__register()
         'hierarchical'          => false,
         'can_export'            => false,
         'rewrite'               => [
-            'slug'          => 'publikation',
+            'slug'          => 'publication',
             'with_front'    => true
         ],
         'query_var'             => true,
@@ -72,7 +72,7 @@ function mdb_tc__publikation__register()
         'show_in_graphql'       => false,
     ];
 
-    register_post_type( 'publikation', $args );
+    register_post_type( 'publication', $args );
 }
 
 add_action( 'init', 'mdb_tc__publikation__register' );
@@ -87,19 +87,19 @@ add_action( 'init', 'mdb_tc__publikation__register' );
  * @return array               An associative array describing the columns to use.
  */
 
-function mdb_tc__publikation__manage_posts_columns( $default )
+function mdb_tc__publication__manage_posts_columns( $default )
 {
-    $columns['cb']                             = $default['cb'];
-    $columns['cover']                          = __( 'Titelbild', 'mdb_tc' );
-    $columns['title']                          = __( 'Titel', 'mdb_tc' );
-    $columns['taxonomy-publikation_kategorie'] = __( 'Publikationsform', 'mdb_tc' );
-    $columns['year']                           = __( 'Veröffentlichung', 'mdb_tc' );
-    $columns['citation']                       = __( 'Zitate', 'mdb_tc' );
+    $columns['cb']                         = $default['cb'];
+    $columns['cover']                      = __( 'Titelbild', 'mdb_tc' );
+    $columns['title']                      = __( 'Titel', 'mdb_tc' );
+    $columns['taxonomy-publication_group'] = __( 'Publikationsgruppe', 'mdb_tc' );
+    $columns['year']                       = __( 'Veröffentlichung', 'mdb_tc' );
+    $columns['citation']                   = __( 'Zitate', 'mdb_tc' );
 
     return $columns;
 }
 
-add_filter( 'manage_publikation_posts_columns', 'mdb_tc__publikation__manage_posts_columns', 10 );
+add_filter( 'manage_publication_posts_columns', 'mdb_tc__publication__manage_posts_columns', 10 );
 
 
 
@@ -111,7 +111,7 @@ add_filter( 'manage_publikation_posts_columns', 'mdb_tc__publikation__manage_pos
  * @param int    $post_id        ID of the contribution (aka record) to be output.
  */
 
-function mdb_tc__publikation__manage_posts_custom_column( $column_name, $post_id )
+function mdb_tc__publication__manage_posts_custom_column( $column_name, $post_id )
 {
     $data = mdb_tc__publication__get_data( $post_id );
 
@@ -143,7 +143,7 @@ function mdb_tc__publikation__manage_posts_custom_column( $column_name, $post_id
     endswitch;
 }
 
-add_action( 'manage_publikation_posts_custom_column', 'mdb_tc__publikation__manage_posts_custom_column', 9999, 2 );
+add_action( 'manage_publication_posts_custom_column', 'mdb_tc__publication__manage_posts_custom_column', 9999, 2 );
 
 
 
@@ -155,14 +155,14 @@ add_action( 'manage_publikation_posts_custom_column', 'mdb_tc__publikation__mana
  * @return array             An associative array.
  */
 
-function mdb_tc__publikation__manage_sortable_columns( $columns )
+function mdb_tc__publication__manage_sortable_columns( $columns )
 {
     $columns['year']     = 'year';
     $columns['citation'] = 'citation';
     return $columns;
 }
 
-add_filter( 'manage_edit-publikation_sortable_columns', 'mdb_tc__publikation__manage_sortable_columns' );
+add_filter( 'manage_edit-publication_sortable_columns', 'mdb_tc__publication__manage_sortable_columns' );
 
 
 
@@ -173,7 +173,7 @@ add_filter( 'manage_edit-publikation_sortable_columns', 'mdb_tc__publikation__ma
  * @param WP_Query $query   A data object of the last query made.
  */
 
-function mdb_tc__publikation__pre_get_posts( $query )
+function mdb_tc__publication__pre_get_posts( $query )
 {
     if( $query->is_main_query() and is_admin() ) :
 
@@ -202,4 +202,4 @@ function mdb_tc__publikation__pre_get_posts( $query )
     endif;
 }
 
-add_action( 'pre_get_posts', 'mdb_tc__publikation__pre_get_posts', 1 );
+add_action( 'pre_get_posts', 'mdb_tc__publication__pre_get_posts', 1 );

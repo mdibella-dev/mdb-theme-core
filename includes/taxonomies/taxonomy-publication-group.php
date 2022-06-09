@@ -57,6 +57,6 @@ function mdb_tc__publication_group__register()
         'show_in_graphql'       => false,
     ];
 
-    register_taxonomy( 'publication_group', [ 'publikation' ], $args );
+    register_taxonomy( 'publication_group', [ 'publication' ], $args );
 }
 add_action( 'init', 'mdb_tc__publication_group__register' );

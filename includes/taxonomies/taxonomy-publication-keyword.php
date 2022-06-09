@@ -49,6 +49,6 @@ function mdb_tc__keyword__register()
         'sort'                  => false,
         'show_in_graphql'       => false,
     ];
-    register_taxonomy( 'publication_keyword', [ 'publikation' ], $args );
+    register_taxonomy( 'publication_keyword', [ 'publication' ], $args );
 }
 add_action( 'init', 'mdb_tc__keyword__register' );
