@@ -1,9 +1,9 @@
 # mdb-theme-core
-The WordPress theme for Marco Di Bella's personal website.
+Custom post types and core functions for Marco Di Bella's theme (mdb-theme).
 
 __Contributors:__ mdibella-dev
 
-__Tags:__  block-styles, translation-ready, slideout-menu, wide-blocks, landing-pages, svg, shortcodes, gutenberg, custom-post-types, responsive, fluid-size, fontawesome, ajax-templates
+__Tags:__  custom-post-types, advanced-custom-fields, api
 
 __Requires at least:__ WordPress 5.3  
 
