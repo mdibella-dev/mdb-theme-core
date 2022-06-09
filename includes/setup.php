@@ -52,11 +52,12 @@ function mdb_tc__plugin_scripts()
         'mdb_tc',
         plugins_url( 'assets/css/backend.min.css', dirname( __FILE__ ) )
     );
-
+/*
     wp_enqueue_script(
         'mdb_tc',
         plugins_url( 'assets/js/backend.min.js', dirname( __FILE__ ) )
     );
+*/
 }
 
 add_action( 'admin_enqueue_scripts','mdb_tc__plugin_scripts' );
