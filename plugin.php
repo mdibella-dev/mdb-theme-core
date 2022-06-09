@@ -31,7 +31,7 @@ require_once( $plugin_path . 'includes/post-types/post-type-publication.php' );
 require_once( $plugin_path . 'includes/post-types/post-type-lecture.php' );
 require_once( $plugin_path . 'includes/taxonomies/taxonomy-publication-group.php' );
 require_once( $plugin_path . 'includes/taxonomies/taxonomy-publication-keyword.php' );
-require_once( $plugin_path . 'includes/api/publikation.php' );
+require_once( $plugin_path . 'includes/api/publication.php' );
 require_once( $plugin_path . 'includes/acf.php' );
 require_once( $plugin_path . 'includes/block-editor.php' );
 require_once( $plugin_path . 'includes/setup.php' );
