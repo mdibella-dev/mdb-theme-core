@@ -36,19 +36,19 @@ function mdb_tc__keyword__register()
         'show_in_nav_menus'     => true,
         'query_var'             => true,
         'rewrite'               => [
-            'slug'          => 'keyword',
+            'slug'          => 'publication_keyword',
             'with_front'    => true,
         ],
         'show_admin_column'     => false,
         'show_in_rest'          => true,
         'show_tagcloud'         => true,
-        'rest_base'             => 'keyword',
+        'rest_base'             => 'publication_keyword',
         'rest_controller_class' => 'WP_REST_Terms_Controller',
         'rest_namespace'        => 'wp/v2',
         'show_in_quick_edit'    => false,
         'sort'                  => false,
         'show_in_graphql'       => false,
     ];
-    register_taxonomy( 'keyword', [ 'publikation' ], $args );
+    register_taxonomy( 'publication_keyword', [ 'publikation' ], $args );
 }
 add_action( 'init', 'mdb_tc__keyword__register' );

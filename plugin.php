@@ -30,7 +30,7 @@ define( 'MDB_BUILD_ARRAY', 2 );
 require_once( $plugin_path . 'includes/post-types/post-type-publikation.php' );
 require_once( $plugin_path . 'includes/post-types/post-type-vortrag.php' );
 require_once( $plugin_path . 'includes/taxonomies/taxonomy-publication-group.php' );
-require_once( $plugin_path . 'includes/taxonomies/taxonomy-keyword.php' );
+require_once( $plugin_path . 'includes/taxonomies/taxonomy-publication-keyword.php' );
 require_once( $plugin_path . 'includes/api/publikation.php' );
 require_once( $plugin_path . 'includes/acf.php' );
 require_once( $plugin_path . 'includes/block-editor.php' );
