@@ -18,7 +18,9 @@ defined( 'ABSPATH' ) or exit;
 
 function mdb_tc__plugin_activation()
 {
-    // Do something!
+    // Define some constants.
+    define( 'MDB_BUILD_STRING', 1 );
+    define( 'MDB_BUILD_ARRAY', 2 );
 }
 
 register_activation_hook( __FILE__, 'mdb_tc__plugin_activation' );
