@@ -4,6 +4,7 @@
  *
  * @author  Marco Di Bella <mdb@marcodibella.de>
  * @package mdb-theme-core
+ * @uses    ACF
  */
 
 
@@ -22,7 +23,7 @@ defined( 'ABSPATH' ) or exit;
  * @see   https://support.advancedcustomfields.com/forums/topic/issue-with-closing-flexible-fields-by-default/
  */
 
-function mdb_tc__vortrag_admin_head()
+function mdb_tc__vortrag__admin_head()
 {
 ?>
 <script type="text/javascript">
@@ -36,4 +37,4 @@ jQuery(function($)
 <?php
 }
 
-add_action( 'acf/input/admin_head', 'mdb_tc__vortrag_admin_head' );
+add_action( 'acf/input/admin_head', 'mdb_tc__vortrag__admin_head' );
