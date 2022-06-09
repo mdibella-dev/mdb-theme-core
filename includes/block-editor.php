@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) or exit;
 
 function mdb_tc__disable_gutenberg( $can_edit, $post_type )
 {
-    if( ( 'vortrag' === $post_type ) or ( 'publikation' === $post_type ) ) :
+    if( ( 'lecture' === $post_type ) or ( 'publication' === $post_type ) ) :
         $can_edit = false;
     endif;
 
