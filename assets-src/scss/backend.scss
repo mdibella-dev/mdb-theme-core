@@ -1,0 +1,37 @@
+/**
+ * Backend styles.
+ *
+ * @author  Marco Di Bella <mdb@marcodibella.de>
+ * @package mdb-theme-core
+ */
+
+
+
+
+.widefat td,
+.widefat th {
+    padding: 1rem;
+}
+
+
+.post-type-publikation .wp-list-table {
+
+    .column-cover {
+        width: 150px;
+
+        a {
+            display: inline-block;
+            line-height: 0;
+
+            &:focus {
+                outline: none !important;
+                box-shadow: none !important;
+            }
+
+            img {
+                box-shadow: 0 10px 15px -10px rgba(0,0,0,.2);
+                border: 2px solid #fff;
+            }
+        }
+    }
+}
