@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) or exit;
  * @since  1.0.0
  */
 
-function mdb_tc__vortrag__register()
+function mdb_tc__lecture__register()
 {
     $labels = [
         'name'                  => __( 'Vorträge', 'mdb_tc' ),
@@ -56,7 +56,7 @@ function mdb_tc__vortrag__register()
         'hierarchical'          => false,
         'can_export'            => true,
         'rewrite'               => [
-            'slug'          => 'vortrag',
+            'slug'          => 'lecture',
             'with_front'    => true
         ],
         'query_var'             => true,
@@ -66,10 +66,10 @@ function mdb_tc__vortrag__register()
         'show_in_graphql'       => false,
     ];
 
-    register_post_type( 'vortrag', $args );
+    register_post_type( 'lecture', $args );
 }
 
-add_action( 'init', 'mdb_tc__vortrag__register' );
+add_action( 'init', 'mdb_tc__lecture__register' );
 
 
 
@@ -81,7 +81,7 @@ add_action( 'init', 'mdb_tc__vortrag__register' );
  * @return array               An associative array describing the columns to use.
  */
 
-function mdb_tc__vortrag__manage_posts_columns( $default )
+function mdb_tc__lecture__manage_posts_columns( $default )
 {
     $columns['cb']                    = $default['cb'];
     $columns['title']                 = __( 'Titel', 'mdb_tc' );
@@ -92,7 +92,7 @@ function mdb_tc__vortrag__manage_posts_columns( $default )
     return $columns;
 }
 
-add_filter( 'manage_vortrag_posts_columns', 'mdb_tc__vortrag__manage_posts_columns', 10 );
+add_filter( 'manage_lecture_posts_columns', 'mdb_tc__lecture__manage_posts_columns', 10 );
 
 
 
@@ -104,7 +104,7 @@ add_filter( 'manage_vortrag_posts_columns', 'mdb_tc__vortrag__manage_posts_colum
  * @param int    $post_id        ID of the contribution (aka record) to be output.
  */
 
-function mdb_tc__vortrag__manage_posts_custom_column( $column_name, $post_id )
+function mdb_tc__lecture__manage_posts_custom_column( $column_name, $post_id )
 {
     switch( $column_name ) :
 
@@ -125,7 +125,7 @@ function mdb_tc__vortrag__manage_posts_custom_column( $column_name, $post_id )
     endswitch;
 }
 
-add_action( 'manage_vortrag_posts_custom_column', 'mdb_tc__vortrag__manage_posts_custom_column', 10, 2 );
+add_action( 'manage_lecture_posts_custom_column', 'mdb_tc__lecture__manage_posts_custom_column', 10, 2 );
 
 
 
@@ -137,7 +137,7 @@ add_action( 'manage_vortrag_posts_custom_column', 'mdb_tc__vortrag__manage_posts
  * @return array             An associative array.
  */
 
-function mdb_tc__vortrag__manage_sortable_columns( $columns )
+function mdb_tc__lecture__manage_sortable_columns( $columns )
 {
     $columns['speech-event-date']     = 'event-date';
     $columns['speech-event-location'] = 'event-location';
@@ -145,7 +145,7 @@ function mdb_tc__vortrag__manage_sortable_columns( $columns )
     return $columns;
 }
 
-add_filter( 'manage_edit-vortrag_sortable_columns', 'mdb_tc__vortrag__manage_sortable_columns' );
+add_filter( 'manage_edit-lecture_sortable_columns', 'mdb_tc__lecture__manage_sortable_columns' );
 
 
 
@@ -156,7 +156,7 @@ add_filter( 'manage_edit-vortrag_sortable_columns', 'mdb_tc__vortrag__manage_sor
  * @param WP_Query $query   A data object of the last query made.
  */
 
-function mdb_tc__vortrag__pre_get_posts( $query )
+function mdb_tc__lecture__pre_get_posts( $query )
 {
     if( $query->is_main_query() and is_admin() ) :
 
@@ -181,4 +181,4 @@ function mdb_tc__vortrag__pre_get_posts( $query )
     endif;
 }
 
-add_action( 'pre_get_posts', 'mdb_tc__vortrag__pre_get_posts', 1 );
+add_action( 'pre_get_posts', 'mdb_tc__lecture__pre_get_posts', 1 );
