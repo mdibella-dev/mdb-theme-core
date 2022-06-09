@@ -46,7 +46,7 @@ add_filter( 'manage_publikation_posts_columns', 'mdb_tc__publikation__manage_pos
 
 function mdb_tc__publikation__manage_posts_custom_column( $column_name, $post_id )
 {
-    $data = mdb_publication__get_data( $post_id );
+    $data = mdb_tc__publication__get_data( $post_id );
 
     switch( $column_name ) :
 
