@@ -17,9 +17,9 @@ defined( 'ABSPATH' ) or exit;
 
 
 
-/** Constants **/
+/** Variables **/
 
-const $plugin_path = plugin_dir_path( __FILE__ );
+$plugin_path = plugin_dir_path( __FILE__ );
 
 
 /** Include function library */
