@@ -24,8 +24,6 @@ $plugin_path = plugin_dir_path( __FILE__ );
 
 /** Include function library */
 
-require_once( $plugin_path . 'includes/post-types/post-type-publikation-table.php' );
-require_once( $plugin_path . 'includes/post-types/post-type-vortrag-table.php' );
 require_once( $plugin_path . 'includes/post-types/post-type-publikation.php' );
 require_once( $plugin_path . 'includes/post-types/post-type-vortrag.php' );
 require_once( $plugin_path . 'includes/taxonomies/taxonomy-publication-group.php' );
