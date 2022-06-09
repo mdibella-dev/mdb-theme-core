@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
- * Returns a record of publication dates.
+ * Returns a record of publication data.
  *
  * @since  1.1.0
  * @param  int   $id    The ID of the publication.
@@ -233,7 +233,7 @@ function mdb_tc__publication__download_ris_file()
     endif;
 }
 
-add_action('template_redirect','mdb_publication__download_ris_file');
+add_action( 'template_redirect', 'mdb_tc__publication__download_ris_file' );
 
 
 
