@@ -27,8 +27,8 @@ define( 'MDB_BUILD_ARRAY', 2 );
 
 /** Include function library */
 
-require_once( $plugin_path . 'includes/post-types/post-type-publikation.php' );
-require_once( $plugin_path . 'includes/post-types/post-type-vortrag.php' );
+require_once( $plugin_path . 'includes/post-types/post-type-publication.php' );
+require_once( $plugin_path . 'includes/post-types/post-type-lecture.php' );
 require_once( $plugin_path . 'includes/taxonomies/taxonomy-publication-group.php' );
 require_once( $plugin_path . 'includes/taxonomies/taxonomy-publication-keyword.php' );
 require_once( $plugin_path . 'includes/api/publikation.php' );
