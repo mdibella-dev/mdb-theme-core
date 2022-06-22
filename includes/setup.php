@@ -50,12 +50,12 @@ function mdb_tc__plugin_scripts()
 {
     wp_enqueue_style(
         'mdb_tc',
-        plugins_url( 'assets/css/backend.min.css', dirname( __FILE__ ) )
+        plugins_url( 'assets/build/css/backend.min.css', dirname( __FILE__ ) )
     );
 /*
     wp_enqueue_script(
         'mdb_tc',
-        plugins_url( 'assets/js/backend.min.js', dirname( __FILE__ ) )
+        plugins_url( 'assets/build/js/backend.min.js', dirname( __FILE__ ) )
     );
 */
 }
