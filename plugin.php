@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:     Marco Di Bella - Kernfunktionen
+ * Plugin Name:     Marco Di Bella - theme core functions
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
- * Description:     Verschiedene Funktionen, die ursprünglich im Theme von Marco Di Bella (mdb-theme) enthalten waren und nunmehr ausgegliedert worden sind.
+ * Description:     Custom post types and core functions for Marco Di Bella's theme (mdb-theme-fse).
  * Version:         1.1.0
  * Text Domain:     mdb_tc
  * Domain Path:     /languages

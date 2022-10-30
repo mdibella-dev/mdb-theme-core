@@ -1,5 +1,5 @@
 # mdb-theme-core
-Custom post types and core functions for Marco Di Bella's theme (mdb-theme).
+Custom post types and core functions for Marco Di Bella's theme (mdb-theme-fse).
 
 __Contributors:__ mdibella-dev
 
