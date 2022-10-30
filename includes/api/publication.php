@@ -2,9 +2,9 @@
 /**
  * Functions for publications.
  *
- * @author  Marco Di Bella <mdb@marcodibella.de>
- * @package mdb-theme-core
- * @uses    ACF
+ * @author    Marco Di Bella <mdb@marcodibella.de>
+ * @package   mdb-theme-core
+ * @uses      ACF
  */
 
 
@@ -15,9 +15,9 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Returns a record of publication data.
  *
- * @since  1.1.0
- * @param  int   $id    The ID of the publication.
- * @return array        The record.
+ * @since   1.1.0
+ * @param   int    $id    The ID of the publication.
+ * @return  array  The record.
  */
 
 function mdb_tc__publication__get_data( $id )
@@ -70,12 +70,11 @@ function mdb_tc__publication__get_data( $id )
 /**
  * Generates a RIS file.
  *
- * @since  1.1.0
- * @param  int $id    The ID of the publication.
- *
- * @source https://github.com/aurimasv/translators/wiki/RIS-Tag-Map
- * @source https://de.wikipedia.org/wiki/RIS_(Dateiformat)
- * @source https://www1.citavi.com/sub/manual6/de/index.html?importing_a_ris_file.html
+ * @since   1.1.0
+ * @source  https://github.com/aurimasv/translators/wiki/RIS-Tag-Map
+ * @source  https://de.wikipedia.org/wiki/RIS_(Dateiformat)
+ * @source  https://www1.citavi.com/sub/manual6/de/index.html?importing_a_ris_file.html
+ * @param   int  $id    The ID of the publication.
  */
 
 function mdb_tc__publication__build_ris_file( $id )
@@ -217,9 +216,8 @@ function mdb_tc__publication__build_ris_file( $id )
 /**
  * Uses the template redirect hook to trigger the creation and download of citation files.
  *
- * @since 1.1.0
- *
- * @see   https://wordpress.stackexchange.com/questions/3480/how-can-i-force-a-file-download-in-the-wordpress-backend
+ * @since  1.1.0
+ * @see    https://wordpress.stackexchange.com/questions/3480/how-can-i-force-a-file-download-in-the-wordpress-backend
  */
 
 function mdb_tc__publication__download_ris_file()
@@ -246,10 +244,10 @@ add_action( 'template_redirect', 'mdb_tc__publication__download_ris_file' );
  * - Marco Di Bella         => Di Bella M
  * - Frank U Montgomery     => Montgomery FU
  *
- * @since  1.1.0
- * @param  array  $persons    List of those involved.
- * @return string             The comma separated list of authors.
- * @return bool               In case of an error: false.
+ * @since   1.1.0
+ * @param   array   $persons    List of those involved.
+ * @return  string  The comma separated list of authors.
+ * @return  bool    In case of an error: false.
  */
 
 function mdb_tc__publication__normalize_names( $persons )
@@ -317,10 +315,10 @@ function mdb_tc__publication__normalize_names( $persons )
 /**
  * Combines the title and subtitle of a publication. Adds punctuation if necessary.
  *
- * @since  1.1.0
- * @param  string $title       The title.
- * @param  string $subtitle    The subtitle.
- * @return string              The combined title.
+ * @since   1.1.0
+ * @param   string  $title       The title.
+ * @param   string  $subtitle    The subtitle.
+ * @return  string  The combined title.
  */
 
 function mdb_tc__publication__normalize_title( $title, $subtitle )
@@ -364,9 +362,9 @@ function mdb_tc__publication__normalize_title( $title, $subtitle )
 /**
  * Creates a citation suggestion for the specified publication.
  *
- * @since  1.1.0
- * @param  int    $id    The ID of the publication.
- * @return string        The citation suggestion.
+ * @since   1.1.0
+ * @param   int     $id    The ID of the publication.
+ * @return  string  The suggested citation.
  */
 
 function mdb_tc__publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )

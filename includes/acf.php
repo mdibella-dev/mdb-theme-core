@@ -2,9 +2,9 @@
 /**
  * Additions to Advanced Custom Fields (ACF).
  *
- * @author  Marco Di Bella <mdb@marcodibella.de>
- * @package mdb-theme-core
- * @uses    ACF
+ * @author   Marco Di Bella <mdb@marcodibella.de>
+ * @package  mdb-theme-core
+ * @uses     ACF
  */
 
 
@@ -17,10 +17,9 @@ defined( 'ABSPATH' ) or exit;
  * - moving various standard WordPress input fields to a new mask (created with ACF),
  * - collapsing flexible fields by default.
  *
- * @since 1.0.0
- *
- * @see   http://www.advancedcustomfields.com/resources/moving-wp-elements-content-editor-within-acf-fields/
- * @see   https://support.advancedcustomfields.com/forums/topic/issue-with-closing-flexible-fields-by-default/
+ * @since  1.0.0
+ * @see    http://www.advancedcustomfields.com/resources/moving-wp-elements-content-editor-within-acf-fields/
+ * @see    https://support.advancedcustomfields.com/forums/topic/issue-with-closing-flexible-fields-by-default/
  */
 
 function mdb_tc__vortrag__admin_head()

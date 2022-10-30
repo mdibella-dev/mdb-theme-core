@@ -2,8 +2,8 @@
 /**
  * Functions to activate, initiate and deactivate the plugin.
  *
- * @author  Marco Di Bella <mdb@marcodibella.de>
- * @package mdb-theme-core
+ * @author   Marco Di Bella <mdb@marcodibella.de>
+ * @package  mdb-theme-core
  */
 
 
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) or exit;
 /**
  * The activation function for the plugin.
  *
- * @since 1.0.0
+ * @since  1.0.0
  */
 
 function mdb_tc__plugin_activation()
@@ -28,7 +28,7 @@ register_activation_hook( __FILE__, 'mdb_tc__plugin_activation' );
 /**
  * The deactivation function for the plugin.
  *
- * @since 1.0.0
+ * @since  1.0.0
  */
 
 function mdb_tc__plugin_deactivation()
@@ -43,7 +43,7 @@ register_deactivation_hook( __FILE__, 'mdb_tc__plugin_deactivation' );
 /**
  * Load the backend scripts and styles.
  *
- * @since 1.1.0
+ * @since  1.1.0
  */
 
 function mdb_tc__plugin_scripts()

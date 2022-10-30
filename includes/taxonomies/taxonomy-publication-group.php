@@ -2,8 +2,8 @@
 /**
  * Custom taxonomy to group publikation-posts.
  *
- * @author  Marco Di Bella <mdb@marcodibella.de>
- * @package mdb-theme-core
+ * @author   Marco Di Bella <mdb@marcodibella.de>
+ * @package  mdb-theme-core
  */
 
 

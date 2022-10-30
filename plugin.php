@@ -8,8 +8,8 @@
  * Text Domain:     mdb_tc
  * Domain Path:     /languages
  *
- * @author  Marco Di Bella <mdb@marcodibella.de>
- * @package mdb_theme_core
+ * @author   Marco Di Bella <mdb@marcodibella.de>
+ * @package  mdb_theme_core
  */
 
 

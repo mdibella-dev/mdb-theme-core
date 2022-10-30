@@ -2,8 +2,8 @@
 /**
  * Settings and functions related to the block editor (aka Gutenberg).
  *
- * @author  Marco Di Bella <mdb@marcodibella.de>
- * @package mdb-theme-core
+ * @author   Marco Di Bella <mdb@marcodibella.de>
+ * @package  mdb-theme-core
  */
 
 
@@ -14,14 +14,13 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Disables the block editor for various post types.
  *
- * @since  1.0.0
- * @param  bool   $can_edit     The current determination of whether Gutenberg can edit the specified post type (true) or not (false).
- * @param  string $post_type    The post type.
- * @return bool                 The new definition of whether Gutenberg can edit the specified post type (true) or not (false).
- *
- * @see    https://digwp.com/2018/04/how-to-disable-gutenberg/
- * @see    https://stackoverflow.com/questions/52199629/how-to-disable-gutenberg-editor-for-certain-post-types/52199630
- * @see    https://www.billerickson.net/disabling-gutenberg-certain-templates/
+ * @since   1.0.0
+ * @see     https://digwp.com/2018/04/how-to-disable-gutenberg/
+ * @see     https://stackoverflow.com/questions/52199629/how-to-disable-gutenberg-editor-for-certain-post-types/52199630
+ * @see     https://www.billerickson.net/disabling-gutenberg-certain-templates/
+ * @param   bool    $can_edit     The current determination of whether Gutenberg can edit the specified post type (true) or not (false).
+ * @param   string  $post_type    The post type.
+ * @return  bool    The new definition of whether Gutenberg can edit the specified post type (true) or not (false).
  */
 
 function mdb_tc__disable_gutenberg( $can_edit, $post_type )
