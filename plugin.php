@@ -4,7 +4,7 @@
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
  * Description:     Verschiedene Funktionen, die ursprünglich im Theme von Marco Di Bella (mdb-theme) enthalten waren und nunmehr ausgegliedert worden sind.
- * Version:         1.0.0
+ * Version:         1.1.0
  * Text Domain:     mdb_tc
  * Domain Path:     /languages
  *
@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) or exit;
 /** Variables and definitions **/
 
 $plugin_path    = plugin_dir_path( __FILE__ );
-$plugin_version = '1.0.0';
+$plugin_version = '1.1.0';
 
 define( 'MDB_BUILD_STRING', 1 );
 define( 'MDB_BUILD_ARRAY', 2 );

@@ -14,6 +14,9 @@ __Tested up to:__ WordPress 6.0
 
 
 ### main
+
+
+### 1.1.0
 * Added: Plugin version variable.
 * Added: Hint to prevent direct access code.
 * Added: backend.php
