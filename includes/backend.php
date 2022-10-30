@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) or exit;
  * @since  1.0.0
  */
 
-function mdb_tc__plugin_scripts()
+function admin_enqueue_scripts()
 {
     wp_enqueue_style(
         'mdb_tc',
@@ -31,4 +31,4 @@ function mdb_tc__plugin_scripts()
     );
 }
 
-add_action( 'admin_enqueue_scripts','mdb_theme_core\mdb_tc__plugin_scripts' );
+add_action( 'admin_enqueue_scripts','mdb_theme_core\admin_enqueue_scripts' );

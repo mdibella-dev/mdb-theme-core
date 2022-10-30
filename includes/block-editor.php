@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) or exit;
  * @return  bool    The new definition of whether Gutenberg can edit the specified post type (true) or not (false).
  */
 
-function mdb_tc__disable_gutenberg( $can_edit, $post_type )
+function disable_gutenberg( $can_edit, $post_type )
 {
     if( ( 'lecture' === $post_type ) or ( 'publication' === $post_type ) ) :
         $can_edit = false;
@@ -37,5 +37,5 @@ function mdb_tc__disable_gutenberg( $can_edit, $post_type )
     return $can_edit;
 }
 
-add_filter( 'gutenberg_can_edit_post_type', 'mdb_theme_core\mdb_tc__disable_gutenberg' );
-add_filter( 'use_block_editor_for_post_type', 'mdb_theme_core\mdb_tc__disable_gutenberg', 10, 2 );
+add_filter( 'gutenberg_can_edit_post_type', 'mdb_theme_core\disable_gutenberg' );
+add_filter( 'use_block_editor_for_post_type', 'mdb_theme_core\disable_gutenberg', 10, 2 );

@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) or exit;
  * @since  1.0.0
  */
 
-function mdb_tc__lecture__register()
+function lecture__register()
 {
     $labels = [
         'name'                  => __( 'Vorträge', 'mdb_tc' ),
@@ -74,7 +74,7 @@ function mdb_tc__lecture__register()
     register_post_type( 'lecture', $args );
 }
 
-add_action( 'init', 'mdb_theme_core\mdb_tc__lecture__register' );
+add_action( 'init', 'mdb_theme_core\lecture__register' );
 
 
 
@@ -86,7 +86,7 @@ add_action( 'init', 'mdb_theme_core\mdb_tc__lecture__register' );
  * @return  array   An associative array describing the columns to use.
  */
 
-function mdb_tc__lecture__manage_posts_columns( $default )
+function lecture__manage_posts_columns( $default )
 {
     $columns['cb']                    = $default['cb'];
     $columns['title']                 = __( 'Titel', 'mdb_tc' );
@@ -97,7 +97,7 @@ function mdb_tc__lecture__manage_posts_columns( $default )
     return $columns;
 }
 
-add_filter( 'manage_lecture_posts_columns', 'mdb_theme_core\mdb_tc__lecture__manage_posts_columns', 10 );
+add_filter( 'manage_lecture_posts_columns', 'mdb_theme_core\lecture__manage_posts_columns', 10 );
 
 
 
@@ -109,7 +109,7 @@ add_filter( 'manage_lecture_posts_columns', 'mdb_theme_core\mdb_tc__lecture__man
  * @param  int    $post_id        ID of the contribution (aka record) to be output.
  */
 
-function mdb_tc__lecture__manage_posts_custom_column( $column_name, $post_id )
+function lecture__manage_posts_custom_column( $column_name, $post_id )
 {
     switch( $column_name ) :
 
@@ -130,7 +130,7 @@ function mdb_tc__lecture__manage_posts_custom_column( $column_name, $post_id )
     endswitch;
 }
 
-add_action( 'manage_lecture_posts_custom_column', 'mdb_theme_core\mdb_tc__lecture__manage_posts_custom_column', 10, 2 );
+add_action( 'manage_lecture_posts_custom_column', 'mdb_theme_core\lecture__manage_posts_custom_column', 10, 2 );
 
 
 
@@ -142,7 +142,7 @@ add_action( 'manage_lecture_posts_custom_column', 'mdb_theme_core\mdb_tc__lectur
  * @return  array  An associative array.
  */
 
-function mdb_tc__lecture__manage_sortable_columns( $columns )
+function lecture__manage_sortable_columns( $columns )
 {
     $columns['speech-event-date']     = 'event-date';
     $columns['speech-event-location'] = 'event-location';
@@ -150,7 +150,7 @@ function mdb_tc__lecture__manage_sortable_columns( $columns )
     return $columns;
 }
 
-add_filter( 'manage_edit-lecture_sortable_columns', 'mdb_theme_core\mdb_tc__lecture__manage_sortable_columns' );
+add_filter( 'manage_edit-lecture_sortable_columns', 'mdb_theme_core\lecture__manage_sortable_columns' );
 
 
 
@@ -161,7 +161,7 @@ add_filter( 'manage_edit-lecture_sortable_columns', 'mdb_theme_core\mdb_tc__lect
  * @param  WP_Query $query   A data object of the last query made.
  */
 
-function mdb_tc__lecture__pre_get_posts( $query )
+function lecture__pre_get_posts( $query )
 {
     if( $query->is_main_query() and is_admin() ) :
 
@@ -186,4 +186,4 @@ function mdb_tc__lecture__pre_get_posts( $query )
     endif;
 }
 
-add_action( 'pre_get_posts', 'mdb_theme_core\mdb_tc__lecture__pre_get_posts', 1 );
+add_action( 'pre_get_posts', 'mdb_theme_core\lecture__pre_get_posts', 1 );

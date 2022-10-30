@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) or exit;
  * @since  1.0.0
  */
 
-function mdb_tc__keyword__register()
+function publication_keyword__register()
 {
     $labels = [
         'name'          => __( 'Keywords', 'mdb_tc' ),
@@ -56,4 +56,4 @@ function mdb_tc__keyword__register()
     ];
     register_taxonomy( 'publication_keyword', [ 'publication' ], $args );
 }
-add_action( 'init', 'mdb_tc__keyword__register' );
+add_action( 'init', 'mdb_theme_core\publication_keyword__register' );

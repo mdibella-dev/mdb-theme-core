@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) or exit;
  * @since  1.0.0
  */
 
-function mdb_tc__publication_group__register()
+function publication_group__register()
 {
     $labels = [
         'name'                  => __( 'Publikationsgruppe', 'mdb_tc' ),
@@ -64,4 +64,4 @@ function mdb_tc__publication_group__register()
 
     register_taxonomy( 'publication_group', [ 'publication' ], $args );
 }
-add_action( 'init', 'mdb_tc__publication_group__register' );
+add_action( 'init', 'mdb_theme_core\publication_group__register' );

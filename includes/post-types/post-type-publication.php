@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) or exit;
  * @since  1.0.0
  */
 
-function mdb_tc__publikation__register()
+function publication__register()
 {
     $labels = [
         'name'                  => __( 'Publikationen', 'mdb_tc' ),
@@ -80,7 +80,7 @@ function mdb_tc__publikation__register()
     register_post_type( 'publication', $args );
 }
 
-add_action( 'init', 'mdb_theme_core\mdb_tc__publikation__register' );
+add_action( 'init', 'mdb_theme_core\publication__register' );
 
 
 
@@ -92,7 +92,7 @@ add_action( 'init', 'mdb_theme_core\mdb_tc__publikation__register' );
  * @return  array   An associative array describing the columns to use.
  */
 
-function mdb_tc__publication__manage_posts_columns( $default )
+function publication__manage_posts_columns( $default )
 {
     $columns['cb']                         = $default['cb'];
     $columns['cover']                      = __( 'Titelbild', 'mdb_tc' );
@@ -104,7 +104,7 @@ function mdb_tc__publication__manage_posts_columns( $default )
     return $columns;
 }
 
-add_filter( 'manage_publication_posts_columns', 'mdb_theme_core\mdb_tc__publication__manage_posts_columns', 10 );
+add_filter( 'manage_publication_posts_columns', 'mdb_theme_core\publication__manage_posts_columns', 10 );
 
 
 
@@ -116,7 +116,7 @@ add_filter( 'manage_publication_posts_columns', 'mdb_theme_core\mdb_tc__publicat
  * @param  int    $post_id        ID of the contribution (aka record) to be output.
  */
 
-function mdb_tc__publication__manage_posts_custom_column( $column_name, $post_id )
+function publication__manage_posts_custom_column( $column_name, $post_id )
 {
     $data = mdb_tc__publication__get_data( $post_id );
 
@@ -148,7 +148,7 @@ function mdb_tc__publication__manage_posts_custom_column( $column_name, $post_id
     endswitch;
 }
 
-add_action( 'manage_publication_posts_custom_column', 'mdb_theme_core\mdb_tc__publication__manage_posts_custom_column', 9999, 2 );
+add_action( 'manage_publication_posts_custom_column', 'mdb_theme_core\publication__manage_posts_custom_column', 9999, 2 );
 
 
 
@@ -160,14 +160,14 @@ add_action( 'manage_publication_posts_custom_column', 'mdb_theme_core\mdb_tc__pu
  * @return  array  An associative array.
  */
 
-function mdb_tc__publication__manage_sortable_columns( $columns )
+function publication__manage_sortable_columns( $columns )
 {
     $columns['year']     = 'year';
     $columns['citation'] = 'citation';
     return $columns;
 }
 
-add_filter( 'manage_edit-publication_sortable_columns', 'mdb_theme_core\mdb_tc__publication__manage_sortable_columns' );
+add_filter( 'manage_edit-publication_sortable_columns', 'mdb_theme_core\publication__manage_sortable_columns' );
 
 
 
@@ -178,7 +178,7 @@ add_filter( 'manage_edit-publication_sortable_columns', 'mdb_theme_core\mdb_tc__
  * @param  WP_Query  $query    A data object of the last query made.
  */
 
-function mdb_tc__publication__pre_get_posts( $query )
+function publication__pre_get_posts( $query )
 {
     if( $query->is_main_query() and is_admin() ) :
 
@@ -207,4 +207,4 @@ function mdb_tc__publication__pre_get_posts( $query )
     endif;
 }
 
-add_action( 'pre_get_posts', 'mdb_theme_core\mdb_tc__publication__pre_get_posts', 1 );
+add_action( 'pre_get_posts', 'mdb_theme_core\publication__pre_get_posts', 1 );

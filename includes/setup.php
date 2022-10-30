@@ -22,12 +22,12 @@ defined( 'ABSPATH' ) or exit;
  * @since  1.0.0
  */
 
-function mdb_tc__plugin_activation()
+function plugin_activation()
 {
     // Do something!
 }
 
-register_activation_hook( __FILE__, 'mdb_theme_core\mdb_tc__plugin_activation' );
+register_activation_hook( __FILE__, 'mdb_theme_core\plugin_activation' );
 
 
 
@@ -37,9 +37,9 @@ register_activation_hook( __FILE__, 'mdb_theme_core\mdb_tc__plugin_activation' )
  * @since  1.0.0
  */
 
-function mdb_tc__plugin_deactivation()
+function plugin_deactivation()
 {
     // Do something!
 }
 
-register_deactivation_hook( __FILE__, 'mdb_theme_core\mdb_tc__plugin_deactivation' );
+register_deactivation_hook( __FILE__, 'mdb_theme_core\plugin_deactivation' );
