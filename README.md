@@ -20,8 +20,10 @@ __Tested up to:__ WordPress 6.0
 * Added: Namespace mdb_theme_core.
 * Changed: Assets folder structure.
 * Changed: Documentation header in php-files.
+* Changed: Move content of acf.php into post-type-lecture.php.
 * Fixed: text domain in publication.php.
 * Removed: Useless code.
+* Removed: Function prefix mdb_tc_ (in favor of namespace).
 
 
 ### 1.0.0
