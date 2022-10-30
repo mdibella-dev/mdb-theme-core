@@ -7,7 +7,10 @@
  */
 
 
+/** Prevent direct access */
+
 defined( 'ABSPATH' ) or exit;
+
 
 
 /**
@@ -52,12 +55,6 @@ function mdb_tc__plugin_scripts()
         'mdb_tc',
         plugins_url( 'assets/build/css/backend.min.css', dirname( __FILE__ ) )
     );
-/*
-    wp_enqueue_script(
-        'mdb_tc',
-        plugins_url( 'assets/build/js/backend.min.js', dirname( __FILE__ ) )
-    );
-*/
 }
 
 add_action( 'admin_enqueue_scripts','mdb_tc__plugin_scripts' );
