@@ -19,6 +19,7 @@ __Tested up to:__ WordPress 6.0
 * Added: backend.php
 * Changed: Assets folder structure.
 * Changed: Documentation header in php-files.
+* Fixed: text domain in publication.php.
 * Removed: Useless code.
 
 
