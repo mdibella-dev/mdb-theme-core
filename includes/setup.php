@@ -40,21 +40,3 @@ function mdb_tc__plugin_deactivation()
 }
 
 register_deactivation_hook( __FILE__, 'mdb_tc__plugin_deactivation' );
-
-
-
-/**
- * Load the backend scripts and styles.
- *
- * @since  1.1.0
- */
-
-function mdb_tc__plugin_scripts()
-{
-    wp_enqueue_style(
-        'mdb_tc',
-        plugins_url( 'assets/build/css/backend.min.css', dirname( __FILE__ ) )
-    );
-}
-
-add_action( 'admin_enqueue_scripts','mdb_tc__plugin_scripts' );

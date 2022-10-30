@@ -37,4 +37,5 @@ require_once( $plugin_path . 'includes/taxonomies/taxonomy-publication-keyword.p
 require_once( $plugin_path . 'includes/api/publication.php' );
 require_once( $plugin_path . 'includes/acf.php' );
 require_once( $plugin_path . 'includes/block-editor.php' );
+require_once( $plugin_path . 'includes/backend.php' );
 require_once( $plugin_path . 'includes/setup.php' );
