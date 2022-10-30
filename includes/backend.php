@@ -27,7 +27,7 @@ function admin_enqueue_scripts()
     wp_enqueue_style(
         'mdb_tc',
         plugins_url( 'assets/build/css/backend.min.css', dirname( __FILE__ ) ),
-        $plugin_version
+        $plugin_version 
     );
 }
 
