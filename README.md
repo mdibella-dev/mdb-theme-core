@@ -12,8 +12,15 @@ __Tested up to:__ WordPress 6.0
 ## Changelog
 *Added/Changed/Fixed/Removed*
 
+
 ### main
-* Changed: assets folder structure
+* Added: Plugin version variable.
+* Added: Hint to prevent direct access code.
+* Added: backend.php
+* Changed: Assets folder structure.
+* Changed: Documentation header in php-files.
+* Removed: Useless code.
+
 
 ### 1.0.0
 * Initial commit
