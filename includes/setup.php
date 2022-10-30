@@ -7,6 +7,9 @@
  */
 
 
+namespace mdb_theme_core;
+
+
 /** Prevent direct access */
 
 defined( 'ABSPATH' ) or exit;
@@ -24,7 +27,7 @@ function mdb_tc__plugin_activation()
     // Do something!
 }
 
-register_activation_hook( __FILE__, 'mdb_tc__plugin_activation' );
+register_activation_hook( __FILE__, 'mdb_theme_core\mdb_tc__plugin_activation' );
 
 
 
@@ -39,4 +42,4 @@ function mdb_tc__plugin_deactivation()
     // Do something!
 }
 
-register_deactivation_hook( __FILE__, 'mdb_tc__plugin_deactivation' );
+register_deactivation_hook( __FILE__, 'mdb_theme_core\mdb_tc__plugin_deactivation' );

@@ -17,6 +17,7 @@ __Tested up to:__ WordPress 6.0
 * Added: Plugin version variable.
 * Added: Hint to prevent direct access code.
 * Added: backend.php
+* Added: Namespace mdb_theme_core.
 * Changed: Assets folder structure.
 * Changed: Documentation header in php-files.
 * Fixed: text domain in publication.php.

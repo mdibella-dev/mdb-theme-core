@@ -12,6 +12,8 @@
  * @package  mdb_theme_core
  */
 
+namespace mdb_theme_core;
+
 
 /** Prevent direct access */
 

@@ -8,6 +8,9 @@
  */
 
 
+namespace mdb_theme_core;
+
+
 /** Prevent direct access */
 
 defined( 'ABSPATH' ) or exit;

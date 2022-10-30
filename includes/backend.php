@@ -7,6 +7,9 @@
  */
 
 
+namespace mdb_theme_core;
+
+
 /** Prevent direct access */
 
 defined( 'ABSPATH' ) or exit;
@@ -28,4 +31,4 @@ function mdb_tc__plugin_scripts()
     );
 }
 
-add_action( 'admin_enqueue_scripts','mdb_tc__plugin_scripts' );
+add_action( 'admin_enqueue_scripts','mdb_theme_core\mdb_tc__plugin_scripts' );

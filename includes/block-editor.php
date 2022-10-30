@@ -7,6 +7,9 @@
  */
 
 
+namespace mdb_theme_core;
+
+
 /** Prevent direct access */
 
 defined( 'ABSPATH' ) or exit;
@@ -34,5 +37,5 @@ function mdb_tc__disable_gutenberg( $can_edit, $post_type )
     return $can_edit;
 }
 
-add_filter( 'gutenberg_can_edit_post_type', 'mdb_tc__disable_gutenberg' );
-add_filter( 'use_block_editor_for_post_type', 'mdb_tc__disable_gutenberg', 10, 2 );
+add_filter( 'gutenberg_can_edit_post_type', 'mdb_theme_core\mdb_tc__disable_gutenberg' );
+add_filter( 'use_block_editor_for_post_type', 'mdb_theme_core\mdb_tc__disable_gutenberg', 10, 2 );

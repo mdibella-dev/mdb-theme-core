@@ -8,6 +8,9 @@
  */
 
 
+namespace mdb_theme_core;
+
+
 /** Prevent direct access */
 
 defined( 'ABSPATH' ) or exit;
@@ -38,4 +41,4 @@ jQuery(function($)
 <?php
 }
 
-add_action( 'acf/input/admin_head', 'mdb_tc__vortrag__admin_head' );
+add_action( 'acf/input/admin_head', 'mdb_theme_core\mdb_tc__vortrag__admin_head' );
