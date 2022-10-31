@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions for publications.
+ * Functions for post-type publications.
  *
  * @author    Marco Di Bella <mdb@marcodibella.de>
  * @package   mdb-theme-core
