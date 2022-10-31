@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name:     Marco Di Bella - theme core functions
+ * Plugin URI:      https://github.com/mdibella-dev/mdb-theme-core
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
  * Description:     Custom post types and core functions for Marco Di Bella's theme (mdb-theme-fse).
