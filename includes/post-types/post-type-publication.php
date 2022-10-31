@@ -2,7 +2,7 @@
 /**
  * Custom post type to manage publications.
  *
- * @author   Marco Di Bella <mdb@marcodibella.de>
+ * @author   Marco Di Bella
  * @package  mdb-theme-core
  * @uses     ACF
  */

@@ -2,7 +2,7 @@
 /**
  * Settings and functions related to the block editor (aka Gutenberg).
  *
- * @author   Marco Di Bella <mdb@marcodibella.de>
+ * @author   Marco Di Bella
  * @package  mdb-theme-core
  */
 

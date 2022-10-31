@@ -2,7 +2,7 @@
 /**
  * Custom taxonomy to support keywords in custom post type publikation.
  *
- * @author   Marco Di Bella <mdb@marcodibella.de>
+ * @author   Marco Di Bella
  * @package  mdb-theme-core
  */
 

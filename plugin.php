@@ -9,7 +9,7 @@
  * Text Domain:     mdb_tc
  * Domain Path:     /languages
  *
- * @author   Marco Di Bella <mdb@marcodibella.de>
+ * @author   Marco Di Bella
  * @package  mdb_theme_core
  */
 

@@ -2,7 +2,7 @@
 /**
  * Functions for post-type publications.
  *
- * @author    Marco Di Bella <mdb@marcodibella.de>
+ * @author    Marco Di Bella
  * @package   mdb-theme-core
  * @uses      ACF
  */
