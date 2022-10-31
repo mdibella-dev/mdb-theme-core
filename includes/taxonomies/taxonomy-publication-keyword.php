@@ -54,6 +54,6 @@ function publication_keyword__register()
         'sort'                  => false,
         'show_in_graphql'       => false,
     ];
-    register_taxonomy( 'publication_keyword', [ 'publication' ], $args );
+    register_taxonomy( 'publication_keyword', ['publication'], $args );
 }
 add_action( 'init', 'mdb_theme_core\publication_keyword__register' );
