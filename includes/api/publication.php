@@ -518,8 +518,8 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
 
     // Improve typography (when plugin wp-typography is loaded).
     if( class_exists( 'WP_Typography' ) ) :
-        $output[0] = WP_Typography::process_title( $output[0] );
-        $output[1] = WP_Typography::process_title( $output[1] );
+        $output[0] = \WP_Typography::process_title( $output[0] );
+        $output[1] = \WP_Typography::process_title( $output[1] );
     endif;
 
 
