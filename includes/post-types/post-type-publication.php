@@ -118,7 +118,7 @@ add_filter( 'manage_publication_posts_columns', 'mdb_theme_core\publication__man
 
 function publication__manage_posts_custom_column( $column_name, $post_id )
 {
-    $data = mdb_tc__publication__get_data( $post_id );
+    $data = publication__get_data( $post_id );
 
     switch( $column_name ) :
 
