@@ -1,0 +1,266 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Marco Di Bella - Theme Core Functions\n"
+"POT-Creation-Date: 2022-11-12 19:23+0100\n"
+"PO-Revision-Date: 2022-11-12 18:55+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: plugin.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: includes/api/publication.php:395
+msgid "without author"
+msgstr ""
+
+#: includes/api/publication.php:418
+msgid "without a title"
+msgstr ""
+
+#: includes/api/publication.php:440
+msgid " In: "
+msgstr ""
+
+#: includes/api/publication.php:466
+msgid "without publisher"
+msgstr ""
+
+#: includes/api/publication.php:470
+#, php-format
+msgid " In: %1$s [Pub.]: %2$s"
+msgstr ""
+
+#: includes/api/publication.php:482
+#, php-format
+msgid " Volume %1$s of the series \"%2$s\"."
+msgstr ""
+
+#: includes/api/publication.php:488
+#, php-format
+msgid " Of the series \"%1$s\"."
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:29
+#: includes/post-types/post-type-lecture.php:31
+#: includes/post-types/post-type-lecture.php:44
+msgid "Lectures"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:30
+#: includes/post-types/post-type-lecture.php:93
+msgid "Lecture"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:32
+msgid "All lectures"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:33
+msgid "Add"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:34
+msgid "Add new lecture"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:35
+msgid "Edit lecture"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:36
+msgid "New lecture"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:37
+msgid "View lecture"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:38
+msgid "Search lectures"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:39
+msgid "No lecture found"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:40
+msgid "No lecture found in trash"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:92
+#: includes/post-types/post-type-publication.php:99
+msgid "Title"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:94
+msgid "Date"
+msgstr ""
+
+#: includes/post-types/post-type-lecture.php:95
+msgid "Event"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:29
+#: includes/post-types/post-type-publication.php:31
+#: includes/post-types/post-type-publication.php:50
+msgid "Publications"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:30
+msgid "Publication"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:32
+msgid "All publications"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:33
+msgid "Add publication"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:34
+msgid "Add new publication"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:35
+msgid "Edit publication"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:36
+msgid "New publication"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:37
+msgid "View publication"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:38
+msgid "Search publications"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:39
+msgid "No publication found"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:40
+msgid "No publication found in trash"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:41
+#: includes/post-types/post-type-publication.php:98
+msgid "Cover"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:42
+msgid "Set cover"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:43
+msgid "Remove cover"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:44
+msgid "Use as cover"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:45
+msgid "Publication published"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:46
+msgid "Publication updated"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:100
+#: includes/taxonomies/taxonomy-publication-group.php:29
+#: includes/taxonomies/taxonomy-publication-group.php:41
+msgid "Publication group"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:101
+msgid "Published"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:102
+msgid "Citations"
+msgstr ""
+
+#: includes/post-types/post-type-publication.php:131
+msgid "Edit"
+msgstr ""
+
+#: includes/taxonomies/taxonomy-publication-group.php:28
+#: includes/taxonomies/taxonomy-publication-group.php:30
+msgid "Publication groups"
+msgstr ""
+
+#: includes/taxonomies/taxonomy-publication-group.php:31
+msgid "All publication groups"
+msgstr ""
+
+#: includes/taxonomies/taxonomy-publication-group.php:32
+msgid "Edit publication group"
+msgstr ""
+
+#: includes/taxonomies/taxonomy-publication-group.php:33
+msgid "View publication group"
+msgstr ""
+
+#: includes/taxonomies/taxonomy-publication-group.php:34
+msgid "New publication group"
+msgstr ""
+
+#: includes/taxonomies/taxonomy-publication-group.php:35
+msgid "Search publication groups"
+msgstr ""
+
+#: includes/taxonomies/taxonomy-publication-group.php:36
+msgid "Popular publication groups"
+msgstr ""
+
+#: includes/taxonomies/taxonomy-publication-group.php:37
+msgid "No publication group found"
+msgstr ""
+
+#: includes/taxonomies/taxonomy-publication-keyword.php:28
+#: includes/taxonomies/taxonomy-publication-keyword.php:34
+msgid "Schlagwörter"
+msgstr ""
+
+#: includes/taxonomies/taxonomy-publication-keyword.php:29
+msgid "Schlagwort"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Marco Di Bella - Theme Core Functions"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/mdibella-dev/mdb-theme-core"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Custom post types and core functions for Marco Di Bella's theme (mdb-theme-"
+"fse)."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Marco Di Bella"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.marcodibella.de"
+msgstr ""
