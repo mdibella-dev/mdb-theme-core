@@ -5,7 +5,7 @@
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
  * Description:     Custom post types and core functions for Marco Di Bella's theme (mdb-theme-fse).
- * Version:         1.1.0
+ * Version:         1.2.0
  * Text Domain:     mdb_theme_core
  * Domain Path:     /languages
  *
@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) or exit;
 /** Variables and definitions **/
 
 $plugin_path    = plugin_dir_path( __FILE__ );
-$plugin_version = '1.1.0';
+$plugin_version = '1.2.0';
 
 define( 'MDB_BUILD_STRING', 1 );
 define( 'MDB_BUILD_ARRAY', 2 );

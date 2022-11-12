@@ -16,6 +16,11 @@ __Tested up to:__ WordPress 6.1
 ### main
 
 
+### 1.2.0
+* Added: New language files (DE).
+* Changed: Basic language is EN now.
+
+
 ### 1.1.0
 * Added: Plugin version variable.
 * Added: Hint to prevent direct access code.
