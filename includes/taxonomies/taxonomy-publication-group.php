@@ -25,20 +25,20 @@ defined( 'ABSPATH' ) or exit;
 function publication_group__register()
 {
     $labels = [
-        'name'                  => __( 'Publikationsgruppe', 'mdb_tc' ),
-        'singular_name'         => __( 'Publikationsgruppe', 'mdb_tc' ),
-        'menu_name'             => __( 'Publikationsgruppen', 'mdb_tc' ),
-        'all_items'             => __( 'Alle Publikationsgruppen', 'mdb_tc' ),
-        'edit_item'             => __( 'Bearbeiten', 'mdb_tc' ),
-        'view_item'             => __( 'Anzeigen', 'mdb_tc' ),
-        'add_new_item'          => __( 'Neue Publikationsgruppe', 'mdb_tc' ),
-        'search_items'          => __( 'Publikationsgruppen durchsuchen', 'mdb_tc' ),
-        'choose_from_most_used' => __( 'Beliebte Publikationsgruppen', 'mdb_tc' ),
-        'not_found'             => __( 'Keine Publikationsgruppe gefunden', 'mdb_tc' ),
+        'name'                  => __( 'Publikationsgruppe', 'mdb_theme_core' ),
+        'singular_name'         => __( 'Publikationsgruppe', 'mdb_theme_core' ),
+        'menu_name'             => __( 'Publikationsgruppen', 'mdb_theme_core' ),
+        'all_items'             => __( 'Alle Publikationsgruppen', 'mdb_theme_core' ),
+        'edit_item'             => __( 'Bearbeiten', 'mdb_theme_core' ),
+        'view_item'             => __( 'Anzeigen', 'mdb_theme_core' ),
+        'add_new_item'          => __( 'Neue Publikationsgruppe', 'mdb_theme_core' ),
+        'search_items'          => __( 'Publikationsgruppen durchsuchen', 'mdb_theme_core' ),
+        'choose_from_most_used' => __( 'Beliebte Publikationsgruppen', 'mdb_theme_core' ),
+        'not_found'             => __( 'Keine Publikationsgruppe gefunden', 'mdb_theme_core' ),
     ];
 
     $args = [
-        'label'                 => __( 'Publikationsgruppe', 'mdb_tc' ),
+        'label'                 => __( 'Publikationsgruppe', 'mdb_theme_core' ),
         'labels'                => $labels,
         'public'                => true,
         'publicly_queryable'    => true,

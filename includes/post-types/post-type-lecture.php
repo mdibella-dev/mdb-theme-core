@@ -26,22 +26,22 @@ defined( 'ABSPATH' ) or exit;
 function lecture__register()
 {
     $labels = [
-        'name'                  => __( 'Vorträge', 'mdb_tc' ),
-        'singular_name'         => __( 'Vortrag', 'mdb_tc' ),
-        'menu_name'             => __( 'Vorträge', 'mdb_tc' ),
-        'all_items'             => __( 'Alle Vorträge', 'mdb_tc' ),
-        'add_new'               => __( 'Hinzufügen', 'mdb_tc' ),
-        'add_new_item'          => __( 'Neuen Vortrag hinzufügen', 'mdb_tc' ),
-        'edit_item'             => __( 'Vortrag bearbeiten', 'mdb_tc' ),
-        'new_item'              => __( 'Neuer Vortrag', 'mdb_tc' ),
-        'view_item'             => __( 'Vortrag anzeigen', 'mdb_tc' ),
-        'search_items'          => __( 'Vorträge durchsuchen', 'mdb_tc' ),
-        'not_found'             => __( 'Keinen Vortrag gefunden', 'mdb_tc' ),
-        'not_found_in_trash'    => __( 'Keinen Vortrag im Papierkorb gefunden', 'mdb_tc' ),
+        'name'                  => __( 'Vorträge', 'mdb_theme_core' ),
+        'singular_name'         => __( 'Vortrag', 'mdb_theme_core' ),
+        'menu_name'             => __( 'Vorträge', 'mdb_theme_core' ),
+        'all_items'             => __( 'Alle Vorträge', 'mdb_theme_core' ),
+        'add_new'               => __( 'Hinzufügen', 'mdb_theme_core' ),
+        'add_new_item'          => __( 'Neuen Vortrag hinzufügen', 'mdb_theme_core' ),
+        'edit_item'             => __( 'Vortrag bearbeiten', 'mdb_theme_core' ),
+        'new_item'              => __( 'Neuer Vortrag', 'mdb_theme_core' ),
+        'view_item'             => __( 'Vortrag anzeigen', 'mdb_theme_core' ),
+        'search_items'          => __( 'Vorträge durchsuchen', 'mdb_theme_core' ),
+        'not_found'             => __( 'Keinen Vortrag gefunden', 'mdb_theme_core' ),
+        'not_found_in_trash'    => __( 'Keinen Vortrag im Papierkorb gefunden', 'mdb_theme_core' ),
     ];
 
     $args = [
-        'label'                 => __( 'Vorträge', 'mdb_tc' ),
+        'label'                 => __( 'Vorträge', 'mdb_theme_core' ),
         'labels'                => $labels,
         'description'           => '',
         'public'                => true,
@@ -89,10 +89,10 @@ add_action( 'init', 'mdb_theme_core\lecture__register' );
 function lecture__manage_posts_columns( $default )
 {
     $columns['cb']                    = $default['cb'];
-    $columns['title']                 = __( 'Titel', 'mdb_tc' );
-    $columns['speech-event']          = __( 'Veranstaltung', 'mdb_tc' );
-    $columns['speech-event-date']     = __( 'Datum', 'mdb_tc' );
-    $columns['speech-event-location'] = __( 'Ort', 'mdb_tc' );
+    $columns['title']                 = __( 'Titel', 'mdb_theme_core' );
+    $columns['speech-event']          = __( 'Veranstaltung', 'mdb_theme_core' );
+    $columns['speech-event-date']     = __( 'Datum', 'mdb_theme_core' );
+    $columns['speech-event-location'] = __( 'Ort', 'mdb_theme_core' );
 
     return $columns;
 }

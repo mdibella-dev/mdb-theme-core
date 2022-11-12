@@ -25,13 +25,13 @@ defined( 'ABSPATH' ) or exit;
 function publication_keyword__register()
 {
     $labels = [
-        'name'          => __( 'Keywords', 'mdb_tc' ),
-        'singular_name' => __( 'Keyword', 'mdb_tc' ),
+        'name'          => __( 'Keywords', 'mdb_theme_core' ),
+        'singular_name' => __( 'Keyword', 'mdb_theme_core' ),
     ];
 
 
     $args = [
-        'label'                 => __( 'Keywords', 'mdb_tc' ),
+        'label'                 => __( 'Keywords', 'mdb_theme_core' ),
         'labels'                => $labels,
         'public'                => true,
         'publicly_queryable'    => true,
