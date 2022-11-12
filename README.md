@@ -7,7 +7,7 @@ __Tags:__  custom-post-types, advanced-custom-fields, api
 
 __Requires at least:__ WordPress 5.3  
 
-__Tested up to:__ WordPress 6.0  
+__Tested up to:__ WordPress 6.1  
 
 ## Changelog
 *Added/Changed/Fixed/Removed*
