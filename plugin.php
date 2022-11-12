@@ -2,11 +2,11 @@
 /**
  * Plugin Name:     Marco Di Bella - Theme Core Functions
  * Plugin URI:      https://github.com/mdibella-dev/mdb-theme-core
+ * Description:     Custom post types and core functions for Marco Di Bella's theme (mdb-theme-fse).
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
- * Description:     Custom post types and core functions for Marco Di Bella's theme (mdb-theme-fse).
  * Version:         1.2.0
- * Text Domain:     mdb_theme_core
+ * Text Domain:     mdb-theme-core
  * Domain Path:     /languages
  *
  * @author   Marco Di Bella

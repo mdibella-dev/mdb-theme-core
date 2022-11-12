@@ -25,20 +25,20 @@ defined( 'ABSPATH' ) or exit;
 function publication_group__register()
 {
     $labels = [
-        'name'                  => __( 'Publication groups', 'mdb_theme_core' ),
-        'singular_name'         => __( 'Publication group', 'mdb_theme_core' ),
-        'menu_name'             => __( 'Publication groups', 'mdb_theme_core' ),
-        'all_items'             => __( 'All publication groups', 'mdb_theme_core' ),
-        'edit_item'             => __( 'Edit publication group', 'mdb_theme_core' ),
-        'view_item'             => __( 'View publication group', 'mdb_theme_core' ),
-        'add_new_item'          => __( 'New publication group', 'mdb_theme_core' ),
-        'search_items'          => __( 'Search publication groups', 'mdb_theme_core' ),
-        'choose_from_most_used' => __( 'Popular publication groups', 'mdb_theme_core' ),
-        'not_found'             => __( 'No publication group found', 'mdb_theme_core' ),
+        'name'                  => __( 'Publication groups', 'mdb-theme-core' ),
+        'singular_name'         => __( 'Publication group', 'mdb-theme-core' ),
+        'menu_name'             => __( 'Publication groups', 'mdb-theme-core' ),
+        'all_items'             => __( 'All publication groups', 'mdb-theme-core' ),
+        'edit_item'             => __( 'Edit publication group', 'mdb-theme-core' ),
+        'view_item'             => __( 'View publication group', 'mdb-theme-core' ),
+        'add_new_item'          => __( 'New publication group', 'mdb-theme-core' ),
+        'search_items'          => __( 'Search publication groups', 'mdb-theme-core' ),
+        'choose_from_most_used' => __( 'Popular publication groups', 'mdb-theme-core' ),
+        'not_found'             => __( 'No publication group found', 'mdb-theme-core' ),
     ];
 
     $args = [
-        'label'                 => __( 'Publication group', 'mdb_theme_core' ),
+        'label'                 => __( 'Publication group', 'mdb-theme-core' ),
         'labels'                => $labels,
         'public'                => true,
         'publicly_queryable'    => true,
