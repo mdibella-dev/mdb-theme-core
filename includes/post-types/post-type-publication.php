@@ -35,7 +35,7 @@ function publication__register()
         'edit_item'             => __( 'Edit publication', 'mdb_theme_core' ),
         'new_item'              => __( 'New publication', 'mdb_theme_core' ),
         'view_item'             => __( 'View publication', 'mdb_theme_core' ),
-        'search_items'          => __( 'Search publication', 'mdb_theme_core' ),
+        'search_items'          => __( 'Search publications', 'mdb_theme_core' ),
         'not_found'             => __( 'No publication found', 'mdb_theme_core' ),
         'not_found_in_trash'    => __( 'No publication found in trash', 'mdb_theme_core' ),
         'featured_image'        => __( 'Cover', 'mdb_theme_core' ),
