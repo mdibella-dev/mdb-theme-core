@@ -392,7 +392,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
     if( ! empty( $data['authors'] ) ) :
         $output[0] .= publication__normalize_names( $data['authors'] );
     else :
-        $output[0] .= __( 'ohne Autor', 'mdb_theme_core' );
+        $output[0] .= __( 'without author', 'mdb_theme_core' );
     endif;
 
 
@@ -415,7 +415,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
             $title = '"' . $title . '"';
         endif;
     else:
-        $title = __( 'ohne Titel', 'mdb_theme_core' );
+        $title = __( 'without a title', 'mdb_theme_core' );
     endif;
 
     $output[0] .= $title;
@@ -463,11 +463,11 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
             if( ! empty( $data['editors'] ) ) :
                 $editors .= publication__normalize_names( $data['editors'] );
             else :
-                $editors .= __( 'ohne Herausgeber', 'mdb_theme_core' );
+                $editors .= __( 'without publisher', 'mdb_theme_core' );
             endif;
 
             $output[1] .= sprintf(
-                __( ' In: %1$s [Hrsg.]: %2$s', 'mdb_theme_core' ),
+                __( ' In: %1$s [Pub.]: %2$s', 'mdb_theme_core' ),
                 $editors,
                 publication__normalize_title( $data['booktitle'], $data['booksubtitle'] )
             );
@@ -479,13 +479,13 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
 
             if( ! empty( $data['issue'] ) ) :
                 $output[1] .= sprintf(
-                    __( ' Band %1$s der Reihe "%2$s".', 'mdb_theme_core' ),
+                    __( ' Volume %1$s of the series "%2$s".', 'mdb_theme_core' ),
                     $data['issue'],
                     $data['edition'],
                 );
             else :
                 $output[1] .= sprintf(
-                    __( ' Aus der Reihe "%1$s".', 'mdb_theme_core' ),
+                    __( ' Of the series "%1$s".', 'mdb_theme_core' ),
                     $data['edition'],
                 );
             endif;

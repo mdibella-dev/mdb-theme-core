@@ -26,30 +26,30 @@ defined( 'ABSPATH' ) or exit;
 function publication__register()
 {
     $labels = [
-        'name'                  => __( 'Publikationen', 'mdb_theme_core' ),
-        'singular_name'         => __( 'Publikation', 'mdb_theme_core' ),
-        'menu_name'             => __( 'Publikationen', 'mdb_theme_core' ),
-        'all_items'             => __( 'Alle Publikationen', 'mdb_theme_core' ),
-        'add_new'               => __( 'Hinzufügen', 'mdb_theme_core' ),
-        'add_new_item'          => __( 'Neue Publikation hinzufügen', 'mdb_theme_core' ),
-        'edit_item'             => __( 'Publikation bearbeiten', 'mdb_theme_core' ),
-        'new_item'              => __( 'Neue Publikation', 'mdb_theme_core' ),
-        'view_item'             => __( 'Publikation anzeigen', 'mdb_theme_core' ),
-        'search_items'          => __( 'Publikationen durchsuchen', 'mdb_theme_core' ),
-        'not_found'             => __( 'Keine Publikation gefunden', 'mdb_theme_core' ),
-        'not_found_in_trash'    => __( 'Keine Publikationen im Papierkorb gefunden', 'mdb_theme_core' ),
-        'featured_image'        => __( 'Titelbild', 'mdb_theme_core' ),
-        'set_featured_image'    => __( 'Titelbild festlegen', 'mdb_theme_core' ),
-        'remove_featured_image' => __( 'Titelbild entfernen', 'mdb_theme_core' ),
-        'use_featured_image'    => __( 'Als Titelbild verwenden', 'mdb_theme_core' ),
-        'item_published'        => __( 'Publikation veröffentlicht', 'mdb_theme_core' ),
-        'item_updated'          => __( 'Publikation aktualisiert', 'mdb_theme_core' ),
+        'name'                  => __( 'Publications', 'mdb_theme_core' ),
+        'singular_name'         => __( 'Publication', 'mdb_theme_core' ),
+        'menu_name'             => __( 'Publications', 'mdb_theme_core' ),
+        'all_items'             => __( 'All publications', 'mdb_theme_core' ),
+        'add_new'               => __( 'Add publication', 'mdb_theme_core' ),
+        'add_new_item'          => __( 'Add new publication', 'mdb_theme_core' ),
+        'edit_item'             => __( 'Edit publication', 'mdb_theme_core' ),
+        'new_item'              => __( 'New publication', 'mdb_theme_core' ),
+        'view_item'             => __( 'View publication', 'mdb_theme_core' ),
+        'search_items'          => __( 'Search publication', 'mdb_theme_core' ),
+        'not_found'             => __( 'No publication found', 'mdb_theme_core' ),
+        'not_found_in_trash'    => __( 'No publication found in trash', 'mdb_theme_core' ),
+        'featured_image'        => __( 'Cover', 'mdb_theme_core' ),
+        'set_featured_image'    => __( 'Set cover', 'mdb_theme_core' ),
+        'remove_featured_image' => __( 'Remove cover', 'mdb_theme_core' ),
+        'use_featured_image'    => __( 'Use as cover', 'mdb_theme_core' ),
+        'item_published'        => __( 'Publication published', 'mdb_theme_core' ),
+        'item_updated'          => __( 'Publication updated', 'mdb_theme_core' ),
     ];
 
     $args = [
-        'label'                 => __( 'Publikationen', 'mdb_theme_core' ),
+        'label'                 => __( 'Publications', 'mdb_theme_core' ),
         'labels'                => $labels,
-        'description'           => 'Alle Formen von Publikationen: Beiträge in Fachzeitschriften, Büchern etc.',
+        'description'           => 'All forms of publications: articles in specialist journals, books, etc.',
         'public'                => true,
         'publicly_queryable'    => true,
         'show_ui'               => true,
@@ -95,11 +95,11 @@ add_action( 'init', 'mdb_theme_core\publication__register' );
 function publication__manage_posts_columns( $default )
 {
     $columns['cb']                         = $default['cb'];
-    $columns['cover']                      = __( 'Titelbild', 'mdb_theme_core' );
-    $columns['title']                      = __( 'Titel', 'mdb_theme_core' );
-    $columns['taxonomy-publication_group'] = __( 'Publikationsgruppe', 'mdb_theme_core' );
-    $columns['year']                       = __( 'Veröffentlichung', 'mdb_theme_core' );
-    $columns['citation']                   = __( 'Zitate', 'mdb_theme_core' );
+    $columns['cover']                      = __( 'Cover', 'mdb_theme_core' );
+    $columns['title']                      = __( 'Title', 'mdb_theme_core' );
+    $columns['taxonomy-publication_group'] = __( 'Publication group', 'mdb_theme_core' );
+    $columns['year']                       = __( 'Published', 'mdb_theme_core' );
+    $columns['citation']                   = __( 'Citations', 'mdb_theme_core' );
 
     return $columns;
 }
@@ -128,7 +128,7 @@ function publication__manage_posts_custom_column( $column_name, $post_id )
                     '<a href="/wp-admin/post.php?post=%1$s&action=edit" title="%3$s">%2$s</a>',
                     $post_id,
                     get_the_post_thumbnail( $post_id, array( 100, 0 ) ),
-                    __( 'Bearbeiten', 'mdb_theme_core' )
+                    __( 'Edit', 'mdb_theme_core' )
                 );
             endif;
         break;
