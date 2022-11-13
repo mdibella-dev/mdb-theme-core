@@ -55,8 +55,7 @@ register_deactivation_hook( __FILE__, 'mdb_theme_core\plugin_deactivation' );
 function plugin_init()
 {
     // Load text domain
-    // The in the Codex described method to determine the path of the languages folder fails because we are in a subfolfer (/includes).
-    load_plugin_textdomain( 'mdb-theme-core', false, '/mdb-theme-core/languages' );
+    load_plugin_textdomain( 'mdb-theme-core', false, dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages' );
 }
 
 add_action( 'init', 'mdb_theme_core\plugin_init' );
