@@ -18,6 +18,27 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
+ * Checks if the id belongs to a publication.
+ *
+ * @since   1.1.0
+ * @param   int    $id    The ID of the publication.
+ * @return  bool   The outcome of the check (true/false).
+ */
+
+function publication__is_publication( $id )
+{
+    $result = get_post_type( $id );
+
+    if( 'publication' == $result ) :
+        return true;
+    endif;
+
+    return false;
+}
+
+
+
+/**
  * Returns a record of publication data.
  *
  * @since   1.1.0

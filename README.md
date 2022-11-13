@@ -14,6 +14,8 @@ __Tested up to:__ WordPress 6.1
 
 
 ### main
+* Added: publication__is_publication().
+
 
 
 ### 1.2.0
