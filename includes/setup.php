@@ -40,6 +40,7 @@ register_activation_hook( __FILE__, 'mdb_theme_core\plugin_activation' );
 function plugin_deactivation()
 {
     // Do something!
+    // unregister_post_type()
 }
 
 register_deactivation_hook( __FILE__, 'mdb_theme_core\plugin_deactivation' );
@@ -58,4 +59,4 @@ function plugin_init()
     load_plugin_textdomain( 'mdb-theme-core', false, dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages' );
 }
 
-add_action( 'init', 'mdb_theme_core\plugin_init' );
+add_action( 'init', 'mdb_theme_core\plugin_init', 9 );
