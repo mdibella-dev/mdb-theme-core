@@ -463,11 +463,11 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
             if( ! empty( $data['editors'] ) ) :
                 $editors .= publication__normalize_names( $data['editors'] );
             else :
-                $editors .= __( 'without publisher', 'mdb-theme-core' );
+                $editors .= __( 'without editor', 'mdb-theme-core' );
             endif;
 
             $output[1] .= sprintf(
-                __( ' In: %1$s [Pub.]: %2$s', 'mdb-theme-core' ),
+                __( ' In: %1$s [ed.]: %2$s', 'mdb-theme-core' ),
                 $editors,
                 publication__normalize_title( $data['booktitle'], $data['booksubtitle'] )
             );
@@ -479,13 +479,13 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
 
             if( ! empty( $data['issue'] ) ) :
                 $output[1] .= sprintf(
-                    __( ' Volume %1$s of the series "%2$s".', 'mdb-theme-core' ),
+                    __( ' Volume %1$s of the "%2$s" book series.', 'mdb-theme-core' ),
                     $data['issue'],
                     $data['edition'],
                 );
             else :
                 $output[1] .= sprintf(
-                    __( ' Of the series "%1$s".', 'mdb-theme-core' ),
+                    __( ' From the "%1$s" book series.', 'mdb-theme-core' ),
                     $data['edition'],
                 );
             endif;
