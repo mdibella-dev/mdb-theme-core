@@ -59,4 +59,4 @@ function plugin_init()
     load_plugin_textdomain( 'mdb-theme-core', false, '/mdb-theme-core/languages' );
 }
 
-add_action( 'init', 'mdb_theme_blocks_two\plugin_init' );
+add_action( 'init', 'mdb_theme_core\plugin_init' );
