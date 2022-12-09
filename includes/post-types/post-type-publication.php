@@ -2,9 +2,9 @@
 /**
  * Custom post type to manage publications.
  *
- * @author   Marco Di Bella
- * @package  mdb-theme-core
- * @uses     ACF
+ * @author  Marco Di Bella
+ * @package mdb-theme-core
+ * @uses    ACF
  */
 
 
@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Register the custom post type.
  *
- * @since  1.0.0
+ * @since 1.0.0
  */
 
 function publication__register()
@@ -87,9 +87,9 @@ add_action( 'init', 'mdb_theme_core\publication__register' );
 /**
  * Determines the columns of the publication list (backend).
  *
- * @since   1.0.0
- * @param   array   $default     The defaults for columns.
- * @return  array   An associative array describing the columns to use.
+ * @since  1.0.0
+ * @param  array $default    The defaults for columns.
+ * @return array             An associative array describing the columns to use.
  */
 
 function publication__manage_posts_columns( $default )
@@ -111,9 +111,9 @@ add_filter( 'manage_publication_posts_columns', 'mdb_theme_core\publication__man
 /**
  * Generates the output of the columns.
  *
- * @since  1.0.0
- * @param  string $column_name    Designation of the column to be output.
- * @param  int    $post_id        ID of the contribution (aka record) to be output.
+ * @since 1.0.0
+ * @param string $column_name    Designation of the column to be output.
+ * @param int    $post_id        ID of the contribution (aka record) to be output.
  */
 
 function publication__manage_posts_custom_column( $column_name, $post_id )
@@ -155,9 +155,9 @@ add_action( 'manage_publication_posts_custom_column', 'mdb_theme_core\publicatio
 /**
  * Registers sortable columns (by assigning appropriate orderby parameters).
  *
- * @since   1.0.0
- * @param   array  $columns    The columns.
- * @return  array  An associative array.
+ * @since  1.0.0
+ * @param  array $columns    The columns.
+ * @return array             An associative array.
  */
 
 function publication__manage_sortable_columns( $columns )
@@ -174,8 +174,8 @@ add_filter( 'manage_edit-publication_sortable_columns', 'mdb_theme_core\publicat
 /**
  * Produces a sorted output.
  *
- * @since  1.0.0
- * @param  WP_Query  $query    A data object of the last query made.
+ * @since 1.0.0
+ * @param WP_Query $query    A data object of the last query made.
  */
 
 function publication__pre_get_posts( $query )

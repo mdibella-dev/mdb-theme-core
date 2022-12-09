@@ -2,8 +2,8 @@
 /**
  * Custom taxonomy to group publikation-posts.
  *
- * @author   Marco Di Bella
- * @package  mdb-theme-core
+ * @author  Marco Di Bella
+ * @package mdb-theme-core
  */
 
 
@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Register the custom taxonomy.
  *
- * @since  1.0.0
+ * @since 1.0.0
  */
 
 function publication_group__register()
