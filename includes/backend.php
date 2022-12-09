@@ -27,7 +27,7 @@ function admin_enqueue_scripts()
     wp_enqueue_style(
         'mdb-theme-core',
         plugins_url( 'assets/build/css/backend.min.css', dirname( __FILE__ ) ),
-        $plugin_version
+        PLUGIN_VERSION
     );
 }
 
