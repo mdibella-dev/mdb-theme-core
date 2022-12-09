@@ -10,30 +10,30 @@ __Requires at least:__ WordPress 5.3
 __Tested up to:__ WordPress 6.1  
 
 ## Changelog
-*Added/Changed/Fixed/Removed*
+*New/Improve/Bugfix*
 
 
 ### main
-* Added: publication__is_publication().
+* New: publication__is_publication().
 
 
 
 ### 1.2.0
-* Added: New language files (DE).
-* Changed: Basic language is EN now.
+* New: German language files.
+* Improve: Basic language is EN now.
 
 
 ### 1.1.0
-* Added: Plugin version variable.
-* Added: Hint to prevent direct access code.
-* Added: backend.php
-* Added: Namespace mdb_theme_core.
-* Changed: Assets folder structure.
-* Changed: Documentation header in php-files.
-* Changed: Move content of acf.php into post-type-lecture.php.
-* Fixed: text domain in publication.php.
-* Removed: Useless code.
-* Removed: Function prefix mdb_theme_core_ (in favor of namespace).
+* New: Plugin version variable.
+* New: Hint to prevent direct access code.
+* New: backend.php
+* New: Namespace mdb_theme_core.
+* Improve: Add Assets folder structure.
+* Improve: Documentation header in php-files.
+* Improve: Move content of acf.php into post-type-lecture.php.
+* Improve: Remove useless code.
+* Improve: Function prefix mdb_theme_core_ (in favor of namespace).
+* Bugfix: Text domain in publication.php.
 
 
 ### 1.0.0

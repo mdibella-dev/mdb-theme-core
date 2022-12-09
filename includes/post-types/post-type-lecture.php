@@ -26,22 +26,22 @@ defined( 'ABSPATH' ) or exit;
 function lecture__register()
 {
     $labels = [
-        'name'                  => __( 'Lectures', 'mdb-theme-core' ),
-        'singular_name'         => __( 'Lecture', 'mdb-theme-core' ),
-        'menu_name'             => __( 'Lectures', 'mdb-theme-core' ),
-        'all_items'             => __( 'All lectures', 'mdb-theme-core' ),
-        'add_new'               => __( 'Add', 'mdb-theme-core' ),
-        'add_new_item'          => __( 'Add new lecture', 'mdb-theme-core' ),
-        'edit_item'             => __( 'Edit lecture', 'mdb-theme-core' ),
-        'new_item'              => __( 'New lecture', 'mdb-theme-core' ),
-        'view_item'             => __( 'View lecture', 'mdb-theme-core' ),
-        'search_items'          => __( 'Search lectures', 'mdb-theme-core' ),
-        'not_found'             => __( 'No lecture found', 'mdb-theme-core' ),
-        'not_found_in_trash'    => __( 'No lecture found in trash', 'mdb-theme-core' ),
+        'name'                  => __( 'Lectures', PLUGIN_DOMAIN ),
+        'singular_name'         => __( 'Lecture', PLUGIN_DOMAIN ),
+        'menu_name'             => __( 'Lectures', PLUGIN_DOMAIN ),
+        'all_items'             => __( 'All lectures', PLUGIN_DOMAIN ),
+        'add_new'               => __( 'Add', PLUGIN_DOMAIN ),
+        'add_new_item'          => __( 'Add new lecture', PLUGIN_DOMAIN ),
+        'edit_item'             => __( 'Edit lecture', PLUGIN_DOMAIN ),
+        'new_item'              => __( 'New lecture', PLUGIN_DOMAIN ),
+        'view_item'             => __( 'View lecture', PLUGIN_DOMAIN ),
+        'search_items'          => __( 'Search lectures', PLUGIN_DOMAIN ),
+        'not_found'             => __( 'No lecture found', PLUGIN_DOMAIN ),
+        'not_found_in_trash'    => __( 'No lecture found in trash', PLUGIN_DOMAIN ),
     ];
 
     $args = [
-        'label'                 => __( 'Lectures', 'mdb-theme-core' ),
+        'label'                 => __( 'Lectures', PLUGIN_DOMAIN ),
         'labels'                => $labels,
         'description'           => '',
         'public'                => true,
@@ -89,10 +89,10 @@ add_action( 'init', 'mdb_theme_core\lecture__register' );
 function lecture__manage_posts_columns( $default )
 {
     $columns['cb']                    = $default['cb'];
-    $columns['title']                 = __( 'Title', 'mdb-theme-core' );
-    $columns['speech-event']          = __( 'Lecture', 'mdb-theme-core' );
-    $columns['speech-event-date']     = __( 'Date', 'mdb-theme-core' );
-    $columns['speech-event-location'] = __( 'Event', 'mdb-theme-core' );
+    $columns['title']                 = __( 'Title', PLUGIN_DOMAIN );
+    $columns['speech-event']          = __( 'Lecture', PLUGIN_DOMAIN );
+    $columns['speech-event-date']     = __( 'Date', PLUGIN_DOMAIN );
+    $columns['speech-event-location'] = __( 'Event', PLUGIN_DOMAIN );
 
     return $columns;
 }

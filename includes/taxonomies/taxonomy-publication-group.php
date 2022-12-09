@@ -25,20 +25,20 @@ defined( 'ABSPATH' ) or exit;
 function publication_group__register()
 {
     $labels = [
-        'name'                  => __( 'Publication groups', 'mdb-theme-core' ),
-        'singular_name'         => __( 'Publication group', 'mdb-theme-core' ),
-        'menu_name'             => __( 'Publication groups', 'mdb-theme-core' ),
-        'all_items'             => __( 'All publication groups', 'mdb-theme-core' ),
-        'edit_item'             => __( 'Edit publication group', 'mdb-theme-core' ),
-        'view_item'             => __( 'View publication group', 'mdb-theme-core' ),
-        'add_new_item'          => __( 'New publication group', 'mdb-theme-core' ),
-        'search_items'          => __( 'Search publication groups', 'mdb-theme-core' ),
-        'choose_from_most_used' => __( 'Popular publication groups', 'mdb-theme-core' ),
-        'not_found'             => __( 'No publication group found', 'mdb-theme-core' ),
+        'name'                  => __( 'Publication groups', PLUGIN_DOMAIN ),
+        'singular_name'         => __( 'Publication group', PLUGIN_DOMAIN ),
+        'menu_name'             => __( 'Publication groups', PLUGIN_DOMAIN ),
+        'all_items'             => __( 'All publication groups', PLUGIN_DOMAIN ),
+        'edit_item'             => __( 'Edit publication group', PLUGIN_DOMAIN ),
+        'view_item'             => __( 'View publication group', PLUGIN_DOMAIN ),
+        'add_new_item'          => __( 'New publication group', PLUGIN_DOMAIN ),
+        'search_items'          => __( 'Search publication groups', PLUGIN_DOMAIN ),
+        'choose_from_most_used' => __( 'Popular publication groups', PLUGIN_DOMAIN ),
+        'not_found'             => __( 'No publication group found', PLUGIN_DOMAIN ),
     ];
 
     $args = [
-        'label'                 => __( 'Publication group', 'mdb-theme-core' ),
+        'label'                 => __( 'Publication group', PLUGIN_DOMAIN ),
         'labels'                => $labels,
         'public'                => true,
         'publicly_queryable'    => true,

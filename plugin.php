@@ -24,8 +24,8 @@ defined( 'ABSPATH' ) or exit;
 
 /** Variables and definitions **/
 
-$plugin_path    = plugin_dir_path( __FILE__ );
-$plugin_version = '1.2.1';
+const PLUGIN_VERSION = '1.2.1';
+const PLUGIN_DOMAIN  = 'mdb-theme-core';
 
 define( 'MDB_BUILD_STRING', 1 );
 define( 'MDB_BUILD_ARRAY', 2 );
@@ -34,11 +34,13 @@ define( 'MDB_BUILD_ARRAY', 2 );
 
 /** Include function library */
 
-require_once( $plugin_path . 'includes/post-types/post-type-publication.php' );
-require_once( $plugin_path . 'includes/post-types/post-type-lecture.php' );
-require_once( $plugin_path . 'includes/taxonomies/taxonomy-publication-group.php' );
-require_once( $plugin_path . 'includes/taxonomies/taxonomy-publication-keyword.php' );
-require_once( $plugin_path . 'includes/api/publication.php' );
-require_once( $plugin_path . 'includes/block-editor.php' );
-require_once( $plugin_path . 'includes/backend.php' );
-require_once( $plugin_path . 'includes/setup.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'includes/post-types/post-type-publication.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'includes/post-types/post-type-lecture.php' );
+
+require_once( plugin_dir_path( __FILE__ ) . 'includes/taxonomies/taxonomy-publication-group.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'includes/taxonomies/taxonomy-publication-keyword.php' );
+
+require_once( plugin_dir_path( __FILE__ ) . 'includes/api/publication.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'includes/block-editor.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'includes/backend.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'includes/setup.php' );

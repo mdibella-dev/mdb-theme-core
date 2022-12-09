@@ -413,7 +413,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
     if( ! empty( $data['authors'] ) ) :
         $output[0] .= publication__normalize_names( $data['authors'] );
     else :
-        $output[0] .= __( 'without author', 'mdb-theme-core' );
+        $output[0] .= __( 'without author', PLUGIN_DOMAIN );
     endif;
 
 
@@ -436,7 +436,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
             $title = '"' . $title . '"';
         endif;
     else:
-        $title = __( 'without a title', 'mdb-theme-core' );
+        $title = __( 'without a title', PLUGIN_DOMAIN );
     endif;
 
     $output[0] .= $title;
@@ -458,7 +458,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
     // Is it an article in a magazine or in a newspaper?
     if( ( 'ARTICLE' === $type[$data['type']] ) ) :
 
-        $output[1] .= __(' In: ', 'mdb-theme-core' );
+        $output[1] .= __(' In: ', PLUGIN_DOMAIN );
 
         if( ! empty( $data['journalabbreviation'] ) ) :
             $output[1] .= $data['journalabbreviation'] . ' ';
@@ -484,11 +484,11 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
             if( ! empty( $data['editors'] ) ) :
                 $editors .= publication__normalize_names( $data['editors'] );
             else :
-                $editors .= __( 'without editor', 'mdb-theme-core' );
+                $editors .= __( 'without editor', PLUGIN_DOMAIN );
             endif;
 
             $output[1] .= sprintf(
-                __( ' In: %1$s [ed.]: %2$s', 'mdb-theme-core' ),
+                __( ' In: %1$s [ed.]: %2$s', PLUGIN_DOMAIN ),
                 $editors,
                 publication__normalize_title( $data['booktitle'], $data['booksubtitle'] )
             );
@@ -500,13 +500,13 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
 
             if( ! empty( $data['issue'] ) ) :
                 $output[1] .= sprintf(
-                    __( ' Volume %1$s of the "%2$s" book series.', 'mdb-theme-core' ),
+                    __( ' Volume %1$s of the "%2$s" book series.', PLUGIN_DOMAIN ),
                     $data['issue'],
                     $data['edition'],
                 );
             else :
                 $output[1] .= sprintf(
-                    __( ' From the "%1$s" book series.', 'mdb-theme-core' ),
+                    __( ' From the "%1$s" book series.', PLUGIN_DOMAIN ),
                     $data['edition'],
                 );
             endif;
