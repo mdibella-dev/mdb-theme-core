@@ -27,8 +27,8 @@ defined( 'ABSPATH' ) or exit;
 const PLUGIN_VERSION = '1.3.0';
 const PLUGIN_DOMAIN  = 'mdb-theme-core';
 
-const MDB_BUILD_STRING = 1;
-const MDB_BUILD_ARRAY  = 2;
+define( 'MDB_BUILD_STRING', 1 );            // need global scope here
+define( 'MDB_BUILD_ARRAY', 2 );             // need global scope here
 
 
 
