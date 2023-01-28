@@ -26,6 +26,8 @@ defined( 'ABSPATH' ) or exit;
 
 const PLUGIN_VERSION = '1.3.0';
 const PLUGIN_DOMAIN  = 'mdb-theme-core';
+const PLUGIN_DIR     = plugin_dir_path( __FILE__ );
+const PLUGIN_URL     = plugin_dir_url( __FILE__ );
 
 define( 'MDB_BUILD_STRING', 1 );            // need global scope here
 define( 'MDB_BUILD_ARRAY', 2 );             // need global scope here
@@ -34,13 +36,13 @@ define( 'MDB_BUILD_ARRAY', 2 );             // need global scope here
 
 /** Include function library */
 
-require_once( plugin_dir_path( __FILE__ ) . 'includes/post-types/post-type-publication.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/post-types/post-type-lecture.php' );
+require_once( PLUGIN_DIR . 'includes/post-types/post-type-publication.php' );
+require_once( PLUGIN_DIR . 'includes/post-types/post-type-lecture.php' );
 
-require_once( plugin_dir_path( __FILE__ ) . 'includes/taxonomies/taxonomy-publication-group.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/taxonomies/taxonomy-publication-keyword.php' );
+require_once( PLUGIN_DIR . 'includes/taxonomies/taxonomy-publication-group.php' );
+require_once( PLUGIN_DIR . 'includes/taxonomies/taxonomy-publication-keyword.php' );
 
-require_once( plugin_dir_path( __FILE__ ) . 'includes/api/publication.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/block-editor.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/backend.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'includes/setup.php' );
+require_once( PLUGIN_DIR . 'includes/api/publication.php' );
+require_once( PLUGIN_DIR . 'includes/block-editor.php' );
+require_once( PLUGIN_DIR . 'includes/backend.php' );
+require_once( PLUGIN_DIR . 'includes/setup.php' );
