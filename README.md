@@ -5,15 +5,16 @@ __Contributors:__ mdibella-dev
 
 __Tags:__  custom-post-types, advanced-custom-fields, api
 
-__Requires at least:__ WordPress 5.3  
+__Requires at least:__ WordPress 5.3
 
-__Tested up to:__ WordPress 6.1  
+__Tested up to:__ WordPress 6.1
 
 ## Changelog
 *New/Improve/Bugfix*
 
 
 ### main
+* Bugfix: Namespace issues.
 
 
 ### 1.3.0
