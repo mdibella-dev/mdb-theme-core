@@ -19,8 +19,8 @@ __Tested up to:__ WordPress 6.1
 
 ### 1.3.0
 * New: publication__is_publication().
-* New: Text domain constant.
 * Improve: Documentation style.
+* Improve: Replace text domain constant with text domain string.
 
 
 ### 1.2.0

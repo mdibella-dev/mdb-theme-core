@@ -26,28 +26,28 @@ defined( 'ABSPATH' ) or exit;
 function publication__register()
 {
     $labels = [
-        'name'                  => __( 'Publications', PLUGIN_DOMAIN ),
-        'singular_name'         => __( 'Publication', PLUGIN_DOMAIN ),
-        'menu_name'             => __( 'Publications', PLUGIN_DOMAIN ),
-        'all_items'             => __( 'All publications', PLUGIN_DOMAIN ),
-        'add_new'               => __( 'Add publication', PLUGIN_DOMAIN ),
-        'add_new_item'          => __( 'Add new publication', PLUGIN_DOMAIN ),
-        'edit_item'             => __( 'Edit publication', PLUGIN_DOMAIN ),
-        'new_item'              => __( 'New publication', PLUGIN_DOMAIN ),
-        'view_item'             => __( 'View publication', PLUGIN_DOMAIN ),
-        'search_items'          => __( 'Search publications', PLUGIN_DOMAIN ),
-        'not_found'             => __( 'No publication found', PLUGIN_DOMAIN ),
-        'not_found_in_trash'    => __( 'No publication found in trash', PLUGIN_DOMAIN ),
-        'featured_image'        => __( 'Cover', PLUGIN_DOMAIN ),
-        'set_featured_image'    => __( 'Set cover', PLUGIN_DOMAIN ),
-        'remove_featured_image' => __( 'Remove cover', PLUGIN_DOMAIN ),
-        'use_featured_image'    => __( 'Use as cover', PLUGIN_DOMAIN ),
-        'item_published'        => __( 'Publication published', PLUGIN_DOMAIN ),
-        'item_updated'          => __( 'Publication updated', PLUGIN_DOMAIN ),
+        'name'                  => __( 'Publications', 'mdb-theme-core' ),
+        'singular_name'         => __( 'Publication', 'mdb-theme-core' ),
+        'menu_name'             => __( 'Publications', 'mdb-theme-core' ),
+        'all_items'             => __( 'All publications', 'mdb-theme-core' ),
+        'add_new'               => __( 'Add publication', 'mdb-theme-core' ),
+        'add_new_item'          => __( 'Add new publication', 'mdb-theme-core' ),
+        'edit_item'             => __( 'Edit publication', 'mdb-theme-core' ),
+        'new_item'              => __( 'New publication', 'mdb-theme-core' ),
+        'view_item'             => __( 'View publication', 'mdb-theme-core' ),
+        'search_items'          => __( 'Search publications', 'mdb-theme-core' ),
+        'not_found'             => __( 'No publication found', 'mdb-theme-core' ),
+        'not_found_in_trash'    => __( 'No publication found in trash', 'mdb-theme-core' ),
+        'featured_image'        => __( 'Cover', 'mdb-theme-core' ),
+        'set_featured_image'    => __( 'Set cover', 'mdb-theme-core' ),
+        'remove_featured_image' => __( 'Remove cover', 'mdb-theme-core' ),
+        'use_featured_image'    => __( 'Use as cover', 'mdb-theme-core' ),
+        'item_published'        => __( 'Publication published', 'mdb-theme-core' ),
+        'item_updated'          => __( 'Publication updated', 'mdb-theme-core' ),
     ];
 
     $args = [
-        'label'                 => __( 'Publications', PLUGIN_DOMAIN ),
+        'label'                 => __( 'Publications', 'mdb-theme-core' ),
         'labels'                => $labels,
         'description'           => 'All forms of publications: articles in specialist journals, books, etc.',
         'public'                => true,
@@ -95,11 +95,11 @@ add_action( 'init', 'mdb_theme_core\publication__register' );
 function publication__manage_posts_columns( $default )
 {
     $columns['cb']                         = $default['cb'];
-    $columns['cover']                      = __( 'Cover', PLUGIN_DOMAIN );
-    $columns['title']                      = __( 'Title', PLUGIN_DOMAIN );
-    $columns['taxonomy-publication_group'] = __( 'Publication group', PLUGIN_DOMAIN );
-    $columns['year']                       = __( 'Published', PLUGIN_DOMAIN );
-    $columns['citation']                   = __( 'Citations', PLUGIN_DOMAIN );
+    $columns['cover']                      = __( 'Cover', 'mdb-theme-core' );
+    $columns['title']                      = __( 'Title', 'mdb-theme-core' );
+    $columns['taxonomy-publication_group'] = __( 'Publication group', 'mdb-theme-core' );
+    $columns['year']                       = __( 'Published', 'mdb-theme-core' );
+    $columns['citation']                   = __( 'Citations', 'mdb-theme-core' );
 
     return $columns;
 }
@@ -128,7 +128,7 @@ function publication__manage_posts_custom_column( $column_name, $post_id )
                     '<a href="/wp-admin/post.php?post=%1$s&action=edit" title="%3$s">%2$s</a>',
                     $post_id,
                     get_the_post_thumbnail( $post_id, array( 100, 0 ) ),
-                    __( 'Edit', PLUGIN_DOMAIN )
+                    __( 'Edit', 'mdb-theme-core' )
                 );
             endif;
         break;
