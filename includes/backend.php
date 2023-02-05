@@ -2,8 +2,8 @@
 /**
  * Functions to handle the backend.
  *
- * @author   Marco Di Bella
- * @package  mdb-theme-core
+ * @author  Marco Di Bella
+ * @package mdb-theme-core
  */
 
 
@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) or exit;
 /**
  * Load the backend scripts and styles.
  *
- * @since  1.0.0
+ * @since 1.0.0
  */
 
 function admin_enqueue_scripts()

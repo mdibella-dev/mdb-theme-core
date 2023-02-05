@@ -17,9 +17,26 @@ defined( 'ABSPATH' ) or exit;
 
 
 /**
+ * The init function for the plugin.
+ *
+ * @since 1.0.0
+ */
+
+function plugin_init()
+{
+    // Load text domain
+    load_plugin_textdomain( 'mdb-theme-core', false, plugin_basename( PLUGIN_DIR ) . '/languages' );
+}
+
+add_action( 'init', 'mdb_theme_core\plugin_init', 9 );
+
+
+
+
+/**
  * The activation function for the plugin.
  *
- * @since  1.0.0
+ * @since 1.0.0
  */
 
 function plugin_activation()
@@ -34,7 +51,7 @@ register_activation_hook( __FILE__, 'mdb_theme_core\plugin_activation' );
 /**
  * The deactivation function for the plugin.
  *
- * @since  1.0.0
+ * @since 1.0.0
  */
 
 function plugin_deactivation()
@@ -48,15 +65,16 @@ register_deactivation_hook( __FILE__, 'mdb_theme_core\plugin_deactivation' );
 
 
 /**
- * The init function for the plugin.
+ * The uninstall function for the plugin.
  *
  * @since 1.0.0
  */
 
-function plugin_init()
+function plugin_uninstall()
 {
-    // Load text domain
-    load_plugin_textdomain( 'mdb-theme-core', false, plugin_basename( PLUGIN_DIR ) . '/languages' );
+    // Do something!
+    // Delete options!
+    // Delete custom tables!
 }
 
-add_action( 'init', 'mdb_theme_core\plugin_init', 9 );
+register_uninstall_hook( __FILE__, 'ph_PLUGIN_NAMESPACE\plugin_uninstall' );

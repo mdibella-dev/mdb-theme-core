@@ -81,9 +81,11 @@ add_action( 'init', 'mdb_theme_core\lecture__register' );
 /**
  * Determines the columns of the lecture list (backend).
  *
- * @since  1.0.0
- * @param  array $default    The defaults for columns.
- * @return array             An associative array describing the columns to use.
+ * @since 1.0.0
+ *
+ * @param array $default The defaults for columns.
+ *
+ * @return array An associative array describing the columns to use.
  */
 
 function lecture__manage_posts_columns( $default )
@@ -105,8 +107,9 @@ add_filter( 'manage_lecture_posts_columns', 'mdb_theme_core\lecture__manage_post
  * Generates the output of the columns.
  *
  * @since 1.0.0
- * @param string $column_name    Designation of the column to be output.
- * @param int    $post_id        ID of the contribution (aka record) to be output.
+ *
+ * @param string $column_name Designation of the column to be output.
+ * @param int    $post_id     ID of the contribution (aka record) to be output.
  */
 
 function lecture__manage_posts_custom_column( $column_name, $post_id )
@@ -137,9 +140,11 @@ add_action( 'manage_lecture_posts_custom_column', 'mdb_theme_core\lecture__manag
 /**
  * Registers sortable columns (by assigning appropriate orderby parameters).
  *
- * @since  1.0.0
- * @param  array $columns   The columns.
- * @return array            An associative array.
+ * @since 1.0.0
+ *
+ * @param array $columns The columns.
+ *
+ * @return array An associative array.
  */
 
 function lecture__manage_sortable_columns( $columns )
@@ -158,7 +163,8 @@ add_filter( 'manage_edit-lecture_sortable_columns', 'mdb_theme_core\lecture__man
  * Produces a sorted output.
  *
  * @since 1.0.0
- * @param WP_Query $query    A data object of the last query made.
+ *
+ * @param WP_Query $query A data object of the last query made.
  */
 
 function lecture__pre_get_posts( $query )
@@ -196,8 +202,9 @@ add_action( 'pre_get_posts', 'mdb_theme_core\lecture__pre_get_posts', 1 );
  * - collapsing flexible fields by default.
  *
  * @since 1.0.0
- * @see   http://www.advancedcustomfields.com/resources/moving-wp-elements-content-editor-within-acf-fields/
- * @see   https://support.advancedcustomfields.com/forums/topic/issue-with-closing-flexible-fields-by-default/
+ *
+ * @see http://www.advancedcustomfields.com/resources/moving-wp-elements-content-editor-within-acf-fields/
+ * @see https://support.advancedcustomfields.com/forums/topic/issue-with-closing-flexible-fields-by-default/
  */
 
 function lecture__admin_head()
