@@ -11,10 +11,11 @@ __Tested up to:__ WordPress 6.1
 
 
 ## Changelog
-*New/Improve/Bugfix*
+*New / Improve / Bugfix*
 
 
 ### main
+* Improve: Include post-types, taxonomies and core files package-wise via index.php.
 * Improve: Replace text domain constant with text domain string.
 * Bugfix: Namespace issues.
 

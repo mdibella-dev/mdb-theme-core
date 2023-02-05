@@ -35,13 +35,10 @@ define( 'MDB_BUILD_ARRAY', 2 );             // need global scope here
 
 /** Include function library */
 
-require_once( PLUGIN_DIR . 'includes/post-types/post-type-publication.php' );
-require_once( PLUGIN_DIR . 'includes/post-types/post-type-lecture.php' );
+require_once( PLUGIN_DIR . 'includes/post-types/index.php' );
+require_once( PLUGIN_DIR . 'includes/taxonomies/index.php' );
+require_once( PLUGIN_DIR . 'includes/core/index.php' );
 
-require_once( PLUGIN_DIR . 'includes/taxonomies/taxonomy-publication-group.php' );
-require_once( PLUGIN_DIR . 'includes/taxonomies/taxonomy-publication-keyword.php' );
-
-require_once( PLUGIN_DIR . 'includes/api/publication.php' );
 require_once( PLUGIN_DIR . 'includes/block-editor.php' );
 require_once( PLUGIN_DIR . 'includes/backend.php' );
 require_once( PLUGIN_DIR . 'includes/setup.php' );
