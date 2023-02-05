@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name:     Marco Di Bella - Theme Core Functions
+ * Plugin Name:     Marco Di Bella &mdash; Core functions for mdb-theme-fse
  * Plugin URI:      https://github.com/mdibella-dev/mdb-theme-core
  * Description:     Custom post types and core functions for Marco Di Bella's theme (mdb-theme-fse).
  * Author:          Marco Di Bella
  * Author URI:      https://www.marcodibella.de
- * Version:         1.3.0
+ * Version:         1.3.1
  * Text Domain:     mdb-theme-core
  * Domain Path:     /languages
  *
@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) or exit;
 
 /** Variables and definitions **/
 
-define( __NAMESPACE__ . '\PLUGIN_VERSION', '1.3.0' );
+define( __NAMESPACE__ . '\PLUGIN_VERSION', '1.3.1' );
 define( __NAMESPACE__ . '\PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( __NAMESPACE__ . '\PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 

@@ -1,4 +1,4 @@
-# mdb-theme-core
+# Marco Di Bella &mdash; Core functions for mdb-theme-fse
 Custom post types and core functions for Marco Di Bella's theme (mdb-theme-fse).
 
 __Contributors:__ mdibella-dev
@@ -15,6 +15,11 @@ __Tested up to:__ WordPress 6.1
 
 
 ### main
+
+
+### 1.3.1
+* New: Add .pot file.
+* Improve: File and folder structure.
 * Improve: Documentation style.
 * Improve: Include post-types, taxonomies and core files package-wise via index.php.
 * Improve: Replace text domain constant with text domain string.
