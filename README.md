@@ -15,6 +15,7 @@ __Tested up to:__ WordPress 6.1
 
 
 ### main
+* Improve: Documentation style.
 * Improve: Include post-types, taxonomies and core files package-wise via index.php.
 * Improve: Replace text domain constant with text domain string.
 * Bugfix: Namespace issues.
