@@ -1,8 +1,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Marco Di Bella &mdash; Core functions for mdb-theme-fse\n"
-"POT-Creation-Date: 2023-02-05 11:31+0100\n"
+"Project-Id-Version: Marco Di Bella &mdash; Core functions for mdb-theme-"
+"fse\n"
+"POT-Creation-Date: 2023-02-05 11:52+0100\n"
 "PO-Revision-Date: 2023-02-05 11:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -244,7 +245,7 @@ msgid "Keyword"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Marco Di Bella &mdash; Core functions for mdb-theme-fse"
+msgid "Marco Di Bella &mdash; Core Functions (mdb-theme-fse)"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

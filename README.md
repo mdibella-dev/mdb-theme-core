@@ -1,4 +1,4 @@
-# Marco Di Bella &mdash; Core functions for mdb-theme-fse
+# Marco Di Bella &mdash; Core Functions
 Custom post types and core functions for Marco Di Bella's theme (mdb-theme-fse).
 
 __Contributors:__ mdibella-dev
