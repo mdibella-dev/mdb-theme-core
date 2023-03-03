@@ -2,8 +2,8 @@
 /**
  * Functions to activate, initiate and deactivate the plugin.
  *
- * @author   Marco Di Bella
- * @package  mdb-theme-core
+ * @author  Marco Di Bella
+ * @package mdb-theme-core
  */
 
 

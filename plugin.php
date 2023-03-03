@@ -9,8 +9,8 @@
  * Text Domain:     mdb-theme-core
  * Domain Path:     /languages
  *
- * @author   Marco Di Bella
- * @package  mdb-theme-core
+ * @author  Marco Di Bella
+ * @package mdb-theme-core
  */
 
 namespace mdb_theme_core;
