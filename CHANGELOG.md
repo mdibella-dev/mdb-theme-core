@@ -14,7 +14,6 @@ Released: 05-02-2023
 * Improve: Replace text domain constant with text domain string
 * Bugfix: Namespace issues
 
-<br>
 
 ### 1.3.0
 Released: 09-12-2022
@@ -23,7 +22,6 @@ Released: 09-12-2022
 * New: Text domain constant
 * Improve: Documentation style
 
-<br>
 
 ### 1.2.0
 Released: 12-11-2022
@@ -31,8 +29,6 @@ Released: 12-11-2022
 * New: German language files
 * Improve: Basic language is EN now
 
-<br>
-<br>
 
 ### 1.1.0
 Released: 30-10-2022
@@ -48,7 +44,6 @@ Released: 30-10-2022
 * Improve: Function prefix mdb_theme_core_ (in favor of namespace)
 * Bugfix: Text domain in publication.php
 
-<br>
 
 ### 1.0.0
 Released: 09-06-2022
