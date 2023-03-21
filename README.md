@@ -1,4 +1,4 @@
-# Marco Di Bella &mdash; Core Functions
+# Marco Di Bella &mdash; Core Functions / mdb-theme-fse
 Custom post types and core functions for the use in Marco Di Bella's personal WordPress theme ([mdb-theme-fse](https://github.com/mdibella-dev/mdb-theme-fse)).
 
 <br>
