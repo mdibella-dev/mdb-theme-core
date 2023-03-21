@@ -1,54 +1,33 @@
 # Marco Di Bella &mdash; Core Functions
-Custom post types and core functions for Marco Di Bella's theme (mdb-theme-fse).
+Custom post types and core functions for the use in Marco Di Bella's personal WordPress theme ([mdb-theme-fse](https://github.com/mdibella-dev/mdb-theme-fse)).
 
-__Contributors:__ mdibella-dev
+<br>
 
-__Tags:__  custom-post-types, advanced-custom-fields, api
+## Development Info
 
-__Requires at least:__ WordPress 5.3
+### Contributors
+[Marco Di Bella ](https://github.com/mdibella-dev)
 
-__Tested up to:__ WordPress 6.1
+### Tags
+custom-post-types, advanced-custom-fields, api, translation-ready
 
+### Requires at least
+
+* WordPress 6.0
+* ACF 5.0
+
+### Tested up to
+
+* WordPress 6.2 RC2
+
+<br>
 
 ## Changelog
-*New / Improve / Bugfix*
 
+### Latest changes to the main branch
 
-### main
+* New: Extract changelog from README.md
 
+### Previous changes
 
-### 1.3.1
-* New: Add .pot file.
-* Improve: File and folder structure.
-* Improve: Documentation style.
-* Improve: Include post-types, taxonomies and core files package-wise via index.php.
-* Improve: Replace text domain constant with text domain string.
-* Bugfix: Namespace issues.
-
-
-### 1.3.0
-* New: publication__is_publication().
-* New: Text domain constant.
-* Improve: Documentation style.
-
-
-### 1.2.0
-* New: German language files.
-* Improve: Basic language is EN now.
-
-
-### 1.1.0
-* New: Plugin version variable.
-* New: Hint to prevent direct access code.
-* New: backend.php
-* New: Namespace mdb_theme_core.
-* Improve: Add Assets folder structure.
-* Improve: Documentation header in php-files.
-* Improve: Move content of acf.php into post-type-lecture.php.
-* Improve: Remove useless code.
-* Improve: Function prefix mdb_theme_core_ (in favor of namespace).
-* Bugfix: Text domain in publication.php.
-
-
-### 1.0.0
-* Initial commit
+See [CHANGELOG.md](https://github.com/mdibella-dev/mdb-theme-core/blob/main/CHANGELOG.md).
