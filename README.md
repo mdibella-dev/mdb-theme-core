@@ -18,7 +18,7 @@ custom-post-types, advanced-custom-fields, api, translation-ready
 
 ### Tested up to
 
-* WordPress 6.2 RC2
+* WordPress 6.2
 
 <br>
 
