@@ -93,10 +93,10 @@ add_action( 'init', 'mdb_theme_core\lecture__register' );
 function lecture__manage_posts_columns( $default )
 {
     $columns['cb']                    = $default['cb'];
-    $columns['title']                 = __( 'Title', 'mdb-theme-core' );
-    $columns['speech-event']          = __( 'Lecture', 'mdb-theme-core' );
+    $columns['title']                 = __( 'Lecture', 'mdb-theme-core' );
+    $columns['speech-event']          = __( 'Event', 'mdb-theme-core' );
     $columns['speech-event-date']     = __( 'Date', 'mdb-theme-core' );
-    $columns['speech-event-location'] = __( 'Event', 'mdb-theme-core' );
+    $columns['speech-event-location'] = __( 'Location', 'mdb-theme-core' );
 
     return $columns;
 }

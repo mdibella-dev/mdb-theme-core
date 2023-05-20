@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Theme Core Functions\n"
-"POT-Creation-Date: 2023-05-20 16:29+0200\n"
-"PO-Revision-Date: 2023-05-20 16:32+0200\n"
+"POT-Creation-Date: 2023-05-20 16:43+0200\n"
+"PO-Revision-Date: 2023-05-20 16:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -59,7 +59,7 @@ msgid "Lectures"
 msgstr "Vorträge"
 
 #: includes/post-types/post-type-lecture.php:30
-#: includes/post-types/post-type-lecture.php:97
+#: includes/post-types/post-type-lecture.php:96
 msgid "Lecture"
 msgstr "Vortrag"
 
@@ -129,18 +129,17 @@ msgstr "Eintrag veröffentlicht"
 msgid "Item updated"
 msgstr "Eintrag aktualisiert"
 
-#: includes/post-types/post-type-lecture.php:96
-#: includes/post-types/post-type-publication.php:101
-msgid "Title"
-msgstr "Titel"
+#: includes/post-types/post-type-lecture.php:97
+msgid "Event"
+msgstr "Veranstaltung"
 
 #: includes/post-types/post-type-lecture.php:98
 msgid "Date"
 msgstr "Datum"
 
 #: includes/post-types/post-type-lecture.php:99
-msgid "Event"
-msgstr "Veranstaltung"
+msgid "Location"
+msgstr "Ort"
 
 #: includes/post-types/post-type-portfolio.php:29
 #: includes/post-types/post-type-portfolio.php:31
@@ -178,6 +177,10 @@ msgstr "Titelbild entfernen"
 #: includes/post-types/post-type-publication.php:46
 msgid "Use as cover"
 msgstr "Als Titelbild verwenden"
+
+#: includes/post-types/post-type-publication.php:101
+msgid "Title"
+msgstr "Titel"
 
 #: includes/post-types/post-type-publication.php:102
 #: includes/taxonomies/taxonomy-publication-group.php:29

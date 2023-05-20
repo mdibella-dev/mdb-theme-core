@@ -30,6 +30,7 @@ custom-post-types, advanced-custom-fields, api, translation-ready
 * New: Add custom post type 'portfolio'
 * Improve: Unify the string associated with custom post types to simplify translations
 * Improve: German translation
+* Fix: Fix wrongful post column titles
 
 ### Previous changes
 
