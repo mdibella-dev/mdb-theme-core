@@ -27,6 +27,7 @@ custom-post-types, advanced-custom-fields, api, translation-ready
 ### Latest changes to the main branch
 
 * Improve: Unify the icon associated with custom post types
+* Improve: Remove author support from portfolio
 
 ### Previous changes
 
