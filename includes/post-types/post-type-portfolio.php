@@ -28,7 +28,7 @@ function portfolio__register()
     $labels = [
         'name'                  => __( 'Portfolio items', 'mdb-theme-core' ),
         'singular_name'         => __( 'Portfolio item', 'mdb-theme-core' ),
-        'menu_name'             => __( 'Portfolio items', 'mdb-theme-core' ),
+        'menu_name'             => __( 'Portfolio', 'mdb-theme-core' ),
         'all_items'             => __( 'All items', 'mdb-theme-core' ),
         'add_new'               => __( 'Add', 'mdb-theme-core' ),
         'add_new_item'          => __( 'Add new item', 'mdb-theme-core' ),

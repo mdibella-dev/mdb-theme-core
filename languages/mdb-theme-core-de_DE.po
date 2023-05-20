@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Theme Core Functions\n"
-"POT-Creation-Date: 2023-05-20 16:43+0200\n"
-"PO-Revision-Date: 2023-05-20 16:43+0200\n"
+"POT-Creation-Date: 2023-05-20 16:54+0200\n"
+"PO-Revision-Date: 2023-05-20 16:54+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -142,7 +142,6 @@ msgid "Location"
 msgstr "Ort"
 
 #: includes/post-types/post-type-portfolio.php:29
-#: includes/post-types/post-type-portfolio.php:31
 #: includes/post-types/post-type-portfolio.php:46
 msgid "Portfolio items"
 msgstr "Portfolio-Einträge"
@@ -150,6 +149,10 @@ msgstr "Portfolio-Einträge"
 #: includes/post-types/post-type-portfolio.php:30
 msgid "Portfolio item"
 msgstr "Portfolio-Eintrag"
+
+#: includes/post-types/post-type-portfolio.php:31
+msgid "Portfolio"
+msgstr "Portfolio"
 
 #: includes/post-types/post-type-publication.php:29
 #: includes/post-types/post-type-publication.php:31
