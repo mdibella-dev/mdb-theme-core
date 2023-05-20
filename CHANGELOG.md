@@ -4,6 +4,16 @@
 
 <br>
 
+### 1.3.2
+Released: 20-05-2023
+
+* New: Extract changelog from README.md
+* New: Add custom post type 'portfolio'
+* Improve: Unify the string associated with custom post types to simplify translations
+* Improve: German translation
+* Fix: Fix wrongful post column titles
+
+
 ### 1.3.1
 Released: 05-02-2023
 
