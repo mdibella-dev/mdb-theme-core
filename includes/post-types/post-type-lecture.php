@@ -68,7 +68,7 @@ function lecture__register()
         ],
         'query_var'             => true,
         'menu_position'         => 20,
-        'menu_icon'             => 'dashicons-welcome-learn-more',
+        'menu_icon'             => 'dashicons-database',
         'supports'              => ['title'],
         'show_in_graphql'       => false,
     ];

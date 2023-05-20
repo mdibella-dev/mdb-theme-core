@@ -72,7 +72,7 @@ function publication__register()
         ],
         'query_var'             => true,
         'menu_position'         => 20,
-        'menu_icon'             => 'dashicons-media-document',
+        'menu_icon'             => 'dashicons-database',
         'supports'              => [ 'title', 'editor', 'thumbnail', 'custom-fields', 'author' ],
         'show_in_graphql'       => false,
     ];
