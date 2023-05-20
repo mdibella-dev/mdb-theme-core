@@ -29,6 +29,7 @@ custom-post-types, advanced-custom-fields, api, translation-ready
 * New: Extract changelog from README.md
 * New: Add custom post type 'portfolio'
 * Improve: Unify the string associated with custom post types to simplify translations
+* Improve: German translation
 
 ### Previous changes
 
