@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Theme Core Functions\n"
-"POT-Creation-Date: 2023-05-20 16:54+0200\n"
-"PO-Revision-Date: 2023-05-20 16:54+0200\n"
+"POT-Creation-Date: 2023-06-09 15:32+0200\n"
+"PO-Revision-Date: 2023-06-09 15:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: plugin.php\n"
@@ -64,67 +64,56 @@ msgid "Lecture"
 msgstr "Vortrag"
 
 #: includes/post-types/post-type-lecture.php:32
-#: includes/post-types/post-type-portfolio.php:32
 #: includes/post-types/post-type-publication.php:32
 msgid "All items"
 msgstr "Alle Einträge"
 
 #: includes/post-types/post-type-lecture.php:33
-#: includes/post-types/post-type-portfolio.php:33
 #: includes/post-types/post-type-publication.php:33
 msgid "Add"
 msgstr "Eintrag hinzufügen"
 
 #: includes/post-types/post-type-lecture.php:34
-#: includes/post-types/post-type-portfolio.php:34
 #: includes/post-types/post-type-publication.php:34
 msgid "Add new item"
 msgstr "Neuen Eintrag hinzufügen"
 
 #: includes/post-types/post-type-lecture.php:35
-#: includes/post-types/post-type-portfolio.php:35
 #: includes/post-types/post-type-publication.php:35
 msgid "Edit item"
 msgstr "Eintrag bearbeiten"
 
 #: includes/post-types/post-type-lecture.php:36
-#: includes/post-types/post-type-portfolio.php:36
 #: includes/post-types/post-type-publication.php:36
 msgid "New item"
 msgstr "Neuer Eintrag"
 
 #: includes/post-types/post-type-lecture.php:37
-#: includes/post-types/post-type-portfolio.php:37
 #: includes/post-types/post-type-publication.php:37
 msgid "View item"
 msgstr "Eintrag anzeigen"
 
 #: includes/post-types/post-type-lecture.php:38
-#: includes/post-types/post-type-portfolio.php:38
 #: includes/post-types/post-type-publication.php:38
 msgid "Search items"
 msgstr "Einträge durchsuchen"
 
 #: includes/post-types/post-type-lecture.php:39
-#: includes/post-types/post-type-portfolio.php:39
 #: includes/post-types/post-type-publication.php:39
 msgid "No item found"
 msgstr "Kein Eintrag gefunden"
 
 #: includes/post-types/post-type-lecture.php:40
-#: includes/post-types/post-type-portfolio.php:40
 #: includes/post-types/post-type-publication.php:40
 msgid "No item found in trash"
 msgstr "Kein Eintrag im Papierkorb gefunden"
 
 #: includes/post-types/post-type-lecture.php:41
-#: includes/post-types/post-type-portfolio.php:41
 #: includes/post-types/post-type-publication.php:41
 msgid "Item published"
 msgstr "Eintrag veröffentlicht"
 
 #: includes/post-types/post-type-lecture.php:42
-#: includes/post-types/post-type-portfolio.php:42
 #: includes/post-types/post-type-publication.php:42
 msgid "Item updated"
 msgstr "Eintrag aktualisiert"
@@ -140,19 +129,6 @@ msgstr "Datum"
 #: includes/post-types/post-type-lecture.php:99
 msgid "Location"
 msgstr "Ort"
-
-#: includes/post-types/post-type-portfolio.php:29
-#: includes/post-types/post-type-portfolio.php:46
-msgid "Portfolio items"
-msgstr "Portfolio-Einträge"
-
-#: includes/post-types/post-type-portfolio.php:30
-msgid "Portfolio item"
-msgstr "Portfolio-Eintrag"
-
-#: includes/post-types/post-type-portfolio.php:31
-msgid "Portfolio"
-msgstr "Portfolio"
 
 #: includes/post-types/post-type-publication.php:29
 #: includes/post-types/post-type-publication.php:31
@@ -268,6 +244,15 @@ msgstr "Marco Di Bella"
 #. Author URI of the plugin/theme
 msgid "https://www.marcodibella.de"
 msgstr "https://www.marcodibella.de"
+
+#~ msgid "Portfolio items"
+#~ msgstr "Portfolio-Einträge"
+
+#~ msgid "Portfolio item"
+#~ msgstr "Portfolio-Eintrag"
+
+#~ msgid "Portfolio"
+#~ msgstr "Portfolio"
 
 #~ msgid "All publications"
 #~ msgstr "Alle Publikationen"

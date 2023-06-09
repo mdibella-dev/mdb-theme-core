@@ -26,6 +26,10 @@ function plugin_init()
 {
     // Load text domain
     load_plugin_textdomain( 'mdb-theme-core', false, plugin_basename( PLUGIN_DIR ) . '/languages' );
+
+    if( true == post_type_exists( 'portfolio' ) ) :
+        unregister_post_type( 'portfolio' );
+    endif;
 }
 
 add_action( 'init', 'mdb_theme_core\plugin_init', 9 );
