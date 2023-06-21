@@ -28,6 +28,7 @@ custom-post-types, advanced-custom-fields, api, translation-ready
 
 * Improve: Unify the icon associated with custom post types
 * Improve: Remove portfolio post type (dropped)
+* Improve: Use __NAMESPACE__
 
 ### Previous changes
 
