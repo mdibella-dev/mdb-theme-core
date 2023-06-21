@@ -264,7 +264,7 @@ function publication__download_ris_file()
     endif;
 }
 
-add_action( 'template_redirect', 'mdb_theme_core\publication__download_ris_file' );
+add_action( 'template_redirect', __NAMESPACE__ . '\publication__download_ris_file' );
 
 
 

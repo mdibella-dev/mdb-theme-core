@@ -80,7 +80,7 @@ function publication__register()
     register_post_type( 'publication', $args );
 }
 
-add_action( 'init', 'mdb_theme_core\publication__register' );
+add_action( 'init', __NAMESPACE__ . '\publication__register' );
 
 
 
@@ -106,7 +106,7 @@ function publication__manage_posts_columns( $default )
     return $columns;
 }
 
-add_filter( 'manage_publication_posts_columns', 'mdb_theme_core\publication__manage_posts_columns', 10 );
+add_filter( 'manage_publication_posts_columns', __NAMESPACE__ . '\publication__manage_posts_columns', 10 );
 
 
 
@@ -151,7 +151,7 @@ function publication__manage_posts_custom_column( $column_name, $post_id )
     endswitch;
 }
 
-add_action( 'manage_publication_posts_custom_column', 'mdb_theme_core\publication__manage_posts_custom_column', 9999, 2 );
+add_action( 'manage_publication_posts_custom_column', __NAMESPACE__ . '\publication__manage_posts_custom_column', 9999, 2 );
 
 
 
@@ -172,7 +172,7 @@ function publication__manage_sortable_columns( $columns )
     return $columns;
 }
 
-add_filter( 'manage_edit-publication_sortable_columns', 'mdb_theme_core\publication__manage_sortable_columns' );
+add_filter( 'manage_edit-publication_sortable_columns', __NAMESPACE__ . '\publication__manage_sortable_columns' );
 
 
 
@@ -213,4 +213,4 @@ function publication__pre_get_posts( $query )
     endif;
 }
 
-add_action( 'pre_get_posts', 'mdb_theme_core\publication__pre_get_posts', 1 );
+add_action( 'pre_get_posts', __NAMESPACE__ . '\publication__pre_get_posts', 1 );

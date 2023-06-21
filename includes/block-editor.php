@@ -40,4 +40,4 @@ function disable_gutenberg( $can_edit, $post_type )
     return $can_edit;
 }
 
-add_filter( 'use_block_editor_for_post_type', 'mdb_theme_core\disable_gutenberg', 10, 2 );
+add_filter( 'use_block_editor_for_post_type', __NAMESPACE__ . '\disable_gutenberg', 10, 2 );

@@ -32,7 +32,7 @@ function plugin_init()
     endif;
 }
 
-add_action( 'init', 'mdb_theme_core\plugin_init', 9 );
+add_action( 'init', __NAMESPACE__ . '\plugin_init', 9 );
 
 
 
@@ -48,7 +48,7 @@ function plugin_activation()
     // Do something!
 }
 
-register_activation_hook( __FILE__, 'mdb_theme_core\plugin_activation' );
+register_activation_hook( __FILE__, __NAMESPACE__ . '\plugin_activation' );
 
 
 
@@ -64,7 +64,7 @@ function plugin_deactivation()
     // unregister_post_type()
 }
 
-register_deactivation_hook( __FILE__, 'mdb_theme_core\plugin_deactivation' );
+register_deactivation_hook( __FILE__, __NAMESPACE__ . '\plugin_deactivation' );
 
 
 

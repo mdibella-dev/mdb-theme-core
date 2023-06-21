@@ -64,4 +64,4 @@ function publication_group__register()
 
     register_taxonomy( 'publication_group', ['publication'], $args );
 }
-add_action( 'init', 'mdb_theme_core\publication_group__register' );
+add_action( 'init', __NAMESPACE__ . '\publication_group__register' );

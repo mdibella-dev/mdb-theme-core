@@ -56,4 +56,4 @@ function publication_keyword__register()
     ];
     register_taxonomy( 'publication_keyword', ['publication'], $args );
 }
-add_action( 'init', 'mdb_theme_core\publication_keyword__register' );
+add_action( 'init', __NAMESPACE__ . '\publication_keyword__register' );

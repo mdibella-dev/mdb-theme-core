@@ -31,4 +31,4 @@ function admin_enqueue_scripts()
     );
 }
 
-add_action( 'admin_enqueue_scripts','mdb_theme_core\admin_enqueue_scripts' );
+add_action( 'admin_enqueue_scripts',__NAMESPACE__ . '\admin_enqueue_scripts' );
