@@ -30,6 +30,7 @@ custom-post-types, custom-taxonomies, advanced-custom-fields, api, translation-r
 * Improve: Remove portfolio post type (dropped)
 * Improve: Use __NAMESPACE__
 * Improve: Refine namespace path for post-types and taxonomies
+* Improve: Rename "core" to "api"
 
 ### Previous changes
 

@@ -4,4 +4,4 @@
 defined( 'ABSPATH' ) or exit;
 
 
-require_once( 'core-publication.php' );
+require_once( 'api-publication.php' );

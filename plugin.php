@@ -37,7 +37,7 @@ define( 'MDB_BUILD_ARRAY', 2 );             // need global scope here
 
 require_once( PLUGIN_DIR . 'includes/post-types/index.php' );
 require_once( PLUGIN_DIR . 'includes/taxonomies/index.php' );
-require_once( PLUGIN_DIR . 'includes/core/index.php' );
+require_once( PLUGIN_DIR . 'includes/api/index.php' );
 
 require_once( PLUGIN_DIR . 'includes/block-editor.php' );
 require_once( PLUGIN_DIR . 'includes/backend.php' );
