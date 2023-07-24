@@ -4,6 +4,16 @@
 
 <br>
 
+## 1.4.0
+Released: 24-07-2023
+
+* Improve: Unify the icon associated with custom post types
+* Improve: Remove portfolio post type (dropped)
+* Improve: Use __NAMESPACE__
+* Improve: Refine namespace path for post-types and taxonomies
+* Improve: Rename "core" to "api"
+
+
 ### 1.3.2
 Released: 20-05-2023
 
@@ -11,7 +21,7 @@ Released: 20-05-2023
 * New: Add custom post type 'portfolio'
 * Improve: Unify the string associated with custom post types to simplify translations
 * Improve: German translation
-* Fix: Fix wrongful post column titles
+* Bugfix: Fix wrongful post column titles
 
 
 ### 1.3.1

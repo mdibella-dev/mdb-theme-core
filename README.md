@@ -26,12 +26,6 @@ custom-post-types, custom-taxonomies, advanced-custom-fields, api, translation-r
 
 ### Latest changes to the main branch
 
-* Improve: Unify the icon associated with custom post types
-* Improve: Remove portfolio post type (dropped)
-* Improve: Use __NAMESPACE__
-* Improve: Refine namespace path for post-types and taxonomies
-* Improve: Rename "core" to "api"
-
 ### Previous changes
 
 See [CHANGELOG.md](https://github.com/mdibella-dev/mdb-theme-core/blob/main/CHANGELOG.md).
