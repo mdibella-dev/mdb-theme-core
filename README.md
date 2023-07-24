@@ -9,7 +9,7 @@ Custom post types and core functions for the use in Marco Di Bella's personal Wo
 [Marco Di Bella ](https://github.com/mdibella-dev)
 
 ### Tags
-custom-post-types, advanced-custom-fields, api, translation-ready
+custom-post-types, custom-taxonomies, advanced-custom-fields, api, translation-ready
 
 ### Requires at least
 
