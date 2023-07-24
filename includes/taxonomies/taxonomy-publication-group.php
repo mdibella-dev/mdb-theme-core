@@ -7,7 +7,7 @@
  */
 
 
-namespace mdb_theme_core;
+namespace mdb_theme_core\taxonomies\publication_group;
 
 
 /** Prevent direct access */
@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.0.0
  */
 
-function publication_group__register()
+function register()
 {
     $labels = [
         'name'                  => __( 'Publication groups', 'mdb-theme-core' ),
@@ -64,4 +64,4 @@ function publication_group__register()
 
     register_taxonomy( 'publication_group', ['publication'], $args );
 }
-add_action( 'init', __NAMESPACE__ . '\publication_group__register' );
+add_action( 'init', __NAMESPACE__ . '\register' );

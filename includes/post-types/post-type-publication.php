@@ -8,7 +8,7 @@
  */
 
 
-namespace mdb_theme_core;
+namespace mdb_theme_core\post_types\publication;
 
 
 /** Prevent direct access */
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.0.0
  */
 
-function publication__register()
+function register()
 {
     $labels = [
         'name'                  => __( 'Publications', 'mdb-theme-core' ),
@@ -80,7 +80,7 @@ function publication__register()
     register_post_type( 'publication', $args );
 }
 
-add_action( 'init', __NAMESPACE__ . '\publication__register' );
+add_action( 'init', __NAMESPACE__ . '\register' );
 
 
 
@@ -94,7 +94,7 @@ add_action( 'init', __NAMESPACE__ . '\publication__register' );
  * @return array An associative array describing the columns to use.
  */
 
-function publication__manage_posts_columns( $default )
+function manage_posts_columns( $default )
 {
     $columns['cb']                         = $default['cb'];
     $columns['cover']                      = __( 'Cover', 'mdb-theme-core' );
@@ -106,7 +106,7 @@ function publication__manage_posts_columns( $default )
     return $columns;
 }
 
-add_filter( 'manage_publication_posts_columns', __NAMESPACE__ . '\publication__manage_posts_columns', 10 );
+add_filter( 'manage_publication_posts_columns', __NAMESPACE__ . '\manage_posts_columns', 10 );
 
 
 
@@ -119,7 +119,7 @@ add_filter( 'manage_publication_posts_columns', __NAMESPACE__ . '\publication__m
  * @param int    $post_id     ID of the contribution (aka record) to be output.
  */
 
-function publication__manage_posts_custom_column( $column_name, $post_id )
+function manage_posts_custom_column( $column_name, $post_id )
 {
     $data = publication__get_data( $post_id );
 
@@ -151,7 +151,7 @@ function publication__manage_posts_custom_column( $column_name, $post_id )
     endswitch;
 }
 
-add_action( 'manage_publication_posts_custom_column', __NAMESPACE__ . '\publication__manage_posts_custom_column', 9999, 2 );
+add_action( 'manage_publication_posts_custom_column', __NAMESPACE__ . '\manage_posts_custom_column', 9999, 2 );
 
 
 
@@ -165,14 +165,14 @@ add_action( 'manage_publication_posts_custom_column', __NAMESPACE__ . '\publicat
  * @return array An associative array.
  */
 
-function publication__manage_sortable_columns( $columns )
+function manage_sortable_columns( $columns )
 {
     $columns['year']     = 'year';
     $columns['citation'] = 'citation';
     return $columns;
 }
 
-add_filter( 'manage_edit-publication_sortable_columns', __NAMESPACE__ . '\publication__manage_sortable_columns' );
+add_filter( 'manage_edit-publication_sortable_columns', __NAMESPACE__ . '\manage_sortable_columns' );
 
 
 
@@ -184,7 +184,7 @@ add_filter( 'manage_edit-publication_sortable_columns', __NAMESPACE__ . '\public
  * @param WP_Query $query A data object of the last query made.
  */
 
-function publication__pre_get_posts( $query )
+function pre_get_posts( $query )
 {
     if( $query->is_main_query() and is_admin() ) :
 
@@ -213,4 +213,4 @@ function publication__pre_get_posts( $query )
     endif;
 }
 
-add_action( 'pre_get_posts', __NAMESPACE__ . '\publication__pre_get_posts', 1 );
+add_action( 'pre_get_posts', __NAMESPACE__ . '\pre_get_posts', 1 );

@@ -8,7 +8,7 @@
  */
 
 
-namespace mdb_theme_core;
+namespace mdb_theme_core\post_types\lecture;
 
 
 /** Prevent direct access */
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.0.0
  */
 
-function lecture__register()
+function register()
 {
     $labels = [
         'name'                  => __( 'Lectures', 'mdb-theme-core' ),
@@ -76,7 +76,7 @@ function lecture__register()
     register_post_type( 'lecture', $args );
 }
 
-add_action( 'init', __NAMESPACE__ . '\lecture__register' );
+add_action( 'init', __NAMESPACE__ . '\register' );
 
 
 
@@ -90,7 +90,7 @@ add_action( 'init', __NAMESPACE__ . '\lecture__register' );
  * @return array An associative array describing the columns to use.
  */
 
-function lecture__manage_posts_columns( $default )
+function manage_posts_columns( $default )
 {
     $columns['cb']                    = $default['cb'];
     $columns['title']                 = __( 'Lecture', 'mdb-theme-core' );
@@ -101,7 +101,7 @@ function lecture__manage_posts_columns( $default )
     return $columns;
 }
 
-add_filter( 'manage_lecture_posts_columns', __NAMESPACE__ . '\lecture__manage_posts_columns', 10 );
+add_filter( 'manage_lecture_posts_columns', __NAMESPACE__ . '\manage_posts_columns', 10 );
 
 
 
@@ -114,7 +114,7 @@ add_filter( 'manage_lecture_posts_columns', __NAMESPACE__ . '\lecture__manage_po
  * @param int    $post_id     ID of the contribution (aka record) to be output.
  */
 
-function lecture__manage_posts_custom_column( $column_name, $post_id )
+function manage_posts_custom_column( $column_name, $post_id )
 {
     switch( $column_name ) :
 
@@ -135,7 +135,7 @@ function lecture__manage_posts_custom_column( $column_name, $post_id )
     endswitch;
 }
 
-add_action( 'manage_lecture_posts_custom_column', __NAMESPACE__ . '\lecture__manage_posts_custom_column', 10, 2 );
+add_action( 'manage_lecture_posts_custom_column', __NAMESPACE__ . '\manage_posts_custom_column', 10, 2 );
 
 
 
@@ -149,7 +149,7 @@ add_action( 'manage_lecture_posts_custom_column', __NAMESPACE__ . '\lecture__man
  * @return array An associative array.
  */
 
-function lecture__manage_sortable_columns( $columns )
+function manage_sortable_columns( $columns )
 {
     $columns['speech-event-date']     = 'event-date';
     $columns['speech-event-location'] = 'event-location';
@@ -157,7 +157,7 @@ function lecture__manage_sortable_columns( $columns )
     return $columns;
 }
 
-add_filter( 'manage_edit-lecture_sortable_columns', __NAMESPACE__ . '\lecture__manage_sortable_columns' );
+add_filter( 'manage_edit-lecture_sortable_columns', __NAMESPACE__ . '\manage_sortable_columns' );
 
 
 
@@ -169,7 +169,7 @@ add_filter( 'manage_edit-lecture_sortable_columns', __NAMESPACE__ . '\lecture__m
  * @param WP_Query $query A data object of the last query made.
  */
 
-function lecture__pre_get_posts( $query )
+function pre_get_posts( $query )
 {
     if( $query->is_main_query() and is_admin() ) :
 
@@ -194,7 +194,7 @@ function lecture__pre_get_posts( $query )
     endif;
 }
 
-add_action( 'pre_get_posts', __NAMESPACE__ . '\lecture__pre_get_posts', 1 );
+add_action( 'pre_get_posts', __NAMESPACE__ . '\pre_get_posts', 1 );
 
 
 
@@ -209,7 +209,7 @@ add_action( 'pre_get_posts', __NAMESPACE__ . '\lecture__pre_get_posts', 1 );
  * @see https://support.advancedcustomfields.com/forums/topic/issue-with-closing-flexible-fields-by-default/
  */
 
-function lecture__admin_head()
+function admin_head()
 {
 ?>
 <script type="text/javascript">
@@ -223,4 +223,4 @@ jQuery(function($)
 <?php
 }
 
-add_action( 'acf/input/admin_head', __NAMESPACE__ . '\lecture__admin_head' );
+add_action( 'acf/input/admin_head', __NAMESPACE__ . '\admin_head' );
