@@ -52,7 +52,7 @@ function publication__is_publication( $id )
 
 function publication__get_data( $id )
 {
-    $data         = array();
+    $data         = [];
     $data['type'] = get_field( 'ref_type', $id );
 
 
@@ -68,7 +68,7 @@ function publication__get_data( $id )
 
     // Citations of the document.
     $citations = get_field( 'citations', $id );
-    $citation  = array();
+    $citation  = [];
 
     if( ! empty( $citations ) ) :
         foreach( (array) $citations as $key => $value ) :
@@ -81,7 +81,7 @@ function publication__get_data( $id )
 
     // Literature used.
     $references = get_field( 'references', $id );
-    $reference  = array();
+    $reference  = [];
 
     if( ! empty( $references ) ) :
         foreach( $references as $key => $value ) :
@@ -113,7 +113,7 @@ function publication__build_ris_file( $id )
 {
     $data  = publication__get_data( $id );
     $title = publication__normalize_title( $data['title'], $data['subtitle'] );
-    $type  = array (
+    $type  = [
                 0 => 'CHAP',
                 2 => 'BOOK',
                 3 => 'BOOK',
@@ -122,19 +122,19 @@ function publication__build_ris_file( $id )
                 7 => 'JOUR',
                 8 => 'NEWS',
                 9 => 'CONF',
-            );
-    $ris   = array();
+            ];
+    $ris   = [];
 
 
     // TY - document type
     // Must be the first tag!
-    $ris[] = array( 'TY', $type[$data['type']] );
+    $ris[] = [ 'TY', $type[$data['type']] ];
 
 
     // TI - title
     // (alternative: T1)
     if( ! empty( $data['title'] ) or ! empty( $data['subtitle'] ) ) :
-        $ris[] = array( 'TI', $title );
+        $ris[] = [ 'TI', $title ];
     endif;
 
 
@@ -144,9 +144,9 @@ function publication__build_ris_file( $id )
         foreach( $data['authors'] as $author ) :
             if( ! empty( $author['au_lastname'] ) ) :
                 if( ! empty( $author['au_firstname'] ) ) :
-                    $ris[] = array( 'AU', sprintf( '%2$s, %1$s', $author['au_firstname'], $author['au_lastname'] ) );
+                    $ris[] = [ 'AU', sprintf( '%2$s, %1$s', $author['au_firstname'], $author['au_lastname'] ) ];
                 else :
-                    $ris[] = array( 'AU', $author['au_lastname'] );
+                    $ris[] = [ 'AU', $author['au_lastname'] ];
                 endif;
             endif;
         endforeach;
@@ -159,9 +159,9 @@ function publication__build_ris_file( $id )
         foreach( $data['editors'] as $editor ) :
             if( ! empty( $editor['ed_lastname'] ) ) :
                 if( ! empty( $editor['ed_firstname'] ) ) :
-                    $ris[] = array( 'ED', sprintf( '%2$s, %1$s', $editor['ed_firstname'], $editor['ed_lastname'] ) );
+                    $ris[] =[ 'ED', sprintf( '%2$s, %1$s', $editor['ed_firstname'], $editor['ed_lastname'] ) ];
                 else :
-                    $ris[] = array( 'ED', $editor['au_lastname'] );
+                    $ris[] = [ 'ED', $editor['au_lastname'] ];
                 endif;
             endif;
         endforeach;
@@ -173,14 +173,14 @@ function publication__build_ris_file( $id )
 
         case 'CHAP' :
             if( ! empty( $data['booktitle'] ) ) :
-                $ris[] = array( 'BT', publication__normalize_title( $data['booktitle'], $data['booksubtitle'] ) );
+                $ris[] = [ 'BT', publication__normalize_title( $data['booktitle'], $data['booksubtitle'] ) ];
             endif;
         break;
 
         case 'BOOK' :
         case 'UNPB' :
             if( ! empty( $data['title'] ) ) :
-                $ris[] = array( 'BT', $title );
+                $ris[] =[ 'BT', $title ];
             endif;
         break;
 
@@ -188,7 +188,7 @@ function publication__build_ris_file( $id )
 
 
     // Tags that can be easily adopted.
-    $tags = array (
+    $tags = [
         'journalfullname'       => 'JF',
         'journalabbreviation'   => 'JO',
         'startpage'             => 'SP',
@@ -201,32 +201,32 @@ function publication__build_ris_file( $id )
         'pubplace'              => 'PP',
         'pubplace'              => 'CY',
         'serialnumber'          => 'SN',
-    );
+    ];
 
     foreach( $tags as $key => $tag ) :
         if( ! empty( $data[$key] ) ) :
-            $ris[] = array( $tag, $data[$key] );
+            $ris[] = [ $tag, $data[$key] ];
         endif;
     endforeach;
 
 
     // AB - abstract
     if( '' !== get_post( $id )->post_content ) :
-        $ris[] = array( 'AB', wp_strip_all_tags( get_post( $id )->post_content, true ) );
+        $ris[] = [ 'AB', wp_strip_all_tags( get_post( $id )->post_content, true ) ];
     endif;
 
 
     // KW - keywords
     if( ! empty( $data['keywords'] ) ) :
         foreach( $data['keywords'] as $keyword ) :
-            $ris[] = array( 'KW', $keyword->name );
+            $ris[] = [ 'KW', $keyword->name ];
         endforeach;
     endif;
 
 
     // ER - end of RIS
     // Must be the last tag
-    $ris[] = array( 'ER', '');
+    $ris[] = [ 'ER', '' ];
 
 
     // Write data to the file along the $ris matrix
@@ -290,12 +290,12 @@ function publication__normalize_names( $persons )
     if( ! empty( $persons ) ) :
 
         // Removes prefixs; au_ and ed_ fields should not coexist.
-        $replacements = array(
+        $replacements = [
             'au_lastname'   => 'lastname',
             'au_firstname'  => 'firstname',
             'ed_lastname'   => 'lastname',
             'ed_firstname'  => 'firstname',
-        );
+        ];
 
         foreach( $persons as &$person ) :
             foreach( $replacements as $oldkey => $newkey ) :
@@ -310,7 +310,7 @@ function publication__normalize_names( $persons )
 
 
         // Shorten first names and compile a list of names.
-        $names = array();
+        $names = [];
 
         foreach( $persons as $person ) :
             if( ! empty( $person['lastname'] ) ) :
@@ -371,7 +371,7 @@ function publication__normalize_title( $title, $subtitle )
 
 
     // Add punctuation.
-    $punctuation = array( '?', '!', '.', ':' );
+    $punctuation = [ '?', '!', '.', ':' ];
     $count       = 0;
 
     foreach( $components as &$component ) :
@@ -409,8 +409,11 @@ function publication__normalize_title( $title, $subtitle )
 function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
 {
     $data   = publication__get_data( $id );
-    $output = array( 0 => '', 1 => '' );
-    $type   = array (
+    $output = [
+        0 => '',
+        1 => ''
+    ];
+    $type   = [
         0 => 'CHAPTER',
         2 => 'BOOK_MONO',
         3 => 'BOOK_EDITION',
@@ -419,7 +422,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
         7 => 'ARTICLE',
         8 => 'ARTICLE',
         9 => 'CONF',
-    );
+    ];
 
 
     // Process authors.
@@ -462,7 +465,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
 
         $output[0] .= ' ' . $data['titleaddition'];
 
-        if( true !== in_array( $last, array( '?', '!', '.' ) ) ) :
+        if( true !== in_array( $last, [ '?', '!', '.' ] ) ) :
             $output[0] .= '.';
         endif;
     endif;

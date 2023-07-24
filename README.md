@@ -26,6 +26,8 @@ custom-post-types, custom-taxonomies, advanced-custom-fields, api, translation-r
 
 ### Latest changes to the main branch
 
+* Change array notation
+
 ### Previous changes
 
 See [CHANGELOG.md](https://github.com/mdibella-dev/mdb-theme-core/blob/main/CHANGELOG.md).
