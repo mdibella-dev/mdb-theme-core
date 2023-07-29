@@ -10,6 +10,9 @@
 
 namespace mdb_theme_core\post_types\publication;
 
+use mdb_theme_core\api as publication;
+
+
 
 /** Prevent direct access */
 
@@ -121,7 +124,7 @@ add_filter( 'manage_publication_posts_columns', __NAMESPACE__ . '\manage_posts_c
 
 function manage_posts_custom_column( $column_name, $post_id )
 {
-    $data = publication__get_data( $post_id );
+    $data = publication\get_data( $post_id );
 
     switch( $column_name ) :
 

@@ -8,7 +8,7 @@
  */
 
 
-namespace mdb_theme_core;
+namespace mdb_theme_core\api;
 
 
 /** Prevent direct access */
@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) or exit;
  * @return bool The outcome of the check (true/false).
  */
 
-function publication__is_publication( $id )
+function is_publication( $id )
 {
     $result = get_post_type( $id );
 
@@ -50,7 +50,7 @@ function publication__is_publication( $id )
  * @return array The record.
  */
 
-function publication__get_data( $id )
+function get_data( $id )
 {
     $data         = [];
     $data['type'] = get_field( 'ref_type', $id );
@@ -109,10 +109,10 @@ function publication__get_data( $id )
  * @param int $id The ID of the publication.
  */
 
-function publication__build_ris_file( $id )
+function build_ris_file( $id )
 {
-    $data  = publication__get_data( $id );
-    $title = publication__normalize_title( $data['title'], $data['subtitle'] );
+    $data  = get_data( $id );
+    $title = normalize_title( $data['title'], $data['subtitle'] );
     $type  = [
                 0 => 'CHAP',
                 2 => 'BOOK',
@@ -173,7 +173,7 @@ function publication__build_ris_file( $id )
 
         case 'CHAP' :
             if( ! empty( $data['booktitle'] ) ) :
-                $ris[] = [ 'BT', publication__normalize_title( $data['booktitle'], $data['booksubtitle'] ) ];
+                $ris[] = [ 'BT', normalize_title( $data['booktitle'], $data['booksubtitle'] ) ];
             endif;
         break;
 
@@ -253,18 +253,18 @@ function publication__build_ris_file( $id )
  * @see https://wordpress.stackexchange.com/questions/3480/how-can-i-force-a-file-download-in-the-wordpress-backend
  */
 
-function publication__download_ris_file()
+function download_ris_file()
 {
     if( false !== strstr( $_SERVER['REQUEST_URI'], '/citation/' ) ) :
 
         $id = (int) substr( strrchr( $_SERVER['REQUEST_URI'], "/" ), 1);
 
-        publication__build_ris_file( $id ); // Currently only RIS is supported!
+        build_ris_file( $id ); // Currently only RIS is supported!
         exit();
     endif;
 }
 
-add_action( 'template_redirect', __NAMESPACE__ . '\publication__download_ris_file' );
+add_action( 'template_redirect', __NAMESPACE__ . '\download_ris_file' );
 
 
 
@@ -285,7 +285,7 @@ add_action( 'template_redirect', __NAMESPACE__ . '\publication__download_ris_fil
  * @return bool   In case of an error: false.
  */
 
-function publication__normalize_names( $persons )
+function normalize_names( $persons )
 {
     if( ! empty( $persons ) ) :
 
@@ -358,7 +358,7 @@ function publication__normalize_names( $persons )
  * @return string The combined title.
  */
 
-function publication__normalize_title( $title, $subtitle )
+function normalize_title( $title, $subtitle )
 {
     // Add title components (if not empty).
     if( ! empty( $title ) ) :
@@ -406,9 +406,9 @@ function publication__normalize_title( $title, $subtitle )
  * @return string The suggested citation.
  */
 
-function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
+function build_citation( $id, $build_mode = MDB_BUILD_STRING )
 {
-    $data   = publication__get_data( $id );
+    $data   = get_data( $id );
     $output = [
         0 => '',
         1 => ''
@@ -427,7 +427,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
 
     // Process authors.
     if( ! empty( $data['authors'] ) ) :
-        $output[0] .= publication__normalize_names( $data['authors'] );
+        $output[0] .= normalize_names( $data['authors'] );
     else :
         $output[0] .= __( 'without author', 'mdb-theme-core' );
     endif;
@@ -445,7 +445,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
 
     // Process title and subtitle.
     if( ! empty( $data['title'] ) or ! empty( $data['subtitle'] ) ) :
-        $title = publication__normalize_title( $data['title'], $data['subtitle'] );
+        $title = normalize_title( $data['title'], $data['subtitle'] );
 
         // Is it a book chapter, article in magazine or newspaper?
         if( ( 'CHAPTER' === $type[$data['type']] ) or ( 'ARTICLE' === $type[$data['type']] ) ) :
@@ -498,7 +498,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
 
             // Identify publishers.
             if( ! empty( $data['editors'] ) ) :
-                $editors .= publication__normalize_names( $data['editors'] );
+                $editors .= normalize_names( $data['editors'] );
             else :
                 $editors .= __( 'without editor', 'mdb-theme-core' );
             endif;
@@ -506,7 +506,7 @@ function publication__build_citation( $id, $build_mode = MDB_BUILD_STRING )
             $output[1] .= sprintf(
                 __( ' In: %1$s [ed.]: %2$s', 'mdb-theme-core' ),
                 $editors,
-                publication__normalize_title( $data['booktitle'], $data['booksubtitle'] )
+                normalize_title( $data['booktitle'], $data['booksubtitle'] )
             );
         endif;
 
