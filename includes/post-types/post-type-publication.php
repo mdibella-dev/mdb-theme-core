@@ -26,8 +26,7 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.0.0
  */
 
-function register()
-{
+function register() {
     $labels = [
         'name'                  => __( 'Publications', 'mdb-theme-core' ),
         'singular_name'         => __( 'Publication', 'mdb-theme-core' ),
@@ -97,8 +96,7 @@ add_action( 'init', __NAMESPACE__ . '\register' );
  * @return array An associative array describing the columns to use.
  */
 
-function manage_posts_columns( $default )
-{
+function manage_posts_columns( $default ) {
     $columns['cb']                         = $default['cb'];
     $columns['cover']                      = __( 'Cover', 'mdb-theme-core' );
     $columns['title']                      = __( 'Title', 'mdb-theme-core' );
@@ -122,8 +120,7 @@ add_filter( 'manage_publication_posts_columns', __NAMESPACE__ . '\manage_posts_c
  * @param int    $post_id     ID of the contribution (aka record) to be output.
  */
 
-function manage_posts_custom_column( $column_name, $post_id )
-{
+function manage_posts_custom_column( $column_name, $post_id ) {
     $data = publication\get_data( $post_id );
 
     switch( $column_name ) :
@@ -168,8 +165,7 @@ add_action( 'manage_publication_posts_custom_column', __NAMESPACE__ . '\manage_p
  * @return array An associative array.
  */
 
-function manage_sortable_columns( $columns )
-{
+function manage_sortable_columns( $columns ) {
     $columns['year']     = 'year';
     $columns['citation'] = 'citation';
     return $columns;
@@ -187,8 +183,7 @@ add_filter( 'manage_edit-publication_sortable_columns', __NAMESPACE__ . '\manage
  * @param WP_Query $query A data object of the last query made.
  */
 
-function pre_get_posts( $query )
-{
+function pre_get_posts( $query ) {
     if( $query->is_main_query() and is_admin() ) :
 
         $orderby = $query->get( 'orderby' );

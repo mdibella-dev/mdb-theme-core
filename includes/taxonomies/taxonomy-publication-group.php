@@ -22,8 +22,8 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.0.0
  */
 
-function register()
-{
+function register() {
+    
     $labels = [
         'name'                  => __( 'Publication groups', 'mdb-theme-core' ),
         'singular_name'         => __( 'Publication group', 'mdb-theme-core' ),
@@ -64,4 +64,5 @@ function register()
 
     register_taxonomy( 'publication_group', ['publication'], $args );
 }
+
 add_action( 'init', __NAMESPACE__ . '\register' );

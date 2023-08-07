@@ -22,8 +22,7 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.0.0
  */
 
-function admin_enqueue_scripts()
-{
+function admin_enqueue_scripts() {
     wp_enqueue_style(
         'mdb-theme-core',
         PLUGIN_URL . 'assets/build/css/backend.min.css',

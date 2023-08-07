@@ -22,8 +22,8 @@ defined( 'ABSPATH' ) or exit;
  * @since 1.0.0
  */
 
-function register()
-{
+function register() {
+
     $labels = [
         'name'          => __( 'Keywords', 'mdb-theme-core' ),
         'singular_name' => __( 'Keyword', 'mdb-theme-core' ),
@@ -53,7 +53,8 @@ function register()
         'sort'                  => false,
         'show_in_graphql'       => false,
     ];
-    
+
     register_taxonomy( 'publication_keyword', ['publication'], $args );
 }
+
 add_action( 'init', __NAMESPACE__ . '\register' );

@@ -31,8 +31,8 @@ defined( 'ABSPATH' ) or exit;
  * @return bool The new definition of whether Gutenberg can edit the specified post type (true) or not (false).
  */
 
-function disable_gutenberg( $can_edit, $post_type )
-{
+function disable_gutenberg( $can_edit, $post_type ) {
+    
     if( ( 'lecture' === $post_type ) or ( 'publication' === $post_type ) ) :
         $can_edit = false;
     endif;

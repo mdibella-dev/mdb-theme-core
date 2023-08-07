@@ -27,8 +27,7 @@ defined( 'ABSPATH' ) or exit;
  * @return bool The outcome of the check (true/false).
  */
 
-function is_publication( $id )
-{
+function is_publication( $id ) {
     $result = get_post_type( $id );
 
     if( 'publication' == $result ) :
@@ -50,8 +49,7 @@ function is_publication( $id )
  * @return array The record.
  */
 
-function get_data( $id )
-{
+function get_data( $id ) {
     $data         = [];
     $data['type'] = get_field( 'ref_type', $id );
 
@@ -109,8 +107,7 @@ function get_data( $id )
  * @param int $id The ID of the publication.
  */
 
-function build_ris_file( $id )
-{
+function build_ris_file( $id ) {
     $data  = get_data( $id );
     $title = normalize_title( $data['title'], $data['subtitle'] );
     $type  = [
@@ -253,8 +250,7 @@ function build_ris_file( $id )
  * @see https://wordpress.stackexchange.com/questions/3480/how-can-i-force-a-file-download-in-the-wordpress-backend
  */
 
-function download_ris_file()
-{
+function download_ris_file() {
     if( false !== strstr( $_SERVER['REQUEST_URI'], '/citation/' ) ) :
 
         $id = (int) substr( strrchr( $_SERVER['REQUEST_URI'], "/" ), 1);
@@ -285,8 +281,7 @@ add_action( 'template_redirect', __NAMESPACE__ . '\download_ris_file' );
  * @return bool   In case of an error: false.
  */
 
-function normalize_names( $persons )
-{
+function normalize_names( $persons ) {
     if( ! empty( $persons ) ) :
 
         // Removes prefixs; au_ and ed_ fields should not coexist.
@@ -358,8 +353,7 @@ function normalize_names( $persons )
  * @return string The combined title.
  */
 
-function normalize_title( $title, $subtitle )
-{
+function normalize_title( $title, $subtitle ) {
     // Add title components (if not empty).
     if( ! empty( $title ) ) :
         $components[] = $title;
@@ -406,8 +400,7 @@ function normalize_title( $title, $subtitle )
  * @return string The suggested citation.
  */
 
-function build_citation( $id, $build_mode = MDB_BUILD_STRING )
-{
+function build_citation( $id, $build_mode = MDB_BUILD_STRING ) {
     $data   = get_data( $id );
     $output = [
         0 => '',
