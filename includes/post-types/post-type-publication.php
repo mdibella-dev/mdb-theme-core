@@ -134,11 +134,11 @@ function manage_posts_custom_column( $column_name, $post_id ) {
                     __( 'Edit', 'mdb-theme-core' )
                 );
             endif;
-        break;
+            break;
 
         case 'year':
             echo $data['pubyear'];
-        break;
+            break;
 
         case 'citation' :
             if( isset( $data['citation'] ) ) :
@@ -146,7 +146,7 @@ function manage_posts_custom_column( $column_name, $post_id ) {
             else :
                 echo '0';
             endif;
-        break;
+            break;
 
     endswitch;
 }
@@ -192,20 +192,20 @@ function pre_get_posts( $query ) {
 
             case 'title':
                 $query->set( 'orderby', 'title' );
-            break;
+                break;
 
             case 'year':
                 $query->set( 'orderby', 'meta_value' );
                 $query->set( 'meta_key', 'dokumenttypspezifische_angaben_ref_pubyear' );
-            break;
+                break;
 
             case 'citation':
                 $query->set( 'orderby', 'meta_value_num' );
                 $query->set( 'meta_key', 'citations' );
-            break;
+                break;
 
             default:
-            break;
+                break;
 
         endswitch;
     endif;

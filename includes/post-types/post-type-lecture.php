@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) or exit;
  */
 
 function register() {
-    
+
     $labels = [
         'name'                  => __( 'Lectures', 'mdb-theme-core' ),
         'singular_name'         => __( 'Lecture', 'mdb-theme-core' ),
@@ -119,17 +119,17 @@ function manage_posts_custom_column( $column_name, $post_id ) {
 
         case 'speech-event':
             echo get_field( 'speech-event', $post_id );
-        break;
+            break;
 
         case 'speech-event-date':
             echo get_the_date( 'F Y', $post_id );
-        break;
+            break;
 
         case 'speech-event-location':
             $location = get_field( 'speech-event-location', $post_id );
 
             echo ( ! empty( $location ) )? $location : '&mdash;';
-        break;
+            break;
 
     endswitch;
 }
@@ -176,16 +176,16 @@ function pre_get_posts( $query ) {
 
             case 'event-date':
                 $query->set( 'orderby', 'publish_date' );
-            break;
+                break;
 
             case 'title':
                 $query->set( 'orderby', 'title' );
-            break;
+                break;
 
             case 'event-location':
                 $query->set( 'orderby', 'meta_value' );
                 $query->set( 'meta_key', 'speech-event-location' );
-            break;
+                break;
 
         endswitch;
     endif;
