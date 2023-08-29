@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) or exit;
  */
 
 function register() {
-
+    
     $labels = [
         'name'                  => __( 'Lectures', 'mdb-theme-core' ),
         'singular_name'         => __( 'Lecture', 'mdb-theme-core' ),
@@ -115,23 +115,23 @@ add_filter( 'manage_lecture_posts_columns', __NAMESPACE__ . '\manage_posts_colum
 
 function manage_posts_custom_column( $column_name, $post_id ) {
 
-    switch( $column_name ) {
+    switch( $column_name ) :
 
         case 'speech-event':
             echo get_field( 'speech-event', $post_id );
-            break;
+        break;
 
         case 'speech-event-date':
             echo get_the_date( 'F Y', $post_id );
-            break;
+        break;
 
         case 'speech-event-location':
             $location = get_field( 'speech-event-location', $post_id );
 
             echo ( ! empty( $location ) )? $location : '&mdash;';
-            break;
+        break;
 
-    }
+    endswitch;
 }
 
 add_action( 'manage_lecture_posts_custom_column', __NAMESPACE__ . '\manage_posts_custom_column', 10, 2 );
@@ -168,27 +168,27 @@ add_filter( 'manage_edit-lecture_sortable_columns', __NAMESPACE__ . '\manage_sor
  */
 
 function pre_get_posts( $query ) {
-    if( $query->is_main_query() and is_admin() ) {
+    if( $query->is_main_query() and is_admin() ) :
 
         $orderby = $query->get( 'orderby' );
 
-        switch( $orderby ) {
+        switch( $orderby ) :
 
             case 'event-date':
                 $query->set( 'orderby', 'publish_date' );
-                break;
+            break;
 
             case 'title':
                 $query->set( 'orderby', 'title' );
-                break;
+            break;
 
             case 'event-location':
                 $query->set( 'orderby', 'meta_value' );
                 $query->set( 'meta_key', 'speech-event-location' );
-                break;
+            break;
 
-        }
-    }
+        endswitch;
+    endif;
 }
 
 add_action( 'pre_get_posts', __NAMESPACE__ . '\pre_get_posts', 1 );
