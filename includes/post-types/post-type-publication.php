@@ -123,32 +123,32 @@ add_filter( 'manage_publication_posts_columns', __NAMESPACE__ . '\manage_posts_c
 function manage_posts_custom_column( $column_name, $post_id ) {
     $data = publication\get_data( $post_id );
 
-    switch( $column_name ) :
+    switch( $column_name ) {
 
         case 'cover':
-            if( true === has_post_thumbnail( $post_id ) ) :
+            if( true === has_post_thumbnail( $post_id ) ) {
                 echo sprintf(
                     '<a href="/wp-admin/post.php?post=%1$s&action=edit" title="%3$s">%2$s</a>',
                     $post_id,
                     get_the_post_thumbnail( $post_id, array( 100, 0 ) ),
                     __( 'Edit', 'mdb-theme-core' )
                 );
-            endif;
-        break;
+            }
+            break;
 
         case 'year':
             echo $data['pubyear'];
-        break;
+            break;
 
-        case 'citation' :
-            if( isset( $data['citation'] ) ) :
+        case 'citation':
+            if( isset( $data['citation'] ) ) {
                 echo sizeof( $data['citation'] );
-            else :
+            } else {
                 echo '0';
-            endif;
-        break;
+            }
+            break;
 
-    endswitch;
+    }
 }
 
 add_action( 'manage_publication_posts_custom_column', __NAMESPACE__ . '\manage_posts_custom_column', 9999, 2 );
@@ -184,31 +184,31 @@ add_filter( 'manage_edit-publication_sortable_columns', __NAMESPACE__ . '\manage
  */
 
 function pre_get_posts( $query ) {
-    if( $query->is_main_query() and is_admin() ) :
+    if( $query->is_main_query() and is_admin() ) {
 
         $orderby = $query->get( 'orderby' );
 
-        switch( $orderby ) :
+        switch( $orderby ) {
 
             case 'title':
                 $query->set( 'orderby', 'title' );
-            break;
+                break;
 
             case 'year':
                 $query->set( 'orderby', 'meta_value' );
                 $query->set( 'meta_key', 'dokumenttypspezifische_angaben_ref_pubyear' );
-            break;
+                break;
 
             case 'citation':
                 $query->set( 'orderby', 'meta_value_num' );
                 $query->set( 'meta_key', 'citations' );
-            break;
+                break;
 
             default:
-            break;
+                break;
 
-        endswitch;
-    endif;
+        }
+    }
 }
 
 add_action( 'pre_get_posts', __NAMESPACE__ . '\pre_get_posts', 1 );
