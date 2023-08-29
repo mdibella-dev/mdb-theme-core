@@ -26,8 +26,9 @@ custom-post-types, custom-taxonomies, advanced-custom-fields, api, translation-r
 
 ### Latest changes to the main branch
 
-* Improve: Change array notation
-* Improve: Change clamping style
+* Improve: Coding style: Change array notation
+* Improve: Coding style: Change clamping style
+* Improve: Coding style: Replace control structure
 
 
 ### Previous changes
