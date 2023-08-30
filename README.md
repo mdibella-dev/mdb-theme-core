@@ -28,7 +28,6 @@ custom-post-types, custom-taxonomies, advanced-custom-fields, api, translation-r
 
 * Improve: Coding style: Change array notation
 * Improve: Coding style: Change clamping style
-* Improve: Coding style: Replace control structure
 
 
 ### Previous changes
