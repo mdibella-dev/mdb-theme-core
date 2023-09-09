@@ -13,12 +13,12 @@ custom-post-types, custom-taxonomies, advanced-custom-fields, api, translation-r
 
 ### Requires at least
 
-* WordPress 6.0
-* ACF 5.0
+- WordPress 6.0
+- ACF 5.0
 
 ### Tested up to
 
-* WordPress 6.2
+- WordPress 6.2
 
 <br>
 
@@ -26,8 +26,8 @@ custom-post-types, custom-taxonomies, advanced-custom-fields, api, translation-r
 
 ### Latest changes to the main branch
 
-* Improve: Coding style: Change array notation
-* Improve: Coding style: Change clamping style
+- Improve: Coding style: Change array notation
+- Improve: Coding style: Change clamping style
 
 
 ### Previous changes
