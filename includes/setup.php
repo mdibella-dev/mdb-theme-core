@@ -25,10 +25,6 @@ defined( 'ABSPATH' ) or exit;
 function plugin_init() {
     // Load text domain
     load_plugin_textdomain( 'mdb-theme-core', false, plugin_basename( PLUGIN_DIR ) . '/languages' );
-
-    if( true == post_type_exists( 'portfolio' ) ) :
-        unregister_post_type( 'portfolio' );
-    endif;
 }
 
 add_action( 'init', __NAMESPACE__ . '\plugin_init', 9 );
