@@ -30,9 +30,9 @@ defined( 'ABSPATH' ) or exit;
 function is_publication( $id ) {
     $result = get_post_type( $id );
 
-    if( 'publication' == $result ) :
+    if ( 'publication' == $result ) {
         return true;
-    endif;
+    }
 
     return false;
 }
@@ -57,37 +57,37 @@ function get_data( $id ) {
     // General information dependent on the document type.
     $spec = get_field( 'dokumenttypspezifische_angaben', $id );
 
-    foreach( (array) $spec as $key => $value ) :
+    foreach( (array) $spec as $key => $value ) {
         $newkey = substr( $key, 4 );        // without ref_
 
         $data[$newkey] = $spec[$key];
-    endforeach;
+    }
 
 
     // Citations of the document.
     $citations = get_field( 'citations', $id );
     $citation  = [];
 
-    if( ! empty( $citations ) ) :
-        foreach( (array) $citations as $key => $value ) :
+    if ( ! empty( $citations ) ) {
+        foreach( (array) $citations as $key => $value ) {
             $citation[] = $value['cite'];
-        endforeach;
+        }
 
         $data['citation'] = $citation;
-    endif;
+    }
 
 
     // Literature used.
     $references = get_field( 'references', $id );
     $reference  = [];
 
-    if( ! empty( $references ) ) :
-        foreach( $references as $key => $value ) :
+    if ( ! empty( $references ) ) {
+        foreach( $references as $key => $value ) {
             $reference[] = $value['reference'];
-        endforeach;
+        }
 
         $data['reference'] = $reference;
-    endif;
+    }
 
 
     return $data;
@@ -111,15 +111,15 @@ function build_ris_file( $id ) {
     $data  = get_data( $id );
     $title = normalize_title( $data['title'], $data['subtitle'] );
     $type  = [
-                0 => 'CHAP',
-                2 => 'BOOK',
-                3 => 'BOOK',
-                5 => 'UNPB',
-                6 => 'ICOMM',
-                7 => 'JOUR',
-                8 => 'NEWS',
-                9 => 'CONF',
-            ];
+        0 => 'CHAP',
+        2 => 'BOOK',
+        3 => 'BOOK',
+        5 => 'UNPB',
+        6 => 'ICOMM',
+        7 => 'JOUR',
+        8 => 'NEWS',
+        9 => 'CONF',
+    ];
     $ris   = [];
 
 
@@ -130,58 +130,57 @@ function build_ris_file( $id ) {
 
     // TI - title
     // (alternative: T1)
-    if( ! empty( $data['title'] ) or ! empty( $data['subtitle'] ) ) :
+    if ( ! empty( $data['title'] ) or ! empty( $data['subtitle'] ) ) {
         $ris[] = [ 'TI', $title ];
-    endif;
+    }
 
 
     // AU - authors
     // (alternative: A1)
-    if( ! empty( $data['authors'] ) ) :
-        foreach( $data['authors'] as $author ) :
-            if( ! empty( $author['au_lastname'] ) ) :
-                if( ! empty( $author['au_firstname'] ) ) :
+    if ( ! empty( $data['authors'] ) ) {
+        foreach ( $data['authors'] as $author ) {
+            if ( ! empty( $author['au_lastname'] ) ) {
+                if ( ! empty( $author['au_firstname'] ) ) {
                     $ris[] = [ 'AU', sprintf( '%2$s, %1$s', $author['au_firstname'], $author['au_lastname'] ) ];
-                else :
+                } else {
                     $ris[] = [ 'AU', $author['au_lastname'] ];
-                endif;
-            endif;
-        endforeach;
-    endif;
+                }
+            }
+        }
+    }
 
 
     // ED - editors
     // (alternative: A2)
-    if( ! empty( $data['editors'] ) ) :
-        foreach( $data['editors'] as $editor ) :
-            if( ! empty( $editor['ed_lastname'] ) ) :
-                if( ! empty( $editor['ed_firstname'] ) ) :
+    if ( ! empty( $data['editors'] ) ) {
+        foreach ( $data['editors'] as $editor ) {
+            if ( ! empty( $editor['ed_lastname'] ) ) {
+                if ( ! empty( $editor['ed_firstname'] ) ) {
                     $ris[] =[ 'ED', sprintf( '%2$s, %1$s', $editor['ed_firstname'], $editor['ed_lastname'] ) ];
-                else :
+                } else {
                     $ris[] = [ 'ED', $editor['au_lastname'] ];
-                endif;
-            endif;
-        endforeach;
-    endif;
+                }
+            }
+        }
+    }
 
 
     // Document type specific information.
-    switch( $type[ $data['type'] ] ) :
+    switch ( $type[ $data['type'] ] ) {
 
         case 'CHAP' :
-            if( ! empty( $data['booktitle'] ) ) :
+            if ( ! empty( $data['booktitle'] ) ) {
                 $ris[] = [ 'BT', normalize_title( $data['booktitle'], $data['booksubtitle'] ) ];
-            endif;
-        break;
+            }
+            break;
 
         case 'BOOK' :
         case 'UNPB' :
-            if( ! empty( $data['title'] ) ) :
+            if ( ! empty( $data['title'] ) ) {
                 $ris[] =[ 'BT', $title ];
-            endif;
-        break;
-
-    endswitch;
+            }
+            break;
+    }
 
 
     // Tags that can be easily adopted.
@@ -200,25 +199,25 @@ function build_ris_file( $id ) {
         'serialnumber'          => 'SN',
     ];
 
-    foreach( $tags as $key => $tag ) :
-        if( ! empty( $data[$key] ) ) :
+    foreach ( $tags as $key => $tag ) {
+        if ( ! empty( $data[$key] ) ) {
             $ris[] = [ $tag, $data[$key] ];
-        endif;
-    endforeach;
+        }
+    }
 
 
     // AB - abstract
-    if( '' !== get_post( $id )->post_content ) :
+    if ( '' !== get_post( $id )->post_content ) {
         $ris[] = [ 'AB', wp_strip_all_tags( get_post( $id )->post_content, true ) ];
-    endif;
+    }
 
 
     // KW - keywords
-    if( ! empty( $data['keywords'] ) ) :
-        foreach( $data['keywords'] as $keyword ) :
+    if ( ! empty( $data['keywords'] ) ) {
+        foreach ( $data['keywords'] as $keyword ) {
             $ris[] = [ 'KW', $keyword->name ];
-        endforeach;
-    endif;
+        }
+    }
 
 
     // ER - end of RIS
@@ -234,10 +233,10 @@ function build_ris_file( $id ) {
     header( "Pragma: no-cache" );
     header( "Expires: 0" );
 
-    foreach( $ris as $line ) :
+    foreach ( $ris as $line ) {
         echo sprintf( '%1$s  - %2$s', $line[0], $line[1] );
         echo "\r\n";
-    endforeach;
+    }
 }
 
 
@@ -251,13 +250,13 @@ function build_ris_file( $id ) {
  */
 
 function download_ris_file() {
-    if( false !== strstr( $_SERVER['REQUEST_URI'], '/citation/' ) ) :
+    if ( false !== strstr( $_SERVER['REQUEST_URI'], '/citation/' ) ) {
 
         $id = (int) substr( strrchr( $_SERVER['REQUEST_URI'], "/" ), 1);
 
         build_ris_file( $id ); // Currently only RIS is supported!
         exit();
-    endif;
+    }
 }
 
 add_action( 'template_redirect', __NAMESPACE__ . '\download_ris_file' );
@@ -282,7 +281,7 @@ add_action( 'template_redirect', __NAMESPACE__ . '\download_ris_file' );
  */
 
 function normalize_names( $persons ) {
-    if( ! empty( $persons ) ) :
+    if ( ! empty( $persons ) ) {
 
         // Removes prefixs; au_ and ed_ fields should not coexist.
         $replacements = [
@@ -292,14 +291,14 @@ function normalize_names( $persons ) {
             'ed_firstname'  => 'firstname',
         ];
 
-        foreach( $persons as &$person ) :
-            foreach( $replacements as $oldkey => $newkey ) :
-                if( true === array_key_exists( $oldkey, $person ) ) :
+        foreach ( $persons as &$person ) {
+            foreach ( $replacements as $oldkey => $newkey ) {
+                if ( true === array_key_exists( $oldkey, $person ) ) {
                     $person[$newkey] = $person[$oldkey];
                     unset( $person[$oldkey] );
-                endif;
-            endforeach;
-        endforeach;
+                }
+            }
+        }
 
         unset( $person );
 
@@ -307,35 +306,34 @@ function normalize_names( $persons ) {
         // Shorten first names and compile a list of names.
         $names = [];
 
-        foreach( $persons as $person ) :
-            if( ! empty( $person['lastname'] ) ) :
+        foreach ( $persons as $person ) {
+            if ( ! empty( $person['lastname'] ) ) {
 
                 $shorten_and_concate = '';
 
-                if( ! empty( $person['firstname'] ) ) :
+                if ( ! empty( $person['firstname'] ) ) {
                     $firstnames = preg_split( "/[\s-]+/", $person['firstname'] );
 
-                    foreach( $firstnames as $firstname ) :
+                    foreach( $firstnames as $firstname ) {
                         $shorten_and_concate .= strtoupper( $firstname[0] );
-                    endforeach;
-                endif;
+                    }
+                }
 
-                if( ! empty( $shorten_and_concate ) ) :
+                if( ! empty( $shorten_and_concate ) ) {
                     $names[] = $person['lastname'] . ' ' . $shorten_and_concate;
-                else :
+                } else {
                     $names[] = $person['lastname'];
-                endif;
+                }
 
-            endif;
-        endforeach;
+            }
+        }
 
 
         // Return a list of names if available.
-        if( ! empty( $names ) ) :
+        if ( ! empty( $names ) ) {
             return implode( ', ', $names );
-        endif;
-
-    endif;
+        }
+    }
 
     return false;
 }
@@ -355,33 +353,33 @@ function normalize_names( $persons ) {
 
 function normalize_title( $title, $subtitle ) {
     // Add title components (if not empty).
-    if( ! empty( $title ) ) :
+    if ( ! empty( $title ) ) {
         $components[] = $title;
-    endif;
+    }
 
-    if( ! empty( $subtitle ) ) :
+    if ( ! empty( $subtitle ) ) {
         $components[] = $subtitle;
-    endif;
+    }
 
 
     // Add punctuation.
     $punctuation = [ '?', '!', '.', ':' ];
     $count       = 0;
 
-    foreach( $components as &$component ) :
+    foreach ( $components as &$component ) {
         $count++;
         $lastchar = substr( $component, -1, 1 );
 
-        if( true !== in_array( $lastchar, $punctuation ) ) :
-            if( $count !== sizeof( $components ) ) :
+        if ( true !== in_array( $lastchar, $punctuation ) ) {
+            if( $count !== sizeof( $components ) ) {
                 // There must be a colon between the components.
                 $component .= ':';
-            else :
+            } else {
                 // Last component gets a point.
                 $component .= '.';
-            endif;
-        endif;
-    endforeach;
+            }
+        }
+    }
 
 
     // Join components by using spaces.
@@ -419,17 +417,17 @@ function build_citation( $id, $build_mode = MDB_BUILD_STRING ) {
 
 
     // Process authors.
-    if( ! empty( $data['authors'] ) ) :
+    if ( ! empty( $data['authors'] ) ) {
         $output[0] .= normalize_names( $data['authors'] );
-    else :
+    } else {
         $output[0] .= __( 'without author', 'mdb-theme-core' );
-    endif;
+    }
 
 
     // Process year of publication.
-    if( ! empty( $data['pubyear'] ) ) :
+    if ( ! empty( $data['pubyear'] ) ) {
         $output[0] .= ' (' . $data['pubyear'] . ')';
-    endif;
+    }
 
 
     // Add 'separation'.
@@ -437,126 +435,126 @@ function build_citation( $id, $build_mode = MDB_BUILD_STRING ) {
 
 
     // Process title and subtitle.
-    if( ! empty( $data['title'] ) or ! empty( $data['subtitle'] ) ) :
+    if ( ! empty( $data['title'] ) or ! empty( $data['subtitle'] ) ) {
         $title = normalize_title( $data['title'], $data['subtitle'] );
 
         // Is it a book chapter, article in magazine or newspaper?
-        if( ( 'CHAPTER' === $type[$data['type']] ) or ( 'ARTICLE' === $type[$data['type']] ) ) :
+        if ( ( 'CHAPTER' === $type[$data['type']] ) or ( 'ARTICLE' === $type[$data['type']] ) ) {
             $title = '"' . $title . '"';
-        endif;
-    else :
+        }
+    } else {
         $title = __( 'without a title', 'mdb-theme-core' );
-    endif;
+    }
 
     $output[0] .= $title;
 
 
     // Process additions to the title.
-    if( ! empty( $data['titleaddition'] ) ) :
+    if ( ! empty( $data['titleaddition'] ) ) {
 
         $last = substr( $data['titleaddition'], -1 );
 
         $output[0] .= ' ' . $data['titleaddition'];
 
-        if( true !== in_array( $last, [ '?', '!', '.' ] ) ) :
+        if ( true !== in_array( $last, [ '?', '!', '.' ] ) ) {
             $output[0] .= '.';
-        endif;
-    endif;
+        }
+    }
 
 
     // Is it an article in a magazine or in a newspaper?
-    if( ( 'ARTICLE' === $type[$data['type']] ) ) :
+    if ( 'ARTICLE' === $type[$data['type']] ) {
 
         $output[1] .= __(' In: ', 'mdb-theme-core' );
 
-        if( ! empty( $data['journalabbreviation'] ) ) :
+        if( ! empty( $data['journalabbreviation'] ) ) {
             $output[1] .= $data['journalabbreviation'] . ' ';
-        else :
+        } else {
             $output[1] .= $data['journalfullname'] . ' ';
-        endif;
+        }
 
-        if( ! empty( $data['volume'] ) ) :
+        if( ! empty( $data['volume'] ) ) {
             $output[1] .= $data['volume'];
-        endif;
+        }
 
-        if( ! empty( $data['issue'] ) ) :
+        if( ! empty( $data['issue'] ) ) {
             $output[1] .= '(' . $data['issue'] .')';
-        endif;
+        }
 
-    else :
+    } else {
 
         // Is it a book chapter?
-        if( 'CHAPTER' === $type[$data['type']] ) :
+        if ( 'CHAPTER' === $type[$data['type']] ) {
             $editors = '';
 
             // Identify publishers.
-            if( ! empty( $data['editors'] ) ) :
+            if ( ! empty( $data['editors'] ) ) {
                 $editors .= normalize_names( $data['editors'] );
-            else :
+            } else {
                 $editors .= __( 'without editor', 'mdb-theme-core' );
-            endif;
+            }
 
             $output[1] .= sprintf(
                 __( ' In: %1$s [ed.]: %2$s', 'mdb-theme-core' ),
                 $editors,
                 normalize_title( $data['booktitle'], $data['booksubtitle'] )
             );
-        endif;
+        }
 
 
         // Is it part of a series?
-        if( ! empty( $data['edition'] ) ) :
+        if ( ! empty( $data['edition'] ) ) {
 
-            if( ! empty( $data['issue'] ) ) :
+            if ( ! empty( $data['issue'] ) ) {
                 $output[1] .= sprintf(
                     __( ' Volume %1$s of the "%2$s" book series.', 'mdb-theme-core' ),
                     $data['issue'],
                     $data['edition'],
                 );
-            else :
+            } else {
                 $output[1] .= sprintf(
                     __( ' From the "%1$s" book series.', 'mdb-theme-core' ),
                     $data['edition'],
                 );
-            endif;
-        endif;
+            }
+        }
 
 
         // Process place of publication.
-        if( ! empty( $data['pubplace'] ) ) :
+        if ( ! empty( $data['pubplace'] ) ) {
             $output[1] .= ' ' . $data['pubplace'];
-        endif;
-    endif;
+        }
+    }
 
 
     // Process the start and end page.
-    if( ! empty( $data['startpage'] ) ) :
-        if( ! empty( $data['endpage'] ) ) :
+    if ( ! empty( $data['startpage'] ) ) {
+        if ( ! empty( $data['endpage'] ) ) {
             $output[1] .= sprintf(
                 ', S. %1$s-%2$s',
                 $data['startpage'],
                 $data['endpage'],
             );
-        else :
+        } else {
             $output[1] .= sprintf(
                 ', S. %1$s',
                 $data['startpage'],
             );
-        endif;
-    endif;
+        }
+    }
 
 
     // Improve typography (when plugin wp-typography is loaded).
-    if( class_exists( 'WP_Typography' ) ) :
+    if ( class_exists( 'WP_Typography' ) ) {
         $output[0] = \WP_Typography::process_title( $output[0] );
         $output[1] = \WP_Typography::process_title( $output[1] );
-    endif;
+    }
 
 
     // Do the output.
-    if( MDB_BUILD_ARRAY == $build_mode ) :
+    if ( MDB_BUILD_ARRAY == $build_mode ) {
         return $output;
-    endif;
+    }
 
     return implode( '', $output );
 }
