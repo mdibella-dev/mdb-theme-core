@@ -28,13 +28,7 @@ defined( 'ABSPATH' ) or exit;
  */
 
 function is_publication( $id ) {
-    $result = get_post_type( $id );
-
-    if ( 'publication' == $result ) {
-        return true;
-    }
-
-    return false;
+    return (bool) ( 'publication' == get_post_type( $id ) );
 }
 
 
