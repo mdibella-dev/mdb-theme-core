@@ -173,7 +173,6 @@ function pre_get_posts( $query ) {
         $orderby = $query->get( 'orderby' );
 
         switch ( $orderby ) {
-
             case 'event-date':
                 $query->set( 'orderby', 'publish_date' );
                 break;
