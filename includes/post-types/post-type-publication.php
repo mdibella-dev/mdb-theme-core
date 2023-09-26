@@ -124,7 +124,7 @@ function manage_posts_custom_column( $column_name, $post_id ) {
     $data = publication\get_data( $post_id );
 
     switch( $column_name ) {
-        case 'cover' :
+        case 'cover':
             if ( true === has_post_thumbnail( $post_id ) ) {
                 echo sprintf(
                     '<a href="/wp-admin/post.php?post=%1$s&action=edit" title="%3$s">%2$s</a>',
@@ -135,11 +135,11 @@ function manage_posts_custom_column( $column_name, $post_id ) {
             }
             break;
 
-        case 'year' :
+        case 'year':
             echo $data['pubyear'];
             break;
 
-        case 'citation' :
+        case 'citation':
             if ( isset( $data['citation'] ) ) {
                 echo sizeof( $data['citation'] );
             } else {
@@ -187,16 +187,16 @@ function pre_get_posts( $query ) {
         $orderby = $query->get( 'orderby' );
 
         switch( $orderby ) {
-            case 'title' :
+            case 'title':
                 $query->set( 'orderby', 'title' );
                 break;
 
-            case 'year' :
+            case 'year':
                 $query->set( 'orderby', 'meta_value' );
                 $query->set( 'meta_key', 'dokumenttypspezifische_angaben_ref_pubyear' );
                 break;
 
-            case 'citation' :
+            case 'citation':
                 $query->set( 'orderby', 'meta_value_num' );
                 $query->set( 'meta_key', 'citations' );
                 break;
