@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) or exit;
 
 function disable_gutenberg( $can_edit, $post_type ) {
 
-    if ( ( 'lecture' === $post_type ) or ( 'publication' === $post_type ) ) {
+    if ( 'lecture' === $post_type ) {
         $can_edit = false;
     }
 
