@@ -24,13 +24,4 @@ custom-post-types, custom-taxonomies, advanced-custom-fields, api, translation-r
 
 ## Changelog
 
-### Latest changes to the main branch
-
-- Improve: Coding style: Change array notation
-- Improve: Coding style: Change clamping style
-- Improve: Coding style: Use WP style for control structures
-
-
-### Previous changes
-
 See [CHANGELOG.md](https://github.com/mdibella-dev/mdb-theme-core/blob/main/CHANGELOG.md).

@@ -4,6 +4,14 @@ _New / Improve / Bugfix_
 
 <br>
 
+### Latest changes to the main branch
+
+- Improve: Coding style: Change array notation
+- Improve: Coding style: Change clamping style
+- Improve: Coding style: Use WP style for control structures
+
+<br>
+
 ## 1.4.0
 Released: 24-07-2023
 
