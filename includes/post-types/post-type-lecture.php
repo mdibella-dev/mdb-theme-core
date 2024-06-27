@@ -63,8 +63,8 @@ function register() {
         'hierarchical'          => false,
         'can_export'            => true,
         'rewrite'               => [
-            'slug'          => 'lecture',
-            'with_front'    => true
+            'slug'       => _x( 'lecture', 'slug name', 'mdb-theme-core' ),
+            'with_front' => true
         ],
         'query_var'             => true,
         'menu_position'         => 20,

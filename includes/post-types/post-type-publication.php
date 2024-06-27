@@ -69,8 +69,8 @@ function register() {
         'hierarchical'          => false,
         'can_export'            => false,
         'rewrite'               => [
-            'slug'          => 'publication',
-            'with_front'    => true
+            'slug'       => _x( 'publication', 'slug name', 'mdb-theme-core' ),
+            'with_front' => true
         ],
         'query_var'             => true,
         'menu_position'         => 20,

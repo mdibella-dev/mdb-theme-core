@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marco Di Bella - Theme Core Functions\n"
-"POT-Creation-Date: 2023-06-09 15:32+0200\n"
-"PO-Revision-Date: 2023-06-09 15:32+0200\n"
+"POT-Creation-Date: 2024-06-27 19:03+0200\n"
+"PO-Revision-Date: 2024-06-27 19:03+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: plugin.php\n"
@@ -21,33 +21,33 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: includes/core/core-publication.php:429
+#: includes/api/api-publication.php:417
 msgid "without author"
 msgstr "ohne Autor"
 
-#: includes/core/core-publication.php:452
+#: includes/api/api-publication.php:440
 msgid "without a title"
 msgstr "ohne Titel"
 
-#: includes/core/core-publication.php:474
+#: includes/api/api-publication.php:462
 msgid " In: "
 msgstr " In: "
 
-#: includes/core/core-publication.php:500
+#: includes/api/api-publication.php:488
 msgid "without editor"
 msgstr "ohne Herausgeber"
 
-#: includes/core/core-publication.php:504
+#: includes/api/api-publication.php:492
 #, php-format
 msgid " In: %1$s [ed.]: %2$s"
 msgstr " In: %1$s [Hrsg.]: %2$s"
 
-#: includes/core/core-publication.php:516
+#: includes/api/api-publication.php:504
 #, php-format
 msgid " Volume %1$s of the \"%2$s\" book series."
 msgstr " Band %1$s der Reihe \"%2$s\"."
 
-#: includes/core/core-publication.php:522
+#: includes/api/api-publication.php:510
 #, php-format
 msgid " From the \"%1$s\" book series."
 msgstr " Aus der Reihe \"%1$s\"."
@@ -59,123 +59,133 @@ msgid "Lectures"
 msgstr "Vorträge"
 
 #: includes/post-types/post-type-lecture.php:30
-#: includes/post-types/post-type-lecture.php:96
+#: includes/post-types/post-type-lecture.php:95
 msgid "Lecture"
 msgstr "Vortrag"
 
 #: includes/post-types/post-type-lecture.php:32
-#: includes/post-types/post-type-publication.php:32
+#: includes/post-types/post-type-publication.php:34
 msgid "All items"
 msgstr "Alle Einträge"
 
 #: includes/post-types/post-type-lecture.php:33
-#: includes/post-types/post-type-publication.php:33
+#: includes/post-types/post-type-publication.php:35
 msgid "Add"
 msgstr "Eintrag hinzufügen"
 
 #: includes/post-types/post-type-lecture.php:34
-#: includes/post-types/post-type-publication.php:34
+#: includes/post-types/post-type-publication.php:36
 msgid "Add new item"
 msgstr "Neuen Eintrag hinzufügen"
 
 #: includes/post-types/post-type-lecture.php:35
-#: includes/post-types/post-type-publication.php:35
+#: includes/post-types/post-type-publication.php:37
 msgid "Edit item"
 msgstr "Eintrag bearbeiten"
 
 #: includes/post-types/post-type-lecture.php:36
-#: includes/post-types/post-type-publication.php:36
+#: includes/post-types/post-type-publication.php:38
 msgid "New item"
 msgstr "Neuer Eintrag"
 
 #: includes/post-types/post-type-lecture.php:37
-#: includes/post-types/post-type-publication.php:37
+#: includes/post-types/post-type-publication.php:39
 msgid "View item"
 msgstr "Eintrag anzeigen"
 
 #: includes/post-types/post-type-lecture.php:38
-#: includes/post-types/post-type-publication.php:38
+#: includes/post-types/post-type-publication.php:40
 msgid "Search items"
 msgstr "Einträge durchsuchen"
 
 #: includes/post-types/post-type-lecture.php:39
-#: includes/post-types/post-type-publication.php:39
+#: includes/post-types/post-type-publication.php:41
 msgid "No item found"
 msgstr "Kein Eintrag gefunden"
 
 #: includes/post-types/post-type-lecture.php:40
-#: includes/post-types/post-type-publication.php:40
+#: includes/post-types/post-type-publication.php:42
 msgid "No item found in trash"
 msgstr "Kein Eintrag im Papierkorb gefunden"
 
 #: includes/post-types/post-type-lecture.php:41
-#: includes/post-types/post-type-publication.php:41
+#: includes/post-types/post-type-publication.php:43
 msgid "Item published"
 msgstr "Eintrag veröffentlicht"
 
 #: includes/post-types/post-type-lecture.php:42
-#: includes/post-types/post-type-publication.php:42
+#: includes/post-types/post-type-publication.php:44
 msgid "Item updated"
 msgstr "Eintrag aktualisiert"
 
-#: includes/post-types/post-type-lecture.php:97
+#: includes/post-types/post-type-lecture.php:66
+msgctxt "slug name"
+msgid "lecture"
+msgstr "vortrag"
+
+#: includes/post-types/post-type-lecture.php:96
 msgid "Event"
 msgstr "Veranstaltung"
 
-#: includes/post-types/post-type-lecture.php:98
+#: includes/post-types/post-type-lecture.php:97
 msgid "Date"
 msgstr "Datum"
 
-#: includes/post-types/post-type-lecture.php:99
+#: includes/post-types/post-type-lecture.php:98
 msgid "Location"
 msgstr "Ort"
 
-#: includes/post-types/post-type-publication.php:29
 #: includes/post-types/post-type-publication.php:31
-#: includes/post-types/post-type-publication.php:50
+#: includes/post-types/post-type-publication.php:33
+#: includes/post-types/post-type-publication.php:52
 msgid "Publications"
 msgstr "Publikationen"
 
-#: includes/post-types/post-type-publication.php:30
+#: includes/post-types/post-type-publication.php:32
 msgid "Publication"
 msgstr "Publikation"
 
-#: includes/post-types/post-type-publication.php:43
-#: includes/post-types/post-type-publication.php:100
+#: includes/post-types/post-type-publication.php:45
+#: includes/post-types/post-type-publication.php:101
 msgid "Cover"
 msgstr "Titelbild"
 
-#: includes/post-types/post-type-publication.php:44
+#: includes/post-types/post-type-publication.php:46
 msgid "Set cover"
 msgstr "Titelbild festlegen"
 
-#: includes/post-types/post-type-publication.php:45
+#: includes/post-types/post-type-publication.php:47
 msgid "Remove cover"
 msgstr "Titelbild entfernen"
 
-#: includes/post-types/post-type-publication.php:46
+#: includes/post-types/post-type-publication.php:48
 msgid "Use as cover"
 msgstr "Als Titelbild verwenden"
 
-#: includes/post-types/post-type-publication.php:101
+#: includes/post-types/post-type-publication.php:72
+msgctxt "slug name"
+msgid "publication"
+msgstr "publikation"
+
+#: includes/post-types/post-type-publication.php:102
 msgid "Title"
 msgstr "Titel"
 
-#: includes/post-types/post-type-publication.php:102
+#: includes/post-types/post-type-publication.php:103
 #: includes/taxonomies/taxonomy-publication-group.php:29
 #: includes/taxonomies/taxonomy-publication-group.php:41
 msgid "Publication group"
 msgstr "Publikationsgruppe"
 
-#: includes/post-types/post-type-publication.php:103
+#: includes/post-types/post-type-publication.php:104
 msgid "Published"
 msgstr "Veröffentlicht"
 
-#: includes/post-types/post-type-publication.php:104
+#: includes/post-types/post-type-publication.php:105
 msgid "Citations"
 msgstr "Zitationen"
 
-#: includes/post-types/post-type-publication.php:134
+#: includes/post-types/post-type-publication.php:133
 msgid "Edit"
 msgstr "Bearbeiten"
 
@@ -213,7 +223,7 @@ msgid "No publication group found"
 msgstr "Keine Publikationsgruppe gefunden"
 
 #: includes/taxonomies/taxonomy-publication-keyword.php:28
-#: includes/taxonomies/taxonomy-publication-keyword.php:34
+#: includes/taxonomies/taxonomy-publication-keyword.php:33
 msgid "Keywords"
 msgstr "Schlagwörter"
 
@@ -245,14 +255,18 @@ msgstr "Marco Di Bella"
 msgid "https://www.marcodibella.de"
 msgstr "https://www.marcodibella.de"
 
+#~ msgid "Portfolio"
+#~ msgstr "Portfolio"
+
+#~ msgctxt "slug name"
+#~ msgid "portfolio"
+#~ msgstr "portfolio"
+
 #~ msgid "Portfolio items"
 #~ msgstr "Portfolio-Einträge"
 
 #~ msgid "Portfolio item"
 #~ msgstr "Portfolio-Eintrag"
-
-#~ msgid "Portfolio"
-#~ msgstr "Portfolio"
 
 #~ msgid "All publications"
 #~ msgstr "Alle Publikationen"

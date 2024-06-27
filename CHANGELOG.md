@@ -6,6 +6,7 @@ _New / Improve / Bugfix_
 
 ### Latest changes to the main branch
 
+- New: Add the ability for localized slug names
 - Improve: Coding style: Change array notation
 - Improve: Coding style: Change clamping style
 - Improve: Coding style: Use WP style for control structures
