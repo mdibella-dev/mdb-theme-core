@@ -6,12 +6,18 @@ _New / Improve / Bugfix_
 
 ### Latest changes to the main branch
 
+- none
+
+<br>
+
+## 1.4.1
+Released: 27-06-2024
+
 - New: Add the ability for localized slug names
 - Improve: Coding style: Change array notation
 - Improve: Coding style: Change clamping style
 - Improve: Coding style: Use WP style for control structures
 
-<br>
 
 ## 1.4.0
 Released: 24-07-2023
