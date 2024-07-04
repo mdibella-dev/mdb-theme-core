@@ -6,7 +6,7 @@ _New / Improve / Bugfix_
 
 ### Latest changes to the main branch
 
-- none
+- Improve: Reintroduce custom post type 'portfolio' 
 
 <br>
 
