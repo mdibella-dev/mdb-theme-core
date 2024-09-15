@@ -123,7 +123,7 @@ add_filter( 'manage_publication_posts_columns', __NAMESPACE__ . '\manage_posts_c
 function manage_posts_custom_column( $column_name, $post_id ) {
     $data = publication\get_data( $post_id );
 
-    switch( $column_name ) {
+    switch ( $column_name ) {
         case 'cover':
             if ( true === has_post_thumbnail( $post_id ) ) {
                 echo sprintf(
