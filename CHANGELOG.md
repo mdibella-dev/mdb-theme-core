@@ -6,9 +6,16 @@ _New / Improve / Bugfix_
 
 ### Latest changes to the main branch
 
-- Improve: Reintroduce custom post type 'portfolio' 
 
 <br>
+
+## 2.0.0
+Released: 06-10-2024
+
+- Improve: Reintroduce custom post type 'portfolio'
+- Improve: Remove support for citation and references in 'publication'
+- Improve: Remove RIS file support
+
 
 ## 1.4.1
 Released: 27-06-2024
