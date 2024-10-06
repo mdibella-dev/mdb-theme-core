@@ -102,7 +102,6 @@ function manage_posts_columns( $default ) {
     $columns['title']                      = __( 'Title', 'mdb-theme-core' );
     $columns['taxonomy-publication_group'] = __( 'Publication group', 'mdb-theme-core' );
     $columns['year']                       = __( 'Published', 'mdb-theme-core' );
-    $columns['citation']                   = __( 'Citations', 'mdb-theme-core' );
 
     return $columns;
 }
@@ -138,14 +137,6 @@ function manage_posts_custom_column( $column_name, $post_id ) {
         case 'year':
             echo $data['pubyear'];
             break;
-
-        case 'citation':
-            if ( isset( $data['citation'] ) ) {
-                echo sizeof( $data['citation'] );
-            } else {
-                echo '0';
-            }
-            break;
     }
 }
 
@@ -165,7 +156,6 @@ add_action( 'manage_publication_posts_custom_column', __NAMESPACE__ . '\manage_p
 
 function manage_sortable_columns( $columns ) {
     $columns['year']     = 'year';
-    $columns['citation'] = 'citation';
     return $columns;
 }
 
@@ -194,11 +184,6 @@ function pre_get_posts( $query ) {
             case 'year':
                 $query->set( 'orderby', 'meta_value' );
                 $query->set( 'meta_key', 'dokumenttypspezifische_angaben_ref_pubyear' );
-                break;
-
-            case 'citation':
-                $query->set( 'orderby', 'meta_value_num' );
-                $query->set( 'meta_key', 'citations' );
                 break;
 
             default:

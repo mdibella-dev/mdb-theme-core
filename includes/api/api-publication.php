@@ -57,33 +57,6 @@ function get_data( $id ) {
         $data[$newkey] = $spec[$key];
     }
 
-
-    // Citations of the document.
-    $citations = get_field( 'citations', $id );
-    $citation  = [];
-
-    if ( ! empty( $citations ) ) {
-        foreach( (array) $citations as $key => $value ) {
-            $citation[] = $value['cite'];
-        }
-
-        $data['citation'] = $citation;
-    }
-
-
-    // Literature used.
-    $references = get_field( 'references', $id );
-    $reference  = [];
-
-    if ( ! empty( $references ) ) {
-        foreach( $references as $key => $value ) {
-            $reference[] = $value['reference'];
-        }
-
-        $data['reference'] = $reference;
-    }
-
-
     return $data;
 }
 
