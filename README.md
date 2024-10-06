@@ -18,7 +18,7 @@ custom-post-types, custom-taxonomies, advanced-custom-fields, api, translation-r
 
 ### Tested up to
 
-- WordPress 6.2
+- WordPress 6.6
 
 <br>
 
